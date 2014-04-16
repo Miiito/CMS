@@ -38,13 +38,11 @@ $config = [
         ],
         'assetManager' => [
             'bundles' => [
+                // override default jquery asset to use cdn with fallback
                 'yii\web\JqueryAsset' => [
                     'class' => 'app\assets\JqueryAsset',
-                    'fallback' => 'yii\web\JqueryAssetLocal',
+                    'fallback' => 'app\assets\JqueryAssetLocal',
                     'check'=>'window.jQuery',
-                ],
-                'yii\web\JqueryAssetLocal' => [
-                    'class' => 'yii\web\JqueryAsset',
                 ],
             ],
         ],

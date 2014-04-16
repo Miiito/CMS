@@ -7,7 +7,7 @@
 
 namespace app\assets;
 
-use yii\web\AssetBundle;
+use app\components\AssetBundle;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\View;
@@ -21,9 +21,8 @@ use yii\web\View;
 class JqueryAsset extends AssetBundle
 {
     public $sourcePath = null;
-    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jdquery.js' ];
-    /*YII_DEBUG ? [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js' ]
-            : [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' ];*/
+    public $devJs = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js' ];
+    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' ];
     public $fallback = null;
     public $check = null;
 
