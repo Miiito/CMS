@@ -53,6 +53,7 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
+    $config['components']['assetManager']['linkAssets'] = true;
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = 'yii\debug\Module';
     $config['modules']['gii'] = [
