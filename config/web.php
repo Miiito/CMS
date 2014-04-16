@@ -36,6 +36,18 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'class' => 'app\assets\JqueryAsset',
+                    'fallback' => 'yii\web\JqueryAssetLocal',
+                    'check'=>'window.jQuery',
+                ],
+                'yii\web\JqueryAssetLocal' => [
+                    'class' => 'yii\web\JqueryAsset',
+                ],
+            ],
+        ],
         'db' => $db,
     ],
     'params' => $params,
