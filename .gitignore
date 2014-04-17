@@ -30,3 +30,6 @@ node_modules
 .sass-cache
 .lrport
 
+# local configurations
+config/ENV
+config/*/*.local.php

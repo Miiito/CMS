@@ -1,7 +1,11 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
+require( dirname(__FILE__) . '/loader.php' );
+
+$common_cfg = require( dirname(__FILE__) . '/common.php');
+
+$env_specific = load_config('web.php');
+$env_specific_local = load_config('web.local.php');
 
 $config = [
     'id' => 'basic',
@@ -46,23 +50,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
     ],
-    'params' => $params,
 ];
 
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['components']['assetManager']['linkAssets'] = true;
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        'allowedIPs' => [ '*' ],
-    ];
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        'allowedIPs' => [ '*' ],
-    ];
-}
-
-return $config;
+return yii\helpers\ArrayHelper::merge($common_cfg, $config, $env_specific, $env_specific_local);
