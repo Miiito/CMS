@@ -1,0 +1,19 @@
+{
+  "name": "grunttest",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "tiny-lr-fork": "0.0.5",
+    "grunt-sass": "^0.12.1",
+    "node-sass": "^0.8.4",
+    "getPackages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git",
+    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-prompt": "^1.1.0",
+    "grunt-shell": "^0.6.4"
+  }
+}

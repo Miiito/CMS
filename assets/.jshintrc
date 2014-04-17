@@ -1,0 +1,11 @@
+{
+	"curly": true,
+	"es3": true,
+	"immed": true,
+	"latedef": true,
+	"nonew": true,
+	"undef": false,
+	"unused": false,
+	"trailing": true,
+	"browser": true
+}
