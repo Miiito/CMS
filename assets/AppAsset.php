@@ -7,7 +7,7 @@
 
 namespace app\assets;
 
-use yii\web\AssetBundle;
+use app\components\AssetBundle;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -15,14 +15,21 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $devPath = '@app/assets/main/src';
+    public $sourcePath = '@app/assets/main/dist';
+    public $imgPath = null;
+    public $scssPath = 'scss';
     public $css = [
         'css/site.css',
     ];
+    public $devJs = [
+        'js/combined.js' => [ 'js/someplugin.js', 'js/site.js' ],
+    ];
     public $js = [
+        'js/combined.js',
     ];
     public $depends = [
+        'yii\web\JqueryAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
