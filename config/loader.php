@@ -1,24 +1,25 @@
 <?php
 
-if (!function_exists('load_config')):
+if (!function_exists('load_config')) {
 
-function load_config($config_name) {
+    function load_config($config_name)
+    {
 
-    if (!defined('YII_CONFIG_ENVIRONMENT')) {
-        // define YII_CONFIG_ENVIRONMENT, YII_DEBUG and YII_TRACE_LEVEL
-        $env=dirname(__FILE__).'/env.php';
-        require_once($env);
+        if (!defined('YII_CONFIG_ENVIRONMENT')) {
+            // define YII_CONFIG_ENVIRONMENT, YII_DEBUG and YII_TRACE_LEVEL
+            $env=dirname(__FILE__).'/env.php';
+            require_once($env);
+        }
+
+        $env_config_path = dirname(__FILE__) . '/' . YII_CONFIG_ENVIRONMENT . '/' . $config_name;
+        if (is_file($env_config_path) && is_readable($env_config_path)) {
+            return include($env_config_path);
+        }
+
+        // no env-specific config found, return empty array
+
+        return array();
+
     }
-
-    $env_config_path = dirname(__FILE__) . '/' . YII_CONFIG_ENVIRONMENT . '/' . $config_name;
-    if (is_file($env_config_path) && is_readable($env_config_path)) {
-        return include($env_config_path);
-    }
-
-    // no env-specific config found, return empty array
-
-    return array();
 
 }
-
-endif;

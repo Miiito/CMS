@@ -9,12 +9,16 @@ if (!defined('YII_CONFIG_ENVIRONMENT')) {
         $env = '';
     }
 
-    if (preg_match("/^([a-z0-9]+)/", $env, $matches)) $env = $matches[1];
-    if (empty($env)) $env = 'development';
+    if (preg_match("/^([a-z0-9]+)/", $env, $matches)) {
+        $env = $matches[1];
+    }
+    if (empty($env)) {
+        $env = 'development';
+    }
 
     define('YII_CONFIG_ENVIRONMENT', $env);
     if ($env == 'development') {
-        defined('YII_DEBUG') or define('YII_DEBUG',true);
+        defined('YII_DEBUG') or define('YII_DEBUG', true);
         defined('YII_ENV') or define('YII_ENV', 'dev');
     }
 }
