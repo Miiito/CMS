@@ -55,7 +55,10 @@ if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['components']['assetManager']['linkAssets'] = true;
     $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = 'yii\debug\Module';
+    $config['modules']['debug'] = [
+        'class' => 'yii\debug\Module',
+        'allowedIPs' => [ '*' ],
+    ];
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         'allowedIPs' => [ '*' ],
