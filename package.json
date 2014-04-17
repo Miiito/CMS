@@ -14,6 +14,7 @@
     "getPackages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git",
     "grunt-contrib-imagemin": "^0.6.1",
     "grunt-prompt": "^1.1.0",
-    "grunt-shell": "^0.6.4"
+    "grunt-shell": "^0.6.4",
+    "grunt-phpcs": "^0.2.2"
   }
 }

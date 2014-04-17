@@ -36,7 +36,7 @@ class PackagesController extends Controller
             if (is_array($config)) {
                 if (!empty($config['basePath'])) {
                     $path = realpath($config['basePath']);
-                } else if (!empty($config['class'])) {
+                } elseif (!empty($config['class'])) {
                     $class = new \ReflectionClass($config['class']);
                     $path = dirname($class->getFileName());
                     if ($path === false) {

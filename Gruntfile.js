@@ -137,6 +137,15 @@ module.exports = function(grunt) {
 					livereload: true
 				}
 			}
+		},
+		phpcs: {
+			application: {
+				dir: ['**/*.php', '!vendor/**/*', '!node_modules/**/*']
+			},
+			options: {
+				bin: 'vendor/bin/phpcs',
+				standard: 'vendor/yiisoft/yii2-coding-standards/Yii2'
+			}
 		}
 	});
 
@@ -148,6 +157,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-prompt');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-phpcs');
 
 	grunt.renameTask('watch', 'watchorig');
 
