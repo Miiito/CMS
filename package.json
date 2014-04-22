@@ -11,10 +11,10 @@
     "tiny-lr-fork": "0.0.5",
     "grunt-sass": "^0.12.1",
     "node-sass": "^0.8.4",
-    "getPackages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git",
     "grunt-contrib-imagemin": "^0.6.1",
     "grunt-prompt": "^1.1.0",
     "grunt-shell": "^0.6.4",
-    "grunt-phpcs": "^0.2.2"
+    "grunt-phpcs": "^0.2.2",
+    "get-packages": "git+ssh://git@gitlab.mito.hu:2222/gg.kovacs/getpackages.git"
   }
 }

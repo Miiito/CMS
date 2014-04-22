@@ -162,10 +162,13 @@ module.exports = function(grunt) {
 	grunt.renameTask('watch', 'watchorig');
 
 	grunt.registerTask('getpackages','Get packages from yii and configure tasks', function() {
-		var getPackages = require('getPackages');
+		var getPackages = require('get-packages');
 		var i, l;
 
-		getPackages.init();
+		getPackages.init({
+			applicationPath: '.',
+			yiiPackagesCommand: 'yii packages'
+		});
 
 		var packages = getPackages.get();
 		var buildJsFiles = {},
