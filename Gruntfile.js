@@ -11,14 +11,7 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
 			build: {
-				//files: buildJsFiles
 				files: []
-				/*files: {
-					'protected/assets/main/dist/js/combined.js' : [
-						'protected/assets/main/src/js/someplugin.js',
-						'protected/assets/main/src/js/site.js'
-					]
-				}*/
 			}
 		},
 		jshint: {
@@ -34,7 +27,6 @@ module.exports = function(grunt) {
 		},
 		imagemin: {
 			dist: {
-				//files: images
 				files: []
 			}
 		},
@@ -43,29 +35,13 @@ module.exports = function(grunt) {
 				options: {
 					style: 'expanded'
 				},
-				//files: csswatches
 				files: []
-				/*files: [{
-					expand: true,
-					cwd: 'protected/assets/main/src/scss',
-					src: ['*.scss'],
-					dest: 'protected/assets/main/src/css',
-					ext: '.css'
-				}]*/
 			},
 			dist: {
 				options: {
 					style: 'compressed'
 				},
-				//files: cssbuild
 				files: []
-				/*files: [{
-					expand: true,
-					cwd: 'protected/assets/main/src/scss',
-					src: ['*.scss'],
-					dest: 'protected/assets/main/dist/css',
-					ext: '.css'
-				}]*/
 			}
 		},
 		copy: {
@@ -121,9 +97,7 @@ module.exports = function(grunt) {
 		},
 		watchorig: {
 			css: {
-				//files: scsswatch,
 				files: [],
-				//files: 'protected/assets/main/src/scss/**/*',
 				tasks: ['sass:watch'],
 				options: {
 					atBegin: true,
@@ -132,9 +106,7 @@ module.exports = function(grunt) {
 				}
 			},
 			reload: {
-				//files: cssreload,
 				files: [],
-				//files: 'protected/assets/main/src/css/**/*',
 				options: {
 					// libsass is too fast for the default 100 interval
 					interval: 20,
