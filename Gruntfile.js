@@ -140,7 +140,10 @@ module.exports = function(grunt) {
 		},
 		phpcs: {
 			application: {
-				dir: ['**/*.php', '!vendor/**/*', '!node_modules/**/*']
+				dir: ['**/*.php',
+					'!vendor/**/*', '!node_modules/**/*',
+					'!views/*/*', '!mail/layouts/*', '!mail/views/*', '!modules/*/views/*/*',
+					'!setup.php', '!web/**/*', '!tests/**/*', '!config/**/*']
 			},
 			options: {
 				bin: 'vendor/bin/phpcs',
