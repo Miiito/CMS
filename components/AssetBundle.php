@@ -7,6 +7,7 @@ class AssetBundle extends \yii\web\AssetBundle
     public $devJs = [];
     public $devPath = null;
     public $imgPath = null;
+    public $fontPath = null;
     public $scssPath = null;
 
     /**

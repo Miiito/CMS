@@ -68,6 +68,11 @@ module.exports = function(grunt) {
 				}]*/
 			}
 		},
+		copy: {
+			fonts: {
+				files: []
+			}
+		},
 		shell: {
 			setup: {
 				command: 'php setup.php <%= environment %>',
@@ -161,6 +166,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-phpcs');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.renameTask('watch', 'watchorig');
 
@@ -204,6 +210,7 @@ module.exports = function(grunt) {
 			cssreload.push(packages.cssfiles[i].dev + '/**/*');
 		}
 		var images = [];
+		var fonts = [];
 		for (i=0, l=packages.packages.length; i<l; ++i) {
 			if (packages.packages[i].imgPath) {
 				images.push({
@@ -214,12 +221,21 @@ module.exports = function(grunt) {
 				});
 				cssreload.push(packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/' + '**/*.{png,jpg,jpeg,gif}');
 			}
+			if (packages.packages[i].fontPath) {
+				fonts.push({
+					expand: true,
+					cwd: packages.packages[i].sources + '/' + packages.packages[i].fontPath + '/',
+					src: ['**/*'],
+					dest: packages.packages[i].dist + '/' + packages.packages[i].fontPath + '/'
+				});
+			}
 		}
 
 		grunt.config.set('uglify.build.files',buildJsFiles);
 		grunt.config.set('imagemin.dist.files',images);
 		grunt.config.set('sass.watch.files',csswatches);
 		grunt.config.set('sass.dist.files',cssbuild);
+		grunt.config.set('copy.fonts.files',fonts);
 		grunt.config.set('watchorig.css.files',scsswatch);
 		grunt.config.set('watchorig.reload.files',cssreload);
 		grunt.config.set('jshint.all.files.src',hintJsFiles);
@@ -271,7 +287,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('watch', ['getpackages', 'tinylr-findport']);
 
-	grunt.registerTask('build', ['getpackages', 'jshint', 'uglify', 'imagemin', 'sass:dist']);
+	grunt.registerTask('build', ['getpackages', 'jshint', 'uglify', 'imagemin', 'sass:dist', 'copy:fonts']);
 
 	grunt.registerTask('hint', ['getpackages', 'jshint']);
 

@@ -15,6 +15,7 @@
     "grunt-prompt": "^1.1.0",
     "grunt-shell": "^0.6.4",
     "grunt-phpcs": "^0.2.2",
+    "grunt-contrib-copy": "^0.5.0",
     "get-packages": "git+ssh://git@gitlab.mito.hu:2222/gg.kovacs/getpackages.git"
   }
 }

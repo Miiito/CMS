@@ -118,6 +118,9 @@ class PackagesController extends Controller
                 if ($bundle->imgPath !== null) {
                     $config['imgPath'] = $bundle->imgPath;
                 }
+                if ($bundle->fontPath !== null) {
+                    $config['fontPath'] = $bundle->fontPath;
+                }
                 $ret['packages'][] = $config;
             }
         }
