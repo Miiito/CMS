@@ -18,6 +18,7 @@ if (!defined('YII_CONFIG_ENVIRONMENT')) {
 
     define('YII_CONFIG_ENVIRONMENT', $env);
     if ($env == 'development') {
+        error_reporting(-1);
         defined('YII_DEBUG') or define('YII_DEBUG', true);
         defined('YII_ENV') or define('YII_ENV', 'dev');
     }
