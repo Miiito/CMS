@@ -16,7 +16,7 @@ use app\components\AssetBundle;
 class AppAsset extends AssetBundle
 {
     public $devPath = '@app/assets/main/src';
-    public $sourcePath = '@app/assets/main/dist';
+    public $distPath = '@app/assets/main/dist';
     public $imgPath = null;
     public $scssPath = 'scss';
     public $css = [

@@ -9,6 +9,7 @@ class AssetBundle extends \yii\web\AssetBundle
     public $imgPath = null;
     public $fontPath = null;
     public $scssPath = null;
+    public $distPath = null;
 
     /**
      * {@inheritdoc}
@@ -26,6 +27,10 @@ class AssetBundle extends \yii\web\AssetBundle
             }
             if ($this->devPath !== null) {
                 $this->sourcePath = $this->devPath;
+            }
+        } else {
+            if ($this->distPath !== null) {
+                $this->sourcePath = $this->distPath;
             }
         }
         parent::init();

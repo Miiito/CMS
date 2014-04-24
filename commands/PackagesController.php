@@ -84,12 +84,12 @@ class PackagesController extends Controller
             foreach ($bundles as $bundleName) {
                 $bundle = Yii::createObject($bundleName);
 
-                if ($bundle->devPath === null || $bundle->sourcePath === null) {
+                if ($bundle->devPath === null || $bundle->distPath === null) {
                     continue;
                 }
                 $config = [
                     'sources' => Yii::getAlias($bundle->devPath),
-                    'dist' => Yii::getAlias($bundle->sourcePath),
+                    'dist' => Yii::getAlias($bundle->distPath),
                 ];
                 if ($bundle->scssPath !== null) {
                     $config['scssPath'] = $bundle->scssPath;
