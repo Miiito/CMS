@@ -119,7 +119,8 @@ module.exports = function(grunt) {
 			application: {
 				dir: ['**/*.php',
 					'!vendor/**/*', '!node_modules/**/*',
-					'!views/*/*', '!mail/layouts/*', '!mail/views/*', '!modules/*/views/*/*',
+					'!views/*/*', '!mail/*/*', '!modules/*/views/*/*',
+					'!migrations/*',
 					'!setup.php', '!web/**/*', '!tests/**/*', '!config/**/*']
 			},
 			options: {
