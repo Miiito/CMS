@@ -75,6 +75,7 @@ GRUNT
 -----
 
 The following commands are available:
+
 * setup : choose environment
 * phpcs : run php codesniffer on source code
 * hint : run jshint on javascript files; will use .jshintrc files
