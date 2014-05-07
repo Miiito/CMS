@@ -35,35 +35,17 @@ The minimum requirement by this application template that your Web server suppor
 INSTALLATION
 ------------
 
-### Install from an Archive File
-
-Extract the archive file downloaded from [yiiframework.com](http://www.yiiframework.com/download/) to
-a directory named `basic` that is directly under the Web root.
-
-You can then access the application through the following URL:
-
-~~~
-http://localhost/basic/web/
-~~~
-
-
-### Install via Composer
-
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-You can then install this application template using the following command:
+After cloning the repository, run:
 
 ~~~
-php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic basic
+composer install
+npm install
 ~~~
 
-Now you should be able to access the application through the following URL, assuming `basic` is the directory
-directly under the Web root.
-
-~~~
-http://localhost/basic/web/
-~~~
+Run `grunt setup` to choose an environment.
 
 
 CONFIGURATION
@@ -71,18 +53,48 @@ CONFIGURATION
 
 ### Database
 
-Edit the file `config/db.php` with real data, for example:
+Create the file `config/development/common.php` with real data, for example:
 
 ```php
 return [
-	'class' => 'yii\db\Connection',
-	'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-	'username' => 'root',
-	'password' => '1234',
-	'charset' => 'utf8',
+    'components' => [
+        'db' => [
+            'dsn' => 'mysql:host=localhost;dbname=yii2sample',
+            'username' => 'php',
+            'password' => 'phppass',
+        ]
+    ],
 ];
 ```
 
 **NOTE:** Yii won't create the database for you, this has to be done manually before you can access it.
 
 Also check and edit the other files in the `config/` directory to customize your application.
+
+GRUNT
+-----
+
+The following commands are available:
+* setup : choose environment
+* phpcs : run php codesniffer on source code
+* hint : run jshint on javascript files; will use .jshintrc files
+* watch : watch scss files for changes and regenerate css files; starts a livereload server on a random port
+* build : generate minified js, css, optimize images and copy fonts; will run hint and abort if it fails
+
+To use the livereload server over ssh, forward the random port selected by the watch command to localhost:35729, e.g.:
+    ssh -L 35729:localhost:39307 dev.mito.hu
+
+Some directories are excluded from the phpcs task (views, migrations, configs etc.). Check the gruntfile for details.
+
+ASSETS
+------
+
+Asset bundles should extend from `app\components\AssetBundle` and should be placed in `app\assets` or the module's assets directory.
+The assets directory should contain a `bundles.php` file, which should return an array of classnames of all asset bundles.
+The build process will build these assets.
+In the development environment `devPath` is used as the base path for publishing assets; `distPath` is used in production, and
+the build process will output files there.
+Any array elements in `devJs` will be combined and minified into the js file specified by the element's key.
+If `scssPath` is specified, all files found inside that directory will be compiled to a file with the same name under the css diretory.
+If `imgPath` is specified, all files found inside that directory will be optimized and copied to a directory with the same name under the dist path.
+If `fontPath` is specified, all files found inside that directory will be copied to a directory with the same name under the dist path.
