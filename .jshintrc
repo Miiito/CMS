@@ -1,6 +1,11 @@
-// WARNING: This file is used for hinting the gruntfile. For hinting application js code, edit assets/.jshintrc or modules/<module>/assets/.jshintrc
-
 {
 	"curly": true,
-	"es3": false
+	"es3": true,
+	"immed": true,
+	"latedef": true,
+	"nonew": true,
+	"undef": false,
+	"unused": false,
+	"trailing": true,
+	"browser": true
 }

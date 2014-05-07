@@ -15,11 +15,19 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			options: {
-				jshintrc: true
+			gruntfile: {
+				files: {
+					src: ['Gruntfile.js']
+				},
+				options: {
+					curly: true,
+					es3: false
+				}
 			},
-			gruntfile: ['Gruntfile.js'],
 			all: {
+				options: {
+					jshintrc: true,
+				},
 				files: {
 					src: []
 				}
