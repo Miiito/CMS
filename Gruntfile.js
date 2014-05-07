@@ -55,6 +55,9 @@ module.exports = function(grunt) {
 		copy: {
 			fonts: {
 				files: []
+			},
+			images: {
+				files: []
 			}
 		},
 		shell: {
@@ -191,6 +194,7 @@ module.exports = function(grunt) {
 			cssreload.push(packages.cssfiles[i].dev + '/**/*');
 		}
 		var images = [];
+		var nonimages = [];
 		var fonts = [];
 		for (i=0, l=packages.packages.length; i<l; ++i) {
 			if (packages.packages[i].imgPath) {
@@ -201,6 +205,12 @@ module.exports = function(grunt) {
 					dest: packages.packages[i].dist + '/' + packages.packages[i].imgPath + '/'
 				});
 				cssreload.push(packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/' + '**/*.{png,jpg,jpeg,gif}');
+				nonimages.push({
+					expand: true,
+					cwd: packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/',
+					src: ['**/*', '!**/*.{png,jpg,jpeg,gif}'],
+					dest: packages.packages[i].dist + '/' + packages.packages[i].imgPath + '/'
+				});
 			}
 			if (packages.packages[i].fontPath) {
 				fonts.push({
@@ -214,6 +224,7 @@ module.exports = function(grunt) {
 
 		grunt.config.set('uglify.build.files',buildJsFiles);
 		grunt.config.set('imagemin.dist.files',images);
+		grunt.config.set('copy.images.files',nonimages);
 		grunt.config.set('sass.watch.files',csswatches);
 		grunt.config.set('sass.dist.files',cssbuild);
 		grunt.config.set('copy.fonts.files',fonts);
@@ -268,7 +279,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('watch', ['getpackages', 'tinylr-findport']);
 
-	grunt.registerTask('build', ['getpackages', 'jshint', 'uglify', 'imagemin', 'sass:dist', 'copy:fonts']);
+	grunt.registerTask('build', ['getpackages', 'jshint', 'uglify', 'imagemin', 'copy:images', 'sass:dist', 'copy:fonts']);
 
 	grunt.registerTask('hint', ['getpackages', 'jshint']);
 
