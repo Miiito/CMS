@@ -12,15 +12,16 @@ class_name: WebGuy
 modules:
     enabled:
         - WebHelper
-        - PhpBrowser
+        - PhpBrowserAuthHelper
 # you can use WebDriver instead of PhpBrowser to test javascript and ajax.
 # This will require you to install selenium. See http://codeception.com/docs/04-AcceptanceTests#Selenium
 # "restart" option is used by the WebDriver to start each time per test-file new session and cookies,
 # it is useful if you want to login in your app in each test.
 #        - WebDriver
     config:
-        PhpBrowser:
-            url: 'http://playground/nkovacs/yii2/'
+        PhpBrowserAuthHelper:
+            url: 'http://playground'
+            auth: ['mito', 'mito']
 #        WebDriver:
 #            url: 'http://localhost'
 #            browser: firefox

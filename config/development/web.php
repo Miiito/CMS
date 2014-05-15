@@ -1,22 +1,26 @@
 <?php
 
-return [
+$config = [
     'components' => [
         'assetManager' => [
             'linkAssets' => true,
         ],
     ],
-    'bootstrap' => [
-        'debug',
-    ],
+    'bootstrap' => [],
     'modules' => [
-        'debug' => [
-            'class' => 'yii\debug\Module',
-            'allowedIPs' => [ '*' ],
-        ],
         'gii' => [
             'class' => 'yii\gii\Module',
             'allowedIPs' => [ '*' ],
         ],
     ],
 ];
+
+if (YII_ENV !== 'test') {
+    $config['bootstrap'][] = 'debug';
+    $config['modules']['debug'] = [
+        'class' => 'yii\debug\Module',
+        'allowedIPs' => [ '*' ],
+    ];
+}
+
+return $config;
