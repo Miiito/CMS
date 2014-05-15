@@ -21,8 +21,8 @@ use yii\web\View;
 class JqueryAsset extends AssetBundle
 {
     public $sourcePath = null;
-    public $devJs = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js' ];
-    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js' ];
+    public $devJs = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js' ];
+    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' ];
     public $fallback = null;
     public $check = null;
 
