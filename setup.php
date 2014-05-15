@@ -25,7 +25,7 @@ class Setup
 
         self::setupWritablePaths($server_group);
         self::writeEnv($args[1]);
-        self::installHooks();
+        //self::installHooks();
     }
 
     protected static function getGroupName($grpName)

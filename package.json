@@ -11,11 +11,20 @@
     "tiny-lr-fork": "0.0.5",
     "grunt-sass": "^0.12.1",
     "node-sass": "^0.8.4",
-    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-contrib-imagemin": "~0.7.0",
     "grunt-prompt": "^1.1.0",
     "grunt-shell": "^0.6.4",
     "grunt-phpcs": "^0.2.2",
     "grunt-contrib-copy": "^0.5.0",
-    "get-packages": "git+ssh://git@gitlab.mito.hu:2222/gg.kovacs/getpackages.git"
+    "get-packages": "git+ssh://git@gitlab.mito.hu:2222/gg.kovacs/getpackages.git",
+    "jit-grunt": "^0.6.0",
+    "grunt-githooks": "^0.3.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "time-grunt": "^0.3.1",
+    "grunt-phplint": "0.0.5",
+    "execSync": "^1.0.1-pre"
+  },
+  "scripts": {
+    "postinstall": "grunt postinstall"
   }
 }

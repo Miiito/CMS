@@ -1,11 +1,40 @@
-var tinylr = require('tiny-lr-fork');
-
 module.exports = function(grunt) {
+	if (grunt.option('time')) {
+		require('time-grunt')(grunt);
+	}
+
+	require('jit-grunt')(grunt, {
+		sass: 'grunt-sass', // jit-grunt looks for grunt-contrib-sass first
+		watchorig: 'grunt-contrib-watch'/*,
+		replace: 'grunt-text-replace'*/
+	});
 
 	// Project configuration.
 	grunt.initConfig({
 		environment: grunt.option('environment') || false,
 		pkg: grunt.file.readJSON('package.json'),
+		clean: {
+			// Clean any pre-commit hooks in .git/hooks directory
+			hooks: ['.git/hooks/pre-commit']
+		},
+		githooks: {
+			staged: {
+				options: {
+					template: 'hooks/staged.js.hbs'
+				},
+				'pre-commit': 'commit'
+			}/*,
+			update: {
+				options: {
+					template: 'hooks/update.js.hbs'
+				},
+				'post-merge': true,
+				'post-checkout': true
+			}*/
+		},
+		phplint: {
+			precommit: ['**/*.php'],
+		},
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -141,7 +170,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	/*grunt.loadNpmTasks('grunt-contrib-uglify');
 	//grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -152,7 +181,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-phpcs');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.renameTask('watch', 'watchorig');
+	grunt.renameTask('watch', 'watchorig');*/
 
 	grunt.registerTask('getpackages','Get packages from yii and configure tasks', function() {
 		var getPackages = require('get-packages');
@@ -234,8 +263,11 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerMultiTask('tinylr-findport', 'Find a port and start the tinylr server', function() {
+		var tinylr = require('tiny-lr-fork');
 		var server = tinylr();
 		var task = this.data.task;
+		var load = this.data.load;
+		var rename = this.data.rename;
 		var target = this.data.target;
 
 		var startPort = false;
@@ -269,6 +301,12 @@ module.exports = function(grunt) {
 					grunt.log.write('Found port:');
 					grunt.log.writeln(port.toString().green.bold);
 					grunt.config.set(task+'.'+target+'.options.livereload', port);
+					if (load) {
+						grunt.loadNpmTasks(load);
+						if (rename) {
+							grunt.renameTask(rename, task);
+						}
+					}
 					grunt.task.run(task);
 				}
 			});
@@ -277,13 +315,38 @@ module.exports = function(grunt) {
 		tryPort();
 	});
 
+	grunt.registerTask('changedonly','Lint and check only those files that are about to be commited', function() {
+
+		var list = require('execSync').exec('git diff-index --cached --name-only --diff-filter=ACMR HEAD').stdout.split("\n");
+		var path = require('path');
+
+		list = list.filter(function(p) {
+			return path.extname(p) == '.php';
+		});
+
+		grunt.config.set('phplint.precommit', list);
+		//grunt.config.set('phpcs.application.dir', list);
+	});
+
+	grunt.registerTask('phpcswrapper','Only run phpcs if there are files to check', function() {
+		if (grunt.config.get('phpcs.application.dir').length) {
+			grunt.task.run('phpcs');
+		}
+	});
+
+	grunt.registerTask('commit', ['changedonly', 'phplint', 'hint']);
+
 	grunt.registerTask('watch', ['getpackages', 'tinylr-findport']);
 
 	grunt.registerTask('build', ['getpackages', 'jshint', 'uglify', 'imagemin', 'copy:images', 'sass:dist', 'copy:fonts']);
 
 	grunt.registerTask('hint', ['getpackages', 'jshint']);
 
-	grunt.registerTask('setup', ['prompt', 'shell:setup']);
+	grunt.registerTask('setup', ['prompt:setup', 'shell:setup']);
+
+	grunt.registerTask('hooks', ['clean:hooks', 'githooks']);
+
+	grunt.registerTask('postinstall', ['hooks', 'setup'/*, 'localemail'*/]);
 
 	// Default task(s).
 	grunt.registerTask('default', ['build']);
