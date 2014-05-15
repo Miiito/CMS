@@ -5,6 +5,7 @@ class Setup
     protected static $serverWritablePaths = array(
         'runtime',
         'web/assets',
+        'testweb/assets',
     );
 
     protected static $defaultServerGroup = 'apache';
