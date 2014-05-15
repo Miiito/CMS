@@ -50,5 +50,11 @@
 		"executable": [
 			"yii"
 		]
-	}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://satis.mito.hu"
+		}
+	]
 }
