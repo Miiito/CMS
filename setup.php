@@ -6,6 +6,7 @@ class Setup
         'runtime',
         'web/assets',
         'testweb/assets',
+        'c3tmp',
     );
 
     protected static $defaultServerGroup = 'apache';

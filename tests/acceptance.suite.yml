@@ -20,7 +20,7 @@ modules:
 #        - WebDriver
     config:
         PhpBrowserAuthHelper:
-            url: 'http://playground'
+            url: 'http://mito:mito@playground'
             auth: ['mito', 'mito']
 #        WebDriver:
 #            url: 'http://localhost'
