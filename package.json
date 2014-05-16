@@ -22,7 +22,8 @@
     "grunt-contrib-clean": "^0.5.0",
     "time-grunt": "^0.3.1",
     "grunt-phplint": "0.0.5",
-    "execSync": "^1.0.1-pre"
+    "execSync": "^1.0.1-pre",
+    "grunt-text-replace": "^0.3.11"
   },
   "scripts": {
     "postinstall": "grunt postinstall"

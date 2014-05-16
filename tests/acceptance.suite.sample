@@ -1,0 +1,8 @@
+modules:
+    config:
+        PhpBrowser:
+            url: 'http://mito:mito@playground'
+            auth: ['mito', 'mito']
+        #WebDriver:
+        #    url: 'http://mito:mito@playground'
+        #    browser: 'phantomjs'

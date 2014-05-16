@@ -21,12 +21,8 @@ modules:
 #        - WebDriver
     config:
         PhpBrowser:
-            url: 'http://mito:mito@playground'
-            auth: ['mito', 'mito']
+            #url:
+            #auth:
         #WebDriver:
-        #    url: 'http://mito:mito@playground'
+        #    #url:
         #    browser: 'phantomjs'
-#        WebDriver:
-#            url: 'http://localhost'
-#            browser: firefox
-#            restart: true

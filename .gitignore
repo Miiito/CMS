@@ -36,3 +36,7 @@ config/*/*.local.php
 
 # codeception code coverage
 c3tmp
+
+# codeception local config
+tests/_bootstrap.local.php
+tests/acceptance.suite.yml

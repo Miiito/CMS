@@ -5,8 +5,8 @@ module.exports = function(grunt) {
 
 	require('jit-grunt')(grunt, {
 		sass: 'grunt-sass', // jit-grunt looks for grunt-contrib-sass first
-		watchorig: 'grunt-contrib-watch'/*,
-		replace: 'grunt-text-replace'*/
+		watchorig: 'grunt-contrib-watch',
+		replace: 'grunt-text-replace'
 	});
 
 	// Project configuration.
@@ -89,6 +89,16 @@ module.exports = function(grunt) {
 				files: []
 			}
 		},
+		copykeep: {
+			testroot: {
+				src: 'tests/_bootstrap.local.sample',
+				dest: 'tests/_bootstrap.local.php'
+			},
+			acceptancehost: {
+				src: 'tests/acceptance.suite.sample',
+				dest: 'tests/acceptance.suite.yml',
+			}
+		},
 		shell: {
 			setup: {
 				command: 'php setup.php <%= environment %>',
@@ -139,6 +149,29 @@ module.exports = function(grunt) {
 						}
 					]
 				}
+			},
+			testroot: {
+				options: {
+					questions: [
+						{
+							config: 'testroot',
+							message: 'Base URL of testroot (without hostname, with leading /)',
+							type: 'input'
+						}
+					]
+				}
+			}
+		},
+		replace: {
+			testroot: {
+				src: 'tests/_bootstrap.local.php',
+				overwrite: true,
+				replacements: [{
+					from: /define\('TEST_ENTRY_URL','[^']*'\);/,
+					to: function(matchedWord, index, fullText, regexMatches) {
+						return "define('TEST_ENTRY_URL','" + grunt.config('testroot') + "');";
+					}
+				}]
 			}
 		},
 		'tinylr-findport': {
@@ -346,6 +379,14 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.registerMultiTask('copykeep', 'Copy source to destination if destination does not exist', function() {
+		var source = this.data.src,
+		    destination = this.data.dest;
+		if (!grunt.file.exists(destination)) {
+			grunt.file.copy(source, destination);
+		}
+	});
+
 	grunt.registerTask('commit', ['changedonly', 'phplint', 'hint']);
 
 	grunt.registerTask('watch', ['getpackages', 'tinylr-findport']);
@@ -359,6 +400,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('hooks', ['clean:hooks', 'githooks']);
 
 	grunt.registerTask('postinstall', ['hooks', 'setup'/*, 'localemail'*/]);
+
+	grunt.registerTask('testroot', ['copykeep:testroot', 'prompt:testroot', 'replace:testroot']);
 
 	grunt.registerTask('test', ['shell:codeceptbuild', 'shell:codeception']);
 
