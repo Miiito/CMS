@@ -7,6 +7,7 @@ class Setup
         'web/assets',
         'testweb/assets',
         'tests/_log',
+        'runtime/mail', //needed for tests
     );
 
     protected static $defaultServerGroup = 'apache';
