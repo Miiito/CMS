@@ -12,6 +12,9 @@
 
 if (isset($_COOKIE['CODECEPTION_CODECOVERAGE'])) {
     $cookie = json_decode($_COOKIE['CODECEPTION_CODECOVERAGE'], true);
+    if (is_string($cookie)) {
+        $cookie = json_decode($cookie);
+    }
 
     if ($cookie) {
         foreach ($cookie as $key => $value) {
