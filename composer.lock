@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "717a13884a1d95862dcb615268101114",
+    "hash": "792533595c81da65932de8bef2fdbf88",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -477,16 +477,16 @@
     "packages-dev": [
         {
             "name": "codeception/codeception",
-            "version": "2.0.0-RC2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "e4035a6e2465e51ffe1a9823da082e0d246b3b69"
+                "url": "https://github.com/nkovacs/Codeception.git",
+                "reference": "65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/e4035a6e2465e51ffe1a9823da082e0d246b3b69",
-                "reference": "e4035a6e2465e51ffe1a9823da082e0d246b3b69",
+                "url": "https://api.github.com/repos/nkovacs/Codeception/zipball/65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c",
+                "reference": "65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c",
                 "shasum": ""
             },
             "require": {
@@ -522,7 +522,6 @@
                     "Codeception": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -537,12 +536,15 @@
             "homepage": "http://codeception.com/",
             "keywords": [
                 "BDD",
-                "TDD",
                 "acceptance testing",
                 "functional testing",
+                "tdd",
                 "unit testing"
             ],
-            "time": "2014-05-13 01:52:17"
+            "support": {
+                "source": "https://github.com/nkovacs/Codeception/tree/master"
+            },
+            "time": "2014-05-16 12:30:14"
         },
         {
             "name": "codeception/specify",
@@ -1907,12 +1909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a"
+                "reference": "2158ca824145bd01877f58c987aff828bccddefa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/e9525fc511a51e7bfa214c6c420515c580fda35a",
-                "reference": "e9525fc511a51e7bfa214c6c420515c580fda35a",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2158ca824145bd01877f58c987aff828bccddefa",
+                "reference": "2158ca824145bd01877f58c987aff828bccddefa",
                 "shasum": ""
             },
             "require": {
@@ -1947,7 +1949,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:40:13"
+            "time": "2014-05-16 14:25:18"
         },
         {
             "name": "yiisoft/yii2-codeception",
