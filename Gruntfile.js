@@ -96,6 +96,18 @@ module.exports = function(grunt) {
 					stdout: true
 				}
 			},
+			codeceptbuild: {
+				command: 'vendor/bin/codecept build',
+				options: {
+					stdout: true
+				}
+			},
+			codeception: {
+				command: 'vendor/bin/codecept run --coverage --html --coverage-html',
+				options: {
+					stdout: true
+				}
+			},
 			test: {
 				command: 'echo <%= environment %>',
 				options: {
@@ -347,6 +359,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('hooks', ['clean:hooks', 'githooks']);
 
 	grunt.registerTask('postinstall', ['hooks', 'setup'/*, 'localemail'*/]);
+
+	grunt.registerTask('test', ['shell:codeceptbuild', 'shell:codeception']);
 
 	// Default task(s).
 	grunt.registerTask('default', ['build']);
