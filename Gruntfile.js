@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 					questions: [
 						{
 							config: 'testroot',
-							message: 'Base URL of testroot (without hostname, with leading /)',
+							message: 'Base URL of this app (e.g. "/me/yii2/basic")',
 							type: 'input'
 						}
 					]
@@ -167,9 +167,9 @@ module.exports = function(grunt) {
 				src: 'tests/_bootstrap.local.php',
 				overwrite: true,
 				replacements: [{
-					from: /define\('TEST_ENTRY_URL','[^']*'\);/,
+					from: /define\('TEST_ENTRY_URL',\s*'[^']*'\);/,
 					to: function(matchedWord, index, fullText, regexMatches) {
-						return "define('TEST_ENTRY_URL','" + grunt.config('testroot') + "');";
+						return "define('TEST_ENTRY_URL', '/" + grunt.config('testroot').replace(/^(\/)|(\/)$/g, '') + "/testweb/index-test.php');";
 					}
 				}]
 			}
