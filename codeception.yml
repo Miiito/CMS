@@ -18,4 +18,11 @@ modules:
             dump: tests/_data/dump.sql
 coverage:
     enabled: true
-    c3url: '/nkovacs/yii2/basic/c3.php'
+    whitelist:
+        include:
+            - models/*.php
+            - components/*.php
+            - commands/*.php
+            - controllers/*.php
+            - modules/*.php
+    c3url: '/nkovacs/yii2/basic/testweb/index-test.php'
