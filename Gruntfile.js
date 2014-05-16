@@ -401,7 +401,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('postinstall', ['hooks', 'setup'/*, 'localemail'*/]);
 
-	grunt.registerTask('testroot', ['copykeep:testroot', 'prompt:testroot', 'replace:testroot']);
+	grunt.registerTask('testroot', ['copykeep:testroot', 'copykeep:acceptancehost', 'prompt:testroot', 'replace:testroot']);
 
 	grunt.registerTask('test', ['shell:codeceptbuild', 'shell:codeception']);
 
