@@ -62,7 +62,7 @@ class AssetBundle extends \yii\web\AssetBundle
      */
     public function init()
     {
-        if (YII_ENV_DEV) {
+        if (YII_DEBUG) {
             $this->js = array();
             foreach ($this->devJs as $name => $scripts) {
                 if (is_array($scripts)) {
