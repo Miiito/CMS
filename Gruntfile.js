@@ -202,11 +202,22 @@ module.exports = function(grunt) {
 		},
 		phpcs: {
 			application: {
-				dir: ['**/*.php',
-					'!vendor/**/*', '!node_modules/**/*',
-					'!views/*/*', '!mail/*/*', '!modules/*/views/*/*',
-					'!migrations/*',
-					'!setup.php', '!web/**/*', '!tests/**/*', '!config/**/*']
+				//dir: [
+				//	'**/*.php',
+				//	'!vendor/**/*', '!node_modules/**/*',
+				//	'!views/*/*', '!mail/*/*', '!modules/*/views/*/*',
+				//	'!migrations/*',
+				//	'!setup.php', '!web/**/*', '!tests/**/*', '!config/**/*', '!testweb/**/*'
+				//]
+				dir: [
+					'components/**/*.php',
+					'modules/**/*.php',
+					'!modules/*/views/*/*',
+					'assets/**/*.php',
+					'controllers/**/*.php',
+					'commands/**/*.php',
+					'models/**/*.php',
+				]
 			},
 			options: {
 				bin: 'vendor/bin/phpcs',
