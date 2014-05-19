@@ -13,7 +13,7 @@ namespace app\assets;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class JqueryAssetLocal extends \app\components\AssetBundle
+class JqueryAssetLocal extends \mito\assets\AssetBundle
 {
     public $sourcePath = '@vendor/yiisoft/jquery';
     public $devJs = [ 'jquery.js' ];

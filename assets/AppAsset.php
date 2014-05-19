@@ -7,13 +7,11 @@
 
 namespace app\assets;
 
-use app\components\AssetBundle;
-
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
+class AppAsset extends \mito\assets\AssetBundle
 {
     public $devPath = '@app/assets/main/src';
     public $distPath = '@app/assets/main/dist';

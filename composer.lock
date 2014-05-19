@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "792533595c81da65932de8bef2fdbf88",
+    "hash": "fbb9ac2faaba84ba8f61bf1d81db2ab5",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -110,6 +110,42 @@
             "time": "2013-11-30 08:25:19"
         },
         {
+            "name": "mito/yii2-enhanced-assets",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@gitlab.mito.hu:2222/n.kovacs/yii2-enhanced-assets.git",
+                "reference": "f110cd6ac895082e8784692907b51a5eb4c0f993"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-34613b.zip",
+                "reference": "f110cd6ac895082e8784692907b51a5eb4c0f993",
+                "shasum": "e75441becad7d8cce30f8af85936a4c6df06c854"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "mito\\assets\\": ""
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikola Kovacs",
+                    "email": "n.kovacs@mito.hu"
+                }
+            ],
+            "description": "Enhanced assets for Yii2",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "time": "2014-05-19 11:44:33"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "dev-master",
             "source": {
@@ -169,13 +205,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "a40ff40b8fb852af8034b215e2102ca8ff1618e0"
+                "reference": "e9b99d475cdc635d6e1435b5101500b84e0ef615"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-a40ff40b8fb852af8034b215e2102ca8ff1618e0-zip-60e89d.zip",
-                "reference": "a40ff40b8fb852af8034b215e2102ca8ff1618e0",
-                "shasum": "0f1923b822146fccf58edee33855083dcf7b5e18"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-e9b99d475cdc635d6e1435b5101500b84e0ef615-zip-83a002.zip",
+                "reference": "e9b99d475cdc635d6e1435b5101500b84e0ef615",
+                "shasum": "5f724c397d1602703ac1218f08a77a1149d10533"
             },
             "type": "library",
             "extra": {
@@ -209,7 +245,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-05-15 08:58:19"
+            "time": "2014-05-19 07:47:06"
         },
         {
             "name": "yiisoft/jquery",
@@ -266,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2c98c9d1ad8e81dcc83b31322cfbc64db123fc9d"
+                "reference": "c5715f309c1cbbb1b5ac0144ad1145afab79f887"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2c98c9d1ad8e81dcc83b31322cfbc64db123fc9d",
-                "reference": "2c98c9d1ad8e81dcc83b31322cfbc64db123fc9d",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-c5715f309c1cbbb1b5ac0144ad1145afab79f887-zip-488c6a.zip",
+                "reference": "c5715f309c1cbbb1b5ac0144ad1145afab79f887",
+                "shasum": "e1bb92d5686b61840888cf81b18c6c449b671ff3"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -336,7 +372,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-05-15 08:00:06"
+            "time": "2014-05-19 10:37:43"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -857,12 +893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "a995604307026ed8693ffba8848765532030371b"
+                "reference": "09efe8d1165735bed167f3d08c60b39957baa952"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/a995604307026ed8693ffba8848765532030371b",
-                "reference": "a995604307026ed8693ffba8848765532030371b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/09efe8d1165735bed167f3d08c60b39957baa952",
+                "reference": "09efe8d1165735bed167f3d08c60b39957baa952",
                 "shasum": ""
             },
             "require": {
@@ -914,7 +950,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-04-30 08:57:33"
+            "time": "2014-05-19 02:26:13"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1105,12 +1141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "270cdf04ea2965711205e8c64bf1d56d058cc76e"
+                "reference": "fb86fa5c327fb805b7bdf036ea11911496975d44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/270cdf04ea2965711205e8c64bf1d56d058cc76e",
-                "reference": "270cdf04ea2965711205e8c64bf1d56d058cc76e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fb86fa5c327fb805b7bdf036ea11911496975d44",
+                "reference": "fb86fa5c327fb805b7bdf036ea11911496975d44",
                 "shasum": ""
             },
             "require": {
@@ -1171,7 +1207,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-05-13 14:02:36"
+            "time": "2014-05-17 08:33:56"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1746,12 +1782,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "9e807943a9de9f8716868a7d7a4ddf1c18e88729"
+                "reference": "b3842390c7d64e92409d7c9c88f433a2626c55c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/9e807943a9de9f8716868a7d7a4ddf1c18e88729",
-                "reference": "9e807943a9de9f8716868a7d7a4ddf1c18e88729",
+                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/b3842390c7d64e92409d7c9c88f433a2626c55c8",
+                "reference": "b3842390c7d64e92409d7c9c88f433a2626c55c8",
                 "shasum": ""
             },
             "require": {
@@ -1792,7 +1828,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:40:13"
+            "time": "2014-05-17 20:50:45"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2065,13 +2101,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "1d0d2a02d9651978285013a9449cb54fc5842fa1"
+                "reference": "63e360841e250f8b76e2df5301628cb695a32bee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/1d0d2a02d9651978285013a9449cb54fc5842fa1",
-                "reference": "1d0d2a02d9651978285013a9449cb54fc5842fa1",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-63e360841e250f8b76e2df5301628cb695a32bee-zip-203cdc.zip",
+                "reference": "63e360841e250f8b76e2df5301628cb695a32bee",
+                "shasum": "8b28cfbb7137918708da19225ae6285f2b729783"
             },
             "require": {
                 "yiisoft/yii2": "*",
@@ -2101,7 +2137,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2014-04-25 19:04:39"
+            "time": "2014-05-17 12:43:47"
         },
         {
             "name": "yiisoft/yii2-gii",
