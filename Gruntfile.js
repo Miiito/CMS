@@ -101,28 +101,16 @@ module.exports = function(grunt) {
 		},
 		shell: {
 			setup: {
-				command: 'php setup.php <%= environment %>',
-				options: {
-					stdout: true
-				}
+				command: 'php setup.php <%= environment %>'
 			},
 			codeceptbuild: {
-				command: 'vendor/bin/codecept build',
-				options: {
-					stdout: true
-				}
+				command: 'vendor/bin/codecept build'
 			},
 			codeception: {
-				command: 'vendor/bin/codecept run --coverage --html --coverage-html',
-				options: {
-					stdout: true
-				}
+				command: 'vendor/bin/codecept run --coverage --html --coverage-html'
 			},
 			test: {
-				command: 'echo <%= environment %>',
-				options: {
-					stdout: true
-				}
+				command: 'exit 1'
 			}
 		},
 		prompt: {
