@@ -21,7 +21,6 @@ coverage:
     whitelist:
         include:
             - models/*.php
-            - components/*.php
             - commands/*.php
             - controllers/*.php
             - modules/*.php
