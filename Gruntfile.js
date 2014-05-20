@@ -20,17 +20,13 @@ module.exports = function(grunt) {
 		githooks: {
 			staged: {
 				options: {
-					template: 'hooks/staged.js.hbs'
+					hashbang: '#!/bin/sh',
+					template: 'hooks/staged.hbs',
+					startMarker: '## GRUNT-GITHOOKS START',
+					endMarker: '## GRUNT-GITHOOKS END'
 				},
 				'pre-commit': 'commit'
-			}/*,
-			update: {
-				options: {
-					template: 'hooks/update.js.hbs'
-				},
-				'post-merge': true,
-				'post-checkout': true
-			}*/
+			}
 		},
 		phplint: {
 			precommit: ['**/*.php'],
