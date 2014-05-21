@@ -205,13 +205,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "e9b99d475cdc635d6e1435b5101500b84e0ef615"
+                "reference": "3dd1531d81c90d6d1cf04962032f868d315ab21c"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-e9b99d475cdc635d6e1435b5101500b84e0ef615-zip-83a002.zip",
-                "reference": "e9b99d475cdc635d6e1435b5101500b84e0ef615",
-                "shasum": "5f724c397d1602703ac1218f08a77a1149d10533"
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/3dd1531d81c90d6d1cf04962032f868d315ab21c",
+                "reference": "3dd1531d81c90d6d1cf04962032f868d315ab21c",
+                "shasum": ""
             },
             "type": "library",
             "extra": {
@@ -245,7 +245,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-05-19 07:47:06"
+            "time": "2014-05-19 12:07:40"
         },
         {
             "name": "yiisoft/jquery",
@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "c5715f309c1cbbb1b5ac0144ad1145afab79f887"
+                "reference": "bc85b5891a8b9950cdfe7f845e2d57383041a5d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-c5715f309c1cbbb1b5ac0144ad1145afab79f887-zip-488c6a.zip",
-                "reference": "c5715f309c1cbbb1b5ac0144ad1145afab79f887",
-                "shasum": "e1bb92d5686b61840888cf81b18c6c449b671ff3"
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bc85b5891a8b9950cdfe7f845e2d57383041a5d4",
+                "reference": "bc85b5891a8b9950cdfe7f845e2d57383041a5d4",
+                "shasum": ""
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -372,7 +372,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-05-19 10:37:43"
+            "time": "2014-05-21 07:42:40"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -700,12 +700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ca838eda194b50a722590a18b1d2fec35652b645"
+                "reference": "596dc90ba80fc16dc820369a567e7b2c007f9566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ca838eda194b50a722590a18b1d2fec35652b645",
-                "reference": "ca838eda194b50a722590a18b1d2fec35652b645",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/596dc90ba80fc16dc820369a567e7b2c007f9566",
+                "reference": "596dc90ba80fc16dc820369a567e7b2c007f9566",
                 "shasum": ""
             },
             "require": {
@@ -757,7 +757,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-05-15 17:29:38"
+            "time": "2014-05-19 16:49:10"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1141,12 +1141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fb86fa5c327fb805b7bdf036ea11911496975d44"
+                "reference": "c244278ce090cda09c08bf47846af291b37e0191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fb86fa5c327fb805b7bdf036ea11911496975d44",
-                "reference": "fb86fa5c327fb805b7bdf036ea11911496975d44",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c244278ce090cda09c08bf47846af291b37e0191",
+                "reference": "c244278ce090cda09c08bf47846af291b37e0191",
                 "shasum": ""
             },
             "require": {
@@ -1207,7 +1207,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-05-17 08:33:56"
+            "time": "2014-05-21 07:40:20"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1615,12 +1615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/BrowserKit.git",
-                "reference": "a618115990f839fdcc24766a51eaf8891899a62b"
+                "reference": "cc1716dafa04277a0c987aee5bce8c3cf8939de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/a618115990f839fdcc24766a51eaf8891899a62b",
-                "reference": "a618115990f839fdcc24766a51eaf8891899a62b",
+                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/cc1716dafa04277a0c987aee5bce8c3cf8939de3",
+                "reference": "cc1716dafa04277a0c987aee5bce8c3cf8939de3",
                 "shasum": ""
             },
             "require": {
@@ -1663,7 +1663,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:40:13"
+            "time": "2014-05-12 09:28:39"
         },
         {
             "name": "symfony/console",
@@ -1729,12 +1729,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/CssSelector.git",
-                "reference": "339e53ea57506b2532b15545cd9242f09cc48ad4"
+                "reference": "bcdd62af59bd3137ede467946a06d41f8644048c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/339e53ea57506b2532b15545cd9242f09cc48ad4",
-                "reference": "339e53ea57506b2532b15545cd9242f09cc48ad4",
+                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/bcdd62af59bd3137ede467946a06d41f8644048c",
+                "reference": "bcdd62af59bd3137ede467946a06d41f8644048c",
                 "shasum": ""
             },
             "require": {
@@ -1773,7 +1773,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:40:13"
+            "time": "2014-05-12 09:28:39"
         },
         {
             "name": "symfony/dom-crawler",
@@ -2105,9 +2105,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-63e360841e250f8b76e2df5301628cb695a32bee-zip-203cdc.zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/63e360841e250f8b76e2df5301628cb695a32bee",
                 "reference": "63e360841e250f8b76e2df5301628cb695a32bee",
-                "shasum": "8b28cfbb7137918708da19225ae6285f2b729783"
+                "shasum": ""
             },
             "require": {
                 "yiisoft/yii2": "*",
@@ -2145,12 +2145,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "3bdd568316589ed6065711c98580a4844ec6d55a"
+                "reference": "fd6425e688620b4896f0beb330700220c890fc99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3bdd568316589ed6065711c98580a4844ec6d55a",
-                "reference": "3bdd568316589ed6065711c98580a4844ec6d55a",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/fd6425e688620b4896f0beb330700220c890fc99",
+                "reference": "fd6425e688620b4896f0beb330700220c890fc99",
                 "shasum": ""
             },
             "require": {
@@ -2182,7 +2182,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-05-14 23:44:20"
+            "time": "2014-05-20 13:35:12"
         }
     ],
     "aliases": [],
