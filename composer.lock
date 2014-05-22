@@ -15,9 +15,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/6a3c3737e9c1f4670f39a771f77b536126788ad2",
+                "url": "http://satis.mito.hu/dist/cebe-markdown-6a3c3737e9c1f4670f39a771f77b536126788ad2-zip-f2cd90.zip",
                 "reference": "6a3c3737e9c1f4670f39a771f77b536126788ad2",
-                "shasum": ""
+                "shasum": "3998688d84399db4184df0969909f25403d26cdd"
             },
             "require": {
                 "lib-pcre": "*",
@@ -74,9 +74,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6f389f0f25b90d0b495308efcfa073981177f0fd",
+                "url": "http://satis.mito.hu/dist/ezyang-htmlpurifier-6f389f0f25b90d0b495308efcfa073981177f0fd-zip-4891c9.zip",
                 "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd",
-                "shasum": ""
+                "shasum": "45b80c14fe54eb209ce931276ecbc981236f5329"
             },
             "require": {
                 "php": ">=5.2"
@@ -115,13 +115,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/n.kovacs/yii2-enhanced-assets.git",
-                "reference": "f110cd6ac895082e8784692907b51a5eb4c0f993"
+                "reference": "c1b80ef696bb4d2c436191cb0c5aeab17dfcf324"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-34613b.zip",
-                "reference": "f110cd6ac895082e8784692907b51a5eb4c0f993",
-                "shasum": "e75441becad7d8cce30f8af85936a4c6df06c854"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-ad4874.zip",
+                "reference": "c1b80ef696bb4d2c436191cb0c5aeab17dfcf324",
+                "shasum": "a644774a0ad54cb4dfc80c5916fe9b3df2457c66"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -143,7 +143,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-05-19 11:44:33"
+            "time": "2014-05-22 14:16:08"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -155,9 +155,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/46d55baab96f943061de6712b38011db354eed78",
+                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-46d55baab96f943061de6712b38011db354eed78-zip-08b8bd.zip",
                 "reference": "46d55baab96f943061de6712b38011db354eed78",
-                "shasum": ""
+                "shasum": "e5266d6b4af0495b222bf82cb3d179d0d488ad54"
             },
             "require": {
                 "php": ">=5.2.4"
@@ -257,9 +257,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery/zipball/bc09bbbc8b40cf89812036188b6f94ae7627c73c",
+                "url": "http://satis.mito.hu/dist/yiisoft-jquery-bc09bbbc8b40cf89812036188b6f94ae7627c73c-zip-5bc4fa.zip",
                 "reference": "bc09bbbc8b40cf89812036188b6f94ae7627c73c",
-                "shasum": ""
+                "shasum": "588971c55e9984af8c656081b16dc306963d57ab"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -280,9 +280,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6",
+                "url": "http://satis.mito.hu/dist/yiisoft-jquery-pjax-520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6-zip-cdd5b2.zip",
                 "reference": "520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6",
-                "shasum": ""
+                "shasum": "eb2575724083b743ce1010d2b10623b31cf3b44f"
             },
             "require": {
                 "yiisoft/jquery": ">=1.8"
@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "2702e1cb1c7e00a57204063feb6e29c20b015184"
+                "reference": "fbe9f6ceda41dd463be86b2238fc1d41cd31cdb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-2702e1cb1c7e00a57204063feb6e29c20b015184-zip-591745.zip",
-                "reference": "2702e1cb1c7e00a57204063feb6e29c20b015184",
-                "shasum": "739e0193b865f2067914c4929dbaa0b0c73d0cd3"
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/fbe9f6ceda41dd463be86b2238fc1d41cd31cdb1",
+                "reference": "fbe9f6ceda41dd463be86b2238fc1d41cd31cdb1",
+                "shasum": ""
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -372,7 +372,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-05-22 10:40:55"
+            "time": "2014-05-22 14:04:13"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -384,9 +384,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/86e22d908151de4fb93f898562afc3cc36ec96c1",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-86e22d908151de4fb93f898562afc3cc36ec96c1-zip-09c272.zip",
                 "reference": "86e22d908151de4fb93f898562afc3cc36ec96c1",
-                "shasum": ""
+                "shasum": "f2ed29604b90201dea5e284cc2c136d116835ef6"
             },
             "require": {
                 "twbs/bootstrap": "3.1.* | 3.0.*",
@@ -427,9 +427,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/139c4522429cf2bf0717ead3e4759d4c70cab817",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-composer-139c4522429cf2bf0717ead3e4759d4c70cab817-zip-bc26ec.zip",
                 "reference": "139c4522429cf2bf0717ead3e4759d4c70cab817",
-                "shasum": ""
+                "shasum": "8ca0867796bb36416857684985cdfbabae99216b"
             },
             "require": {
                 "composer-plugin-api": "1.0.0"
@@ -473,9 +473,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-swiftmailer-ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de-zip-73d74b.zip",
                 "reference": "ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de",
-                "shasum": ""
+                "shasum": "0858da610744b7051f3316243a719ec8d248697f"
             },
             "require": {
                 "swiftmailer/swiftmailer": "*",
@@ -864,9 +864,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/30e103d19519fe678ae64a60d77884ef3d71b28a",
+                "url": "http://satis.mito.hu/dist/phpspec-php-diff-30e103d19519fe678ae64a60d77884ef3d71b28a-zip-b63c58.zip",
                 "reference": "30e103d19519fe678ae64a60d77884ef3d71b28a",
-                "shasum": ""
+                "shasum": "373f7058c6bbb87fcac090cff7a7a59cec91f81c"
             },
             "type": "library",
             "autoload": {
@@ -1672,12 +1672,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f"
+                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/50be4f30d0a93404e5d62b05fd7294492cf64c4f",
-                "reference": "50be4f30d0a93404e5d62b05fd7294492cf64c4f",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
+                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
                 "shasum": ""
             },
             "require": {
@@ -1720,7 +1720,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-15 08:56:35"
+            "time": "2014-05-22 08:54:24"
         },
         {
             "name": "symfony/css-selector",
@@ -1896,12 +1896,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "1343b576d1401f4a5117cab4e250201ae348143a"
+                "reference": "307aad2c541bbdf43183043645e186ef2cd6b973"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/1343b576d1401f4a5117cab4e250201ae348143a",
-                "reference": "1343b576d1401f4a5117cab4e250201ae348143a",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/307aad2c541bbdf43183043645e186ef2cd6b973",
+                "reference": "307aad2c541bbdf43183043645e186ef2cd6b973",
                 "shasum": ""
             },
             "require": {
@@ -1936,7 +1936,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-12 09:28:39"
+            "time": "2014-05-22 13:47:45"
         },
         {
             "name": "symfony/yaml",
@@ -1997,9 +1997,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/979101cf3d1e5446e7a4f09eb0d813d24eb0e860",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-codeception-979101cf3d1e5446e7a4f09eb0d813d24eb0e860-zip-43f6e1.zip",
                 "reference": "979101cf3d1e5446e7a4f09eb0d813d24eb0e860",
-                "shasum": ""
+                "shasum": "e1b8b46952fccea0348ac438d7af91fb062d0507"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -2149,9 +2149,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/fd6425e688620b4896f0beb330700220c890fc99",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-fd6425e688620b4896f0beb330700220c890fc99-zip-36e5be.zip",
                 "reference": "fd6425e688620b4896f0beb330700220c890fc99",
-                "shasum": ""
+                "shasum": "0cf02beea3b6d435ee4502768474aedc46a47fbe"
             },
             "require": {
                 "phpspec/php-diff": ">=1.0.2",
