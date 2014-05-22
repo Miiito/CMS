@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "fbb9ac2faaba84ba8f61bf1d81db2ab5",
+    "hash": "2ab6ba5ec704997f35aeb3c7d6dc056a",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -205,13 +205,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "3dd1531d81c90d6d1cf04962032f868d315ab21c"
+                "reference": "cae7dee2361c7023bd147570509a0c40ade3c4e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/3dd1531d81c90d6d1cf04962032f868d315ab21c",
-                "reference": "3dd1531d81c90d6d1cf04962032f868d315ab21c",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-cae7dee2361c7023bd147570509a0c40ade3c4e9-zip-6d4b0c.zip",
+                "reference": "cae7dee2361c7023bd147570509a0c40ade3c4e9",
+                "shasum": "e65de7092c1a1c10d38b9f0e2f54eae20f25625b"
             },
             "type": "library",
             "extra": {
@@ -245,7 +245,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-05-19 12:07:40"
+            "time": "2014-05-22 07:55:28"
         },
         {
             "name": "yiisoft/jquery",
@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "bc85b5891a8b9950cdfe7f845e2d57383041a5d4"
+                "reference": "2702e1cb1c7e00a57204063feb6e29c20b015184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/bc85b5891a8b9950cdfe7f845e2d57383041a5d4",
-                "reference": "bc85b5891a8b9950cdfe7f845e2d57383041a5d4",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-2702e1cb1c7e00a57204063feb6e29c20b015184-zip-591745.zip",
+                "reference": "2702e1cb1c7e00a57204063feb6e29c20b015184",
+                "shasum": "739e0193b865f2067914c4929dbaa0b0c73d0cd3"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -372,7 +372,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-05-21 07:42:40"
+            "time": "2014-05-22 10:40:55"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -700,13 +700,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "596dc90ba80fc16dc820369a567e7b2c007f9566"
+                "reference": "9267eba3effe89a2bdfd6190b0f473aca026d458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/596dc90ba80fc16dc820369a567e7b2c007f9566",
-                "reference": "596dc90ba80fc16dc820369a567e7b2c007f9566",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-9267eba3effe89a2bdfd6190b0f473aca026d458-zip-c0d43e.zip",
+                "reference": "9267eba3effe89a2bdfd6190b0f473aca026d458",
+                "shasum": "d58be05ef67027825e0a33313e39dd8dd5159611"
             },
             "require": {
                 "ext-json": "*",
@@ -757,7 +757,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-05-19 16:49:10"
+            "time": "2014-05-22 03:57:06"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1782,13 +1782,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "b3842390c7d64e92409d7c9c88f433a2626c55c8"
+                "reference": "0f37019bb78937d7f7c7c7c9e11da6de1befeeb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/b3842390c7d64e92409d7c9c88f433a2626c55c8",
-                "reference": "b3842390c7d64e92409d7c9c88f433a2626c55c8",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/symfony-dom-crawler-0f37019bb78937d7f7c7c7c9e11da6de1befeeb0-zip-cf77d9.zip",
+                "reference": "0f37019bb78937d7f7c7c7c9e11da6de1befeeb0",
+                "shasum": "00cc9588165ee6f1ce721e8ff7f7cb325f3f29ce"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1828,7 +1828,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-17 20:50:45"
+            "time": "2014-05-21 16:04:07"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2105,9 +2105,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/63e360841e250f8b76e2df5301628cb695a32bee",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-63e360841e250f8b76e2df5301628cb695a32bee-zip-203cdc.zip",
                 "reference": "63e360841e250f8b76e2df5301628cb695a32bee",
-                "shasum": ""
+                "shasum": "8b28cfbb7137918708da19225ae6285f2b729783"
             },
             "require": {
                 "yiisoft/yii2": "*",
@@ -2187,7 +2187,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "yiisoft/yii2-codeception": 20
+    },
     "platform": {
         "php": ">=5.4.0"
     },

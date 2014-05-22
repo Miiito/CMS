@@ -21,7 +21,7 @@
 		"mito/yii2-enhanced-assets": "*"
 	},
 	"require-dev": {
-		"yiisoft/yii2-codeception": "*",
+		"yiisoft/yii2-codeception": "dev-master",
 		"yiisoft/yii2-debug": "*",
 		"yiisoft/yii2-gii": "*",
 		"squizlabs/php_codesniffer": "1.*",
