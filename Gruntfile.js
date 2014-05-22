@@ -232,58 +232,62 @@ module.exports = function(grunt) {
 		var packages = getPackages.get();
 		var buildJsFiles = {},
 		    hintJsFiles = [];
-		for (i=0, l=packages.jsfiles.length; i<l; ++i) {
-			buildJsFiles[packages.jsfiles[i].dist] = packages.jsfiles[i].sources;
-			hintJsFiles = hintJsFiles.concat(packages.jsfiles[i].sources);
-		}
-
 		var csswatches = [],
-			cssbuild = [],
-			scsswatch = [],
-			cssreload = [];
-		for (i=0, l=packages.cssfiles.length; i<l; ++i) {
-			csswatches.push({
-				expand: true,
-				cwd: packages.cssfiles[i].sources,
-				src: ['*.scss'],
-				dest: packages.cssfiles[i].dev,
-				ext: '.css'
-			});
-			cssbuild.push({
-				expand: true,
-				cwd: packages.cssfiles[i].sources,
-				src: ['*.scss'],
-				dest: packages.cssfiles[i].dist,
-				ext: '.css'
-			});
-			scsswatch.push(packages.cssfiles[i].sources + '/**/*');
-			cssreload.push(packages.cssfiles[i].dev + '/**/*');
-		}
-		var images = [];
-		var nonimages = [];
-		var fonts = [];
+		    cssbuild = [],
+		    scsswatch = [],
+		    cssreload = [];
+		var images = [],
+		    nonimages = [],
+		    fonts = [];
 		for (i=0, l=packages.packages.length; i<l; ++i) {
-			if (packages.packages[i].imgPath) {
+			var pkg = packages.packages[i];
+			if (pkg.jsfiles) {
+				for (j=0, m=pkg.jsfiles.length; j<m; ++j) {
+					buildJsFiles[pkg.jsfiles[j].dist] = pkg.jsfiles[j].sources;
+					hintJsFiles = hintJsFiles.concat(pkg.jsfiles[j].sources);
+				}
+			}
+			if (pkg.cssfiles) {
+				for (j=0, m=pkg.cssfiles.length; j<m; ++j) {
+					csswatches.push({
+						expand: true,
+						cwd: pkg.cssfiles[j].sources,
+						src: ['*.scss', '!_*.scss'],
+						dest: pkg.cssfiles[j].dev,
+						ext: '.css'
+					});
+					cssbuild.push({
+						expand: true,
+						cwd: pkg.cssfiles[j].sources,
+						src: ['*.scss', '!_*.scss'],
+						dest: pkg.cssfiles[j].dist,
+						ext: '.css'
+					});
+					scsswatch.push(pkg.cssfiles[j].sources + '/**/*');
+					cssreload.push(pkg.cssfiles[j].dev + '/**/*.css');
+				}
+			}
+			if (pkg.imgPath) {
 				images.push({
 					expand: true,
-					cwd: packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/',
+					cwd: pkg.sources + '/' + pkg.imgPath + '/',
 					src: ['**/*.{png,jpg,jpeg,gif}'],
-					dest: packages.packages[i].dist + '/' + packages.packages[i].imgPath + '/'
+					dest: pkg.dist + '/' + pkg.imgPath + '/'
 				});
-				cssreload.push(packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/' + '**/*.{png,jpg,jpeg,gif}');
+				cssreload.push(pkg.sources + '/' + pkg.imgPath + '/' + '**/*.{png,jpg,jpeg,gif}');
 				nonimages.push({
 					expand: true,
-					cwd: packages.packages[i].sources + '/' + packages.packages[i].imgPath + '/',
+					cwd: pkg.sources + '/' + pkg.imgPath + '/',
 					src: ['**/*', '!**/*.{png,jpg,jpeg,gif}'],
-					dest: packages.packages[i].dist + '/' + packages.packages[i].imgPath + '/'
+					dest: pkg.dist + '/' + pkg.imgPath + '/'
 				});
 			}
-			if (packages.packages[i].fontPath) {
+			if (pkg.fontPath) {
 				fonts.push({
 					expand: true,
-					cwd: packages.packages[i].sources + '/' + packages.packages[i].fontPath + '/',
+					cwd: pkg.sources + '/' + pkg.fontPath + '/',
 					src: ['**/*'],
-					dest: packages.packages[i].dist + '/' + packages.packages[i].fontPath + '/'
+					dest: pkg.dist + '/' + pkg.fontPath + '/'
 				});
 			}
 		}
