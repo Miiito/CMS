@@ -32,9 +32,6 @@ module.exports = function(grunt) {
 			precommit: ['**/*.php'],
 		},
 		uglify: {
-			options: {
-				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
 			build: {
 				files: []
 			}
