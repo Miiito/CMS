@@ -6,6 +6,7 @@ $env_specific = load_config('common.php');
 $env_specific_local = load_config('common.local.php');
 
 $common = [
+    'name' => 'Mito Yii2 base app',
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
