@@ -158,6 +158,8 @@ module.exports = function(grunt) {
 		'tinylr-findport': {
 			watch: {
 				task: 'watchorig',
+				load: 'grunt-contrib-watch',
+				rename: 'watch',
 				target: 'reload'
 			}
 		},
@@ -339,8 +341,10 @@ module.exports = function(grunt) {
 				} else {
 					server.close();
 					grunt.file.write('.lrport', port);
-					grunt.log.write('Found port:');
+					grunt.log.write('Found port: ');
 					grunt.log.writeln(port.toString().green.bold);
+					var os = require("os");
+					grunt.log.writeln('\tssh -L 35729:localhost:' + port + ' ' + os.hostname());
 					grunt.config.set(task+'.'+target+'.options.livereload', port);
 					if (load) {
 						grunt.loadNpmTasks(load);
