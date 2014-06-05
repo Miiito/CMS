@@ -90,7 +90,7 @@ Some directories are excluded from the phpcs task (views, migrations, configs et
 ASSETS
 ------
 
-Asset bundles should extend from `app\components\AssetBundle` and should be placed in `app\assets` or the module's assets directory.
+Asset bundles should extend from `\mito\assets\AssetBundle` and should be placed in `app\assets` or the module's assets directory.
 The assets directory should contain a `bundles.php` file, which should return an array of classnames of all asset bundles.
 The build process will build these assets.
 In the development environment `devPath` is used as the base path for publishing assets; `distPath` is used in production, and
