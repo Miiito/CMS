@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		environment: grunt.option('environment') || false,
+		apachegrp: grunt.option('apachegrp') || '',
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
 			// Clean any pre-commit hooks in .git/hooks directory
@@ -94,7 +95,10 @@ module.exports = function(grunt) {
 		},
 		shell: {
 			setup: {
-				command: 'php setup.php <%= environment %>'
+				command: 'php setup.php "<%= environment %>" <%= apachegrp ? "\\"" + apachegrp + "\\"" : "" %>',
+				options: {
+					stdout: true
+				}
 			},
 			codeceptbuild: {
 				command: 'vendor/bin/codecept build'
@@ -103,7 +107,10 @@ module.exports = function(grunt) {
 				command: 'vendor/bin/codecept run --coverage --html --coverage-html'
 			},
 			test: {
-				command: 'exit 1'
+				command: 'echo "<%= environment %> <%= apachegrp %>"',
+				options: {
+					stdout: true
+				}
 			}
 		},
 		prompt: {
@@ -224,7 +231,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('getpackages','Get packages from yii and configure tasks', function() {
 		var getPackages = require('get-packages');
-		var i, l;
+		var i, l, j, m;
 
 		getPackages.init({
 			applicationPath: '.',
@@ -241,8 +248,8 @@ module.exports = function(grunt) {
 		var images = [],
 		    nonimages = [],
 		    fonts = [];
-		for (i=0, l=packages.packages.length; i<l; ++i) {
-			var pkg = packages.packages[i];
+		for (i=0, l=packages.length; i<l; ++i) {
+			var pkg = packages[i];
 			if (pkg.jsfiles) {
 				for (j=0, m=pkg.jsfiles.length; j<m; ++j) {
 					buildJsFiles[pkg.jsfiles[j].dist] = pkg.jsfiles[j].sources;
@@ -330,7 +337,7 @@ module.exports = function(grunt) {
 				port = startPort;
 				startPort = false;
 			}
-			grunt.log.writeln('Try port:'+port);
+			grunt.log.writeln('Try port:' +port);
 			server.listen(port, function(err) {
 				if(err) {
 					if (err.code === 'EADDRINUSE') {
@@ -373,6 +380,18 @@ module.exports = function(grunt) {
 		//grunt.config.set('phpcs.application.dir', list);
 	});
 
+	grunt.registerTask('phpcschangedonly','Check only those files that have been changed', function() {
+
+		var list = require('execSync').exec('git diff-index --name-only --diff-filter=ACMR HEAD').stdout.split("\n");
+		var path = require('path');
+
+		origFilter = grunt.config.get('phpcs.application.dir');
+
+		list = grunt.file.match(origFilter, list);
+
+		grunt.config.set('phpcs.application.dir', list);
+	});
+
 	grunt.registerTask('phpcswrapper','Only run phpcs if there are files to check', function() {
 		if (grunt.config.get('phpcs.application.dir').length) {
 			grunt.task.run('phpcs');
@@ -388,6 +407,8 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('commit', ['changedonly', 'phplint', 'hint']);
+
+	grunt.registerTask('phpcsdiff', ['phpcschangedonly', 'phpcswrapper']);
 
 	grunt.registerTask('watch', ['getpackages', 'tinylr-findport']);
 
