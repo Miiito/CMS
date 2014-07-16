@@ -114,6 +114,12 @@ if ! git rev-parse -q --verify HEAD >/dev/null; then
 	exit 0
 fi
 
+#cancel if in merge, stash would break things horribly
+test -f "$GIT_DIR/MERGE_HEAD" && {
+	echo "Warning: skipping pre-commit hook in merge."
+	exit 0
+}
+
 stashed=0
 if fixed_stash; then
 	stashed=1
