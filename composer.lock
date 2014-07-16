@@ -206,13 +206,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "94472ee74ac6732a3abd0d32ad5c3a68370090c0"
+                "reference": "5c1746c556753a19a980ab13d0ce23daebb6022f"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-94472ee74ac6732a3abd0d32ad5c3a68370090c0-zip-4ede01.zip",
-                "reference": "94472ee74ac6732a3abd0d32ad5c3a68370090c0",
-                "shasum": "88e053256af2e5a961690840d3c127cf148ac73a"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-5c1746c556753a19a980ab13d0ce23daebb6022f-zip-fb6078.zip",
+                "reference": "5c1746c556753a19a980ab13d0ce23daebb6022f",
+                "shasum": "ec4c8ab7b5d278a64cb8d82fb55ae02c215d09f8"
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
@@ -249,7 +249,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-10 07:03:24"
+            "time": "2014-07-14 21:52:36"
         },
         {
             "name": "yiisoft/jquery",
@@ -306,13 +306,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "8992c7d402b9dfd8c957772aaedea2827b8b342d"
+                "reference": "6459473942c42b8369a1d36729d38aa98575a020"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-8992c7d402b9dfd8c957772aaedea2827b8b342d-zip-816b07.zip",
-                "reference": "8992c7d402b9dfd8c957772aaedea2827b8b342d",
-                "shasum": "fca6f4bd2b1f3d34e1a7eba047c50967037b1470"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-6459473942c42b8369a1d36729d38aa98575a020-zip-c4f8fc.zip",
+                "reference": "6459473942c42b8369a1d36729d38aa98575a020",
+                "shasum": "8a6b5760979b51cc7f45657e3a537bcd12bfa0bf"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -379,7 +379,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-07-11 10:53:52"
+            "time": "2014-07-15 04:10:57"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -707,13 +707,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "49a14b2bbc819c801a8eb1509de2179f718e3f0b"
+                "reference": "b909bd8befddbf9424995e0dad1c31d4be97b1fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-49a14b2bbc819c801a8eb1509de2179f718e3f0b-zip-9ae3f8.zip",
-                "reference": "49a14b2bbc819c801a8eb1509de2179f718e3f0b",
-                "shasum": "3ae2a123fa5a1c7e0801a84079b81839c2ddef07"
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-b909bd8befddbf9424995e0dad1c31d4be97b1fb-zip-7a31e5.zip",
+                "reference": "b909bd8befddbf9424995e0dad1c31d4be97b1fb",
+                "shasum": "70714327a52d4900451a65d712cb6e9ba6d3fdb2"
             },
             "require": {
                 "ext-json": "*",
@@ -764,20 +764,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-08 05:30:38"
+            "time": "2014-07-14 23:55:50"
         },
         {
             "name": "guzzlehttp/streams",
-            "version": "1.1.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/streams.git",
-                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180"
+                "reference": "d6aaa91cfdbae86355dd2a168a3ca536755898a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/cf0c8c33ca95cc147efba4c714f630ee44767180",
-                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/d6aaa91cfdbae86355dd2a168a3ca536755898a2",
+                "reference": "d6aaa91cfdbae86355dd2a168a3ca536755898a2",
                 "shasum": ""
             },
             "require": {
@@ -789,7 +789,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -817,7 +817,7 @@
                 "Guzzle",
                 "stream"
             ],
-            "time": "2014-04-03 04:48:24"
+            "time": "2014-07-15 22:02:02"
         },
         {
             "name": "myclabs/deep-copy",
