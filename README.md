@@ -99,3 +99,6 @@ Any array elements in `devJs` will be combined and minified into the js file spe
 If `scssPath` is specified, all files found inside that directory will be compiled to a file with the same name under the css diretory.
 If `imgPath` is specified, all files found inside that directory will be optimized and copied to a directory with the same name under the dist path.
 If `fontPath` is specified, all files found inside that directory will be copied to a directory with the same name under the dist path.
+
+To get the baseUrl of an asset bundle, use the baseUrl property of the registered asset instance:
+    $assetUrl = AppAsset::register($this)->baseUrl;
