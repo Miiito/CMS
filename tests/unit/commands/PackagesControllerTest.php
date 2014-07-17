@@ -282,7 +282,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests loading of a config file
      * @dataProvider loadConfigProvider
      */
-    function testLoadConfig($configFile, $expectedName)
+    public function testLoadConfig($configFile, $expectedName)
     {
         if ($expectedName === null) {
             $expectedName = Yii::$app->name;
@@ -297,7 +297,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
     /**
      * Tests mock loadConfigFile
      */
-    function testLoadMockConfig()
+    public function testLoadMockConfig()
     {
         $mockConfig = ['name' => 'test mock app'];
         $controller = $this->createMockPackagesController($mockConfig);
@@ -309,7 +309,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests getPaths with no modules
      * @depends testLoadMockConfig
      */
-    function testGetPathsNoModules()
+    public function testGetPathsNoModules()
     {
         $config = [
             'modules' => [],
@@ -338,7 +338,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests getPaths with missing module
      * @depends testLoadMockConfig
      */
-    function testGetPathsMissingModule()
+    public function testGetPathsMissingModule()
     {
         $config = [
             'modules' => [
@@ -371,7 +371,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests getPaths with basePath
      * @depends testLoadMockConfig
      */
-    function testGetPathsBasePath()
+    public function testGetPathsBasePath()
     {
         $basePath = $this->tempPath . '/modules/basepath';
         $this->createDir($basePath);
@@ -407,7 +407,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests getPaths
      * @depends testLoadMockConfig
      */
-    function testGetPaths()
+    public function testGetPaths()
     {
         $config = $this->createFiles();
         $alias = Yii::getAlias('@app');
@@ -438,7 +438,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests that the comand returns a json
      * @coversNothing
      */
-    function testReturnsJson()
+    public function testReturnsJson()
     {
         $output = $this->runPackagesControllerAction('index');
         $decoded = Json::decode($output);
@@ -450,7 +450,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * @depends testReturnsJson
      * @depends testLoadMockConfig
      */
-    function testActionIndex()
+    public function testActionIndex()
     {
         $config = $this->createFiles();
         $alias = Yii::getAlias('@app');
