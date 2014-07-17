@@ -206,13 +206,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "5c1746c556753a19a980ab13d0ce23daebb6022f"
+                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-5c1746c556753a19a980ab13d0ce23daebb6022f-zip-fb6078.zip",
-                "reference": "5c1746c556753a19a980ab13d0ce23daebb6022f",
-                "shasum": "ec4c8ab7b5d278a64cb8d82fb55ae02c215d09f8"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-dd22f599998cc07c18b6643a856d5acda6c5c122-zip-3cc7e5.zip",
+                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122",
+                "shasum": "8ed96d531c6df48134553228e0a54b6e6b4d3fe1"
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
@@ -249,7 +249,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-14 21:52:36"
+            "time": "2014-07-15 18:09:50"
         },
         {
             "name": "yiisoft/jquery",
@@ -306,13 +306,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "6459473942c42b8369a1d36729d38aa98575a020"
+                "reference": "ee609c6a48cbd2d9ef702305f7d526736efc8873"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-6459473942c42b8369a1d36729d38aa98575a020-zip-c4f8fc.zip",
-                "reference": "6459473942c42b8369a1d36729d38aa98575a020",
-                "shasum": "8a6b5760979b51cc7f45657e3a537bcd12bfa0bf"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-ee609c6a48cbd2d9ef702305f7d526736efc8873-zip-4397eb.zip",
+                "reference": "ee609c6a48cbd2d9ef702305f7d526736efc8873",
+                "shasum": "79da2e77bdc9b29252adaf4da1acd012d2bc4923"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -379,7 +379,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-07-15 04:10:57"
+            "time": "2014-07-17 01:49:35"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -524,12 +524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nkovacs/Codeception.git",
-                "reference": "65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c"
+                "reference": "6a164aaf9d9e29f3146fb3a29903fd90ad55cf66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nkovacs/Codeception/zipball/65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c",
-                "reference": "65b91bf85307996a5ac50ac96a7a6f72f2c6ac7c",
+                "url": "https://api.github.com/repos/nkovacs/Codeception/zipball/6a164aaf9d9e29f3146fb3a29903fd90ad55cf66",
+                "reference": "6a164aaf9d9e29f3146fb3a29903fd90ad55cf66",
                 "shasum": ""
             },
             "require": {
@@ -537,13 +537,13 @@
                 "guzzlehttp/guzzle": "4.*",
                 "php": ">=5.4.0",
                 "phpunit/phpunit": "~4.0",
-                "symfony/browser-kit": "~2.3",
-                "symfony/console": "~2.3",
-                "symfony/css-selector": "~2.3",
-                "symfony/dom-crawler": "~2.3",
-                "symfony/event-dispatcher": "~2.3",
-                "symfony/finder": "~2.3",
-                "symfony/yaml": "~2.3"
+                "symfony/browser-kit": "~2.4",
+                "symfony/console": "~2.4",
+                "symfony/css-selector": "~2.4",
+                "symfony/dom-crawler": "~2.4,!=2.4.5",
+                "symfony/event-dispatcher": "~2.4",
+                "symfony/finder": "~2.4",
+                "symfony/yaml": "~2.4"
             },
             "require-dev": {
                 "facebook/php-sdk": "3.*",
@@ -587,7 +587,7 @@
             "support": {
                 "source": "https://github.com/nkovacs/Codeception/tree/master"
             },
-            "time": "2014-05-16 12:30:14"
+            "time": "2014-07-17 14:03:21"
         },
         {
             "name": "codeception/specify",
@@ -707,17 +707,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b909bd8befddbf9424995e0dad1c31d4be97b1fb"
+                "reference": "012b2aecbda4e38f119c19580898685851015fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-b909bd8befddbf9424995e0dad1c31d4be97b1fb-zip-7a31e5.zip",
-                "reference": "b909bd8befddbf9424995e0dad1c31d4be97b1fb",
-                "shasum": "70714327a52d4900451a65d712cb6e9ba6d3fdb2"
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-012b2aecbda4e38f119c19580898685851015fa7-zip-9ef32d.zip",
+                "reference": "012b2aecbda4e38f119c19580898685851015fa7",
+                "shasum": "2ced017b7f27677ebbc166011003bfece4ce782d"
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/streams": "~1.0",
+                "guzzlehttp/streams": "~1.3",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -764,7 +764,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-14 23:55:50"
+            "time": "2014-07-16 03:01:02"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1793,13 +1793,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "a8cc82877396aab7b028c4594dad9a4392fbf7f0"
+                "reference": "06d8f2a22d4801cc2d80d5697d35860e073077bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-console-a8cc82877396aab7b028c4594dad9a4392fbf7f0-zip-f7fc06.zip",
-                "reference": "a8cc82877396aab7b028c4594dad9a4392fbf7f0",
-                "shasum": "19fac4808f52ed76c56d3fb14b6aa5c528352ed1"
+                "url": "http://satis.mito.hu/dist/symfony-console-06d8f2a22d4801cc2d80d5697d35860e073077bb-zip-568b48.zip",
+                "reference": "06d8f2a22d4801cc2d80d5697d35860e073077bb",
+                "shasum": "9cc69a60624cd6fd3afd817a6e813c929edcbf79"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1843,7 +1843,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-15 14:15:21"
         },
         {
             "name": "symfony/css-selector",
@@ -1960,13 +1960,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "dc2182b4275f153469321b99c3a675ef3cffafd4"
+                "reference": "c2f8a5d3181736d107d6622a536fbdcd55436674"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-event-dispatcher-dc2182b4275f153469321b99c3a675ef3cffafd4-zip-6a3572.zip",
-                "reference": "dc2182b4275f153469321b99c3a675ef3cffafd4",
-                "shasum": "8b09384d6c6468ef8702cb5712f9c8398e24817c"
+                "url": "http://satis.mito.hu/dist/symfony-event-dispatcher-c2f8a5d3181736d107d6622a536fbdcd55436674-zip-164b26.zip",
+                "reference": "c2f8a5d3181736d107d6622a536fbdcd55436674",
+                "shasum": "9615fb657c48f974da0930de30e7dce519f906f3"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2010,7 +2010,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-08 12:21:41"
+            "time": "2014-07-09 09:06:26"
         },
         {
             "name": "symfony/finder",
@@ -2019,13 +2019,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "e518598652b9fe093b1b07a9de83309459fcb357"
+                "reference": "45fbbe9444b04be0a8595a86d91808278a0d22fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-finder-e518598652b9fe093b1b07a9de83309459fcb357-zip-51bc31.zip",
-                "reference": "e518598652b9fe093b1b07a9de83309459fcb357",
-                "shasum": "4903b793ddf7c3271eaba280fc5660f4c0084ea5"
+                "url": "http://satis.mito.hu/dist/symfony-finder-45fbbe9444b04be0a8595a86d91808278a0d22fc-zip-b73037.zip",
+                "reference": "45fbbe9444b04be0a8595a86d91808278a0d22fc",
+                "shasum": "a71e32920b6ac310eed168f66786aa0d0b674aec"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2059,7 +2059,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-15 14:15:21"
         },
         {
             "name": "symfony/yaml",
@@ -2068,13 +2068,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "4168f7b8e211cdc2d778ab78f35666580a6d7437"
+                "reference": "07ff901ce8b081cf227091b4919d347fa999b2a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-yaml-4168f7b8e211cdc2d778ab78f35666580a6d7437-zip-3947d1.zip",
-                "reference": "4168f7b8e211cdc2d778ab78f35666580a6d7437",
-                "shasum": "63579b8de9cadfca39dbef4fbfaec6890a47117f"
+                "url": "http://satis.mito.hu/dist/symfony-yaml-07ff901ce8b081cf227091b4919d347fa999b2a0-zip-a6738d.zip",
+                "reference": "07ff901ce8b081cf227091b4919d347fa999b2a0",
+                "shasum": "521c94d687a3fdb4d9fbff7a8b07ab4245643f64"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2108,7 +2108,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-08 12:21:41"
+            "time": "2014-07-09 09:06:26"
         },
         {
             "name": "yiisoft/yii2-codeception",
