@@ -40,6 +40,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'request' => [
+            'cookieValidationKey' => '-R745xsEUkQB43qCrDo8DKZHIJBw2n9B',
+        ],
         'assetManager' => [
             'bundles' => [
                 // override default jquery asset to use cdn with fallback

@@ -152,13 +152,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "1471619d856da006a4de443355d6339325b3f46e"
+                "reference": "e27c50e6f768aecbc46666994ccc9b2f77fd8ade"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-1471619d856da006a4de443355d6339325b3f46e-zip-b8abf0.zip",
-                "reference": "1471619d856da006a4de443355d6339325b3f46e",
-                "shasum": "38ca682d392cb2be100bb978e39267d3333d65b8"
+                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-e27c50e6f768aecbc46666994ccc9b2f77fd8ade-zip-d695b9.zip",
+                "reference": "e27c50e6f768aecbc46666994ccc9b2f77fd8ade",
+                "shasum": "56f82d16af97bed414e264332f7b7726cabf7faf"
             },
             "require": {
                 "php": ">=5.2.4"
@@ -183,13 +183,11 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "name": "Chris Corbyn"
                 },
                 {
-                    "name": "Chris Corbyn"
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
@@ -198,7 +196,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-07-03 13:54:59"
+            "time": "2014-07-22 15:44:41"
         },
         {
             "name": "twbs/bootstrap",
@@ -206,13 +204,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122"
+                "reference": "2c4641855dd0505608566489392ed35aaa6cf2e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-dd22f599998cc07c18b6643a856d5acda6c5c122-zip-3cc7e5.zip",
-                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122",
-                "shasum": "8ed96d531c6df48134553228e0a54b6e6b4d3fe1"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-2c4641855dd0505608566489392ed35aaa6cf2e3-zip-5df6c0.zip",
+                "reference": "2c4641855dd0505608566489392ed35aaa6cf2e3",
+                "shasum": "4338107e94b1eb3d64715af664d01dff90d7a065"
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
@@ -249,7 +247,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-15 18:09:50"
+            "time": "2014-07-24 22:16:08"
         },
         {
             "name": "yiisoft/jquery",
@@ -306,13 +304,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ee609c6a48cbd2d9ef702305f7d526736efc8873"
+                "reference": "c4f19f9987f1192c330a01945162f61ba64b83a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-ee609c6a48cbd2d9ef702305f7d526736efc8873-zip-4397eb.zip",
-                "reference": "ee609c6a48cbd2d9ef702305f7d526736efc8873",
-                "shasum": "79da2e77bdc9b29252adaf4da1acd012d2bc4923"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-c4f19f9987f1192c330a01945162f61ba64b83a5-zip-12d777.zip",
+                "reference": "c4f19f9987f1192c330a01945162f61ba64b83a5",
+                "shasum": "789fa3de55fa65be8fb7476942f8d8b4804e523a"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -379,7 +377,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-07-17 01:49:35"
+            "time": "2014-07-25 07:24:04"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -387,13 +385,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "5517eeac747ad628a79ed8b16f05ec1966ef1c12"
+                "reference": "b74f3b0d65f2650aac72a63c72db04e18e86a883"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-5517eeac747ad628a79ed8b16f05ec1966ef1c12-zip-0d80af.zip",
-                "reference": "5517eeac747ad628a79ed8b16f05ec1966ef1c12",
-                "shasum": "1f914d4189b3a28148ede5c516a791bb864e9213"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-b74f3b0d65f2650aac72a63c72db04e18e86a883-zip-7bb636.zip",
+                "reference": "b74f3b0d65f2650aac72a63c72db04e18e86a883",
+                "shasum": "0ac08cc9f51dbd2774200bd0bbbbdef5d1790fce"
             },
             "require": {
                 "twbs/bootstrap": "3.2.* | 3.1.* | 3.0.*",
@@ -412,9 +410,7 @@
             "authors": [
                 {
                     "name": "Qiang Xue",
-                    "email": "qiang.xue@gmail.com",
-                    "homepage": "http://www.yiiframework.com/",
-                    "role": "Founder and project lead"
+                    "email": "qiang.xue@gmail.com"
                 }
             ],
             "description": "The Twitter Bootstrap extension for the Yii framework",
@@ -422,7 +418,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2014-06-30 11:04:22"
+            "time": "2014-07-22 04:10:23"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -430,13 +426,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "47dbc7c4a323086ba96dc4a9c3ff85c9f08d2615"
+                "reference": "e5614b13ee4c30c1e322aaf95855140580bc109a"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-composer-47dbc7c4a323086ba96dc4a9c3ff85c9f08d2615-zip-a8f0b7.zip",
-                "reference": "47dbc7c4a323086ba96dc4a9c3ff85c9f08d2615",
-                "shasum": "ae0f7ee734512f5b4cab2b8b1b6ec0b8147ea451"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-composer-e5614b13ee4c30c1e322aaf95855140580bc109a-zip-7bd274.zip",
+                "reference": "e5614b13ee4c30c1e322aaf95855140580bc109a",
+                "shasum": "4d25f13b09736127c36bfcae01bfe4b9451ad98b"
             },
             "require": {
                 "composer-plugin-api": "1.0.0"
@@ -457,9 +453,7 @@
             "authors": [
                 {
                     "name": "Qiang Xue",
-                    "email": "qiang.xue@gmail.com",
-                    "homepage": "http://www.yiiframework.com/",
-                    "role": "Founder and project lead"
+                    "email": "qiang.xue@gmail.com"
                 }
             ],
             "description": "The composer plugin for Yii extension installer",
@@ -468,7 +462,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2014-07-03 12:33:09"
+            "time": "2014-07-19 19:39:03"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -707,17 +701,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "012b2aecbda4e38f119c19580898685851015fa7"
+                "reference": "8e90e67c65b0dc08ef608c8993d6cb08b94b4b1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-012b2aecbda4e38f119c19580898685851015fa7-zip-9ef32d.zip",
-                "reference": "012b2aecbda4e38f119c19580898685851015fa7",
-                "shasum": "2ced017b7f27677ebbc166011003bfece4ce782d"
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-8e90e67c65b0dc08ef608c8993d6cb08b94b4b1a-zip-1c1daf.zip",
+                "reference": "8e90e67c65b0dc08ef608c8993d6cb08b94b4b1a",
+                "shasum": "8759930f4eece94c34c6ddfec7bfca773626d762"
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/streams": "~1.3",
+                "guzzlehttp/streams": "~1.4",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -764,21 +758,21 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-16 03:01:02"
+            "time": "2014-07-23 19:40:03"
         },
         {
             "name": "guzzlehttp/streams",
-            "version": "1.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/streams.git",
-                "reference": "d6aaa91cfdbae86355dd2a168a3ca536755898a2"
+                "reference": "3b761a328e5ed6ed519e960aded95d7acbe77894"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/d6aaa91cfdbae86355dd2a168a3ca536755898a2",
-                "reference": "d6aaa91cfdbae86355dd2a168a3ca536755898a2",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/guzzlehttp-streams-3b761a328e5ed6ed519e960aded95d7acbe77894-zip-32558a.zip",
+                "reference": "3b761a328e5ed6ed519e960aded95d7acbe77894",
+                "shasum": "1a92af549a55d04ab1be82316d9aae8bd397cf52"
             },
             "require": {
                 "php": ">=5.4.0"
@@ -789,7 +783,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -817,7 +811,7 @@
                 "Guzzle",
                 "stream"
             ],
-            "time": "2014-07-15 22:02:02"
+            "time": "2014-07-19 18:43:42"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1261,13 +1255,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "39989b72a0ef50405307288a1493cbe0e7e5a605"
+                "reference": "e243de0b5264da8454105455bda0881f5b2ac972"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/phpunit-phpunit-39989b72a0ef50405307288a1493cbe0e7e5a605-zip-33499a.zip",
-                "reference": "39989b72a0ef50405307288a1493cbe0e7e5a605",
-                "shasum": "b0ff4996f9e7cb50dfa63b48c74266f9863fe9fb"
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-e243de0b5264da8454105455bda0881f5b2ac972-zip-8b48ba.zip",
+                "reference": "e243de0b5264da8454105455bda0881f5b2ac972",
+                "shasum": "1c686580c2ad41937841233bd395ad06aceb1a4d"
             },
             "require": {
                 "ext-dom": "*",
@@ -1327,7 +1321,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-07-07 11:51:41"
+            "time": "2014-07-22 22:57:02"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1793,13 +1787,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "06d8f2a22d4801cc2d80d5697d35860e073077bb"
+                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-console-06d8f2a22d4801cc2d80d5697d35860e073077bb-zip-568b48.zip",
-                "reference": "06d8f2a22d4801cc2d80d5697d35860e073077bb",
-                "shasum": "9cc69a60624cd6fd3afd817a6e813c929edcbf79"
+                "url": "http://satis.mito.hu/dist/symfony-console-a61d4fb086e33c3b45c80b638fb915c62eac58a3-zip-3eba0b.zip",
+                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3",
+                "shasum": "d4403e418cde667bd6084781c4f3aaec9ec8d66b"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1831,19 +1825,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-15 14:15:21"
+            "time": "2014-07-20 19:24:23"
         },
         {
             "name": "symfony/css-selector",
@@ -1852,13 +1844,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/CssSelector.git",
-                "reference": "c99d087768c654e3d061b922f1a671294992a166"
+                "reference": "3075f28ebc958c2006d0267ae0d189eac1dd4b2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-css-selector-c99d087768c654e3d061b922f1a671294992a166-zip-dff855.zip",
-                "reference": "c99d087768c654e3d061b922f1a671294992a166",
-                "shasum": "0b7a9cf52ba12f6b9f34e73672a946a0ee2383e5"
+                "url": "http://satis.mito.hu/dist/symfony-css-selector-3075f28ebc958c2006d0267ae0d189eac1dd4b2f-zip-72acd2.zip",
+                "reference": "3075f28ebc958c2006d0267ae0d189eac1dd4b2f",
+                "shasum": "182908e98731a371d2463325b4220aa595ec8b05"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1880,23 +1872,21 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
                 },
                 {
                     "name": "Jean-François Simon",
                     "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-18 07:44:18"
         },
         {
             "name": "symfony/dom-crawler",
@@ -1905,13 +1895,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "e50da0a1af797151266110f432586d062bb873fb"
+                "reference": "82b5ca611e483de4dfc010b21dc63d5e7c8645c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-dom-crawler-e50da0a1af797151266110f432586d062bb873fb-zip-d1d074.zip",
-                "reference": "e50da0a1af797151266110f432586d062bb873fb",
-                "shasum": "aeccc2bd68979aeb9dc3084785a2c70b47da9f79"
+                "url": "http://satis.mito.hu/dist/symfony-dom-crawler-82b5ca611e483de4dfc010b21dc63d5e7c8645c1-zip-f11ac6.zip",
+                "reference": "82b5ca611e483de4dfc010b21dc63d5e7c8645c1",
+                "shasum": "d2d3a2abd3bc2dffb45c078a1f0b65a056804ac2"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1939,19 +1929,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-23 19:02:07"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2268,13 +2256,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "b42d638192bb9b4b7d7e73e747dfcda9db4d9985"
+                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-b42d638192bb9b4b7d7e73e747dfcda9db4d9985-zip-5ca515.zip",
-                "reference": "b42d638192bb9b4b7d7e73e747dfcda9db4d9985",
-                "shasum": "83632df155e8a403b32923fadff14c9b4e8c9667"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-ce6644841f805bfce14453bbe4eba17b8bb6e549-zip-5e8a3f.zip",
+                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549",
+                "shasum": "da1e74148f87673045409b15b1ab8ec92aec87cd"
             },
             "require": {
                 "phpspec/php-diff": ">=1.0.2",
@@ -2294,9 +2282,7 @@
             "authors": [
                 {
                     "name": "Qiang Xue",
-                    "email": "qiang.xue@gmail.com",
-                    "homepage": "http://www.yiiframework.com/",
-                    "role": "Founder and project lead"
+                    "email": "qiang.xue@gmail.com"
                 }
             ],
             "description": "The Gii extension for the Yii framework",
@@ -2305,7 +2291,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-07-09 23:54:30"
+            "time": "2014-07-23 12:37:49"
         }
     ],
     "aliases": [
