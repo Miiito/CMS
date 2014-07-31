@@ -152,13 +152,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "e27c50e6f768aecbc46666994ccc9b2f77fd8ade"
+                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-e27c50e6f768aecbc46666994ccc9b2f77fd8ade-zip-d695b9.zip",
-                "reference": "e27c50e6f768aecbc46666994ccc9b2f77fd8ade",
-                "shasum": "56f82d16af97bed414e264332f7b7726cabf7faf"
+                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-62478c4c4ed84939a5457b15f9b978b58d0db849-zip-51598b.zip",
+                "reference": "62478c4c4ed84939a5457b15f9b978b58d0db849",
+                "shasum": "c0156949f1f25f7ad149ab15a43c5a3c2788a481"
             },
             "require": {
                 "php": ">=5.2.4"
@@ -196,7 +196,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-07-22 15:44:41"
+            "time": "2014-07-28 09:34:50"
         },
         {
             "name": "twbs/bootstrap",
@@ -204,13 +204,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "2c4641855dd0505608566489392ed35aaa6cf2e3"
+                "reference": "fc1db2e74b16b355656512eafd39f667f383a8a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-2c4641855dd0505608566489392ed35aaa6cf2e3-zip-5df6c0.zip",
-                "reference": "2c4641855dd0505608566489392ed35aaa6cf2e3",
-                "shasum": "4338107e94b1eb3d64715af664d01dff90d7a065"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-fc1db2e74b16b355656512eafd39f667f383a8a9-zip-feb834.zip",
+                "reference": "fc1db2e74b16b355656512eafd39f667f383a8a9",
+                "shasum": "ff57aeb61dc49b4835405b04d8ca7771807d3568"
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
@@ -247,7 +247,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-24 22:16:08"
+            "time": "2014-07-29 00:47:51"
         },
         {
             "name": "yiisoft/jquery",
@@ -304,13 +304,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "c4f19f9987f1192c330a01945162f61ba64b83a5"
+                "reference": "22fa6c00eb4d823901df8e75e8d3dc2950e18ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-c4f19f9987f1192c330a01945162f61ba64b83a5-zip-12d777.zip",
-                "reference": "c4f19f9987f1192c330a01945162f61ba64b83a5",
-                "shasum": "789fa3de55fa65be8fb7476942f8d8b4804e523a"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-22fa6c00eb4d823901df8e75e8d3dc2950e18ced-zip-2e1915.zip",
+                "reference": "22fa6c00eb4d823901df8e75e8d3dc2950e18ced",
+                "shasum": "18ecf19bda90cc256a2f7eedd795617c652863dc"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -377,7 +377,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-07-25 07:24:04"
+            "time": "2014-07-29 07:10:31"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -518,15 +518,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nkovacs/Codeception.git",
-                "reference": "6a164aaf9d9e29f3146fb3a29903fd90ad55cf66"
+                "reference": "92ad115c40b2954395ff3c8c336223e875f257fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nkovacs/Codeception/zipball/6a164aaf9d9e29f3146fb3a29903fd90ad55cf66",
-                "reference": "6a164aaf9d9e29f3146fb3a29903fd90ad55cf66",
+                "url": "https://api.github.com/repos/nkovacs/Codeception/zipball/92ad115c40b2954395ff3c8c336223e875f257fd",
+                "reference": "92ad115c40b2954395ff3c8c336223e875f257fd",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
                 "facebook/webdriver": "~0.4",
                 "guzzlehttp/guzzle": "4.*",
                 "php": ">=5.4.0",
@@ -540,15 +542,18 @@
                 "symfony/yaml": "~2.4"
             },
             "require-dev": {
+                "codeception/specify": "*",
                 "facebook/php-sdk": "3.*",
                 "monolog/monolog": "*",
+                "phpseclib/phpseclib": "0.3.6",
                 "videlalvaro/php-amqplib": "*"
             },
             "suggest": {
                 "codeception/phpbuiltinserver": "Extension to start and stop PHP built-in web server for your tests",
                 "codeception/specify": "BDD-style code blocks",
                 "codeception/verify": "BDD-style assertions",
-                "monolog/monolog": "Log test steps"
+                "monolog/monolog": "Log test steps",
+                "phpseclib/phpseclib": "Extension required to use the SFTP option in the FTP Module."
             },
             "bin": [
                 "codecept"
@@ -581,7 +586,7 @@
             "support": {
                 "source": "https://github.com/nkovacs/Codeception/tree/master"
             },
-            "time": "2014-07-17 14:03:21"
+            "time": "2014-07-31 13:54:09"
         },
         {
             "name": "codeception/specify",
@@ -1255,13 +1260,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e243de0b5264da8454105455bda0881f5b2ac972"
+                "reference": "7d8da4174961b3144e364990a499efe90c5b49f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/phpunit-phpunit-e243de0b5264da8454105455bda0881f5b2ac972-zip-8b48ba.zip",
-                "reference": "e243de0b5264da8454105455bda0881f5b2ac972",
-                "shasum": "1c686580c2ad41937841233bd395ad06aceb1a4d"
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-7d8da4174961b3144e364990a499efe90c5b49f5-zip-f0e962.zip",
+                "reference": "7d8da4174961b3144e364990a499efe90c5b49f5",
+                "shasum": "6349ce2cef86bec8f1d77fd4c4b2e5198e2e293f"
             },
             "require": {
                 "ext-dom": "*",
@@ -1321,7 +1326,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-07-22 22:57:02"
+            "time": "2014-07-28 20:41:55"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1730,13 +1735,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/BrowserKit.git",
-                "reference": "c8b7ca1034645c67e01c14c4dc25eab4e4cb1df7"
+                "reference": "e09f62da7b58956a84734627310619a7438657a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-browser-kit-c8b7ca1034645c67e01c14c4dc25eab4e4cb1df7-zip-f72f3e.zip",
-                "reference": "c8b7ca1034645c67e01c14c4dc25eab4e4cb1df7",
-                "shasum": "f99836ee20eff4988f07bbfb225b8ea61d05ff20"
+                "url": "http://satis.mito.hu/dist/symfony-browser-kit-e09f62da7b58956a84734627310619a7438657a6-zip-fa3142.zip",
+                "reference": "e09f62da7b58956a84734627310619a7438657a6",
+                "shasum": "79ea60cfd147f36a163c40a8ac075b8eb6283009"
             },
             "require": {
                 "php": ">=5.3.3",
@@ -1766,19 +1771,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-28 13:20:53"
         },
         {
             "name": "symfony/console",
@@ -1948,13 +1951,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "c2f8a5d3181736d107d6622a536fbdcd55436674"
+                "reference": "68ab3c3f50eae2b152075da722204d4de67f596f"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-event-dispatcher-c2f8a5d3181736d107d6622a536fbdcd55436674-zip-164b26.zip",
-                "reference": "c2f8a5d3181736d107d6622a536fbdcd55436674",
-                "shasum": "9615fb657c48f974da0930de30e7dce519f906f3"
+                "url": "http://satis.mito.hu/dist/symfony-event-dispatcher-68ab3c3f50eae2b152075da722204d4de67f596f-zip-aa5b95.zip",
+                "reference": "68ab3c3f50eae2b152075da722204d4de67f596f",
+                "shasum": "5aa3c16bc46e369e5a7f521cdb93a412f967ea0b"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1986,19 +1989,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:06:26"
+            "time": "2014-07-28 13:20:53"
         },
         {
             "name": "symfony/finder",
@@ -2007,13 +2008,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "45fbbe9444b04be0a8595a86d91808278a0d22fc"
+                "reference": "3329a4cb19075326ef2cc2abe848aa21b84905cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/symfony-finder-45fbbe9444b04be0a8595a86d91808278a0d22fc-zip-b73037.zip",
-                "reference": "45fbbe9444b04be0a8595a86d91808278a0d22fc",
-                "shasum": "a71e32920b6ac310eed168f66786aa0d0b674aec"
+                "url": "http://satis.mito.hu/dist/symfony-finder-3329a4cb19075326ef2cc2abe848aa21b84905cf-zip-afd05f.zip",
+                "reference": "3329a4cb19075326ef2cc2abe848aa21b84905cf",
+                "shasum": "a2c274450ef7def65d9c224e1d60ba16221fab25"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2035,19 +2036,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-15 14:15:21"
+            "time": "2014-07-28 13:20:53"
         },
         {
             "name": "symfony/yaml",
@@ -2256,13 +2255,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549"
+                "reference": "3919852efa2a4526d8388b4c9d5b8590b0ebf85a"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-ce6644841f805bfce14453bbe4eba17b8bb6e549-zip-5e8a3f.zip",
-                "reference": "ce6644841f805bfce14453bbe4eba17b8bb6e549",
-                "shasum": "da1e74148f87673045409b15b1ab8ec92aec87cd"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-3919852efa2a4526d8388b4c9d5b8590b0ebf85a-zip-d7db75.zip",
+                "reference": "3919852efa2a4526d8388b4c9d5b8590b0ebf85a",
+                "shasum": "d1a575e86f2091fcaccb5c84ddd1d938aa995ec9"
             },
             "require": {
                 "phpspec/php-diff": ">=1.0.2",
@@ -2291,7 +2290,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-07-23 12:37:49"
+            "time": "2014-07-25 11:01:13"
         }
     ],
     "aliases": [
@@ -2301,6 +2300,7 @@
     "stability-flags": {
         "yiisoft/yii2-codeception": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.4.0"
     },
