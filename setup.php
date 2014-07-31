@@ -1,14 +1,15 @@
 <?php
-
+// @codingStandardsIgnoreStart
 class Setup
+// @codingStandardsIgnoreEnd
 {
-    protected static $serverWritablePaths = array(
+    protected static $serverWritablePaths = [
         'runtime',
         'web/assets',
         'testweb/assets',
         'tests/_log',
         'runtime/mail', //needed for tests
-    );
+    ];
 
     protected static $defaultServerGroup = 'apache';
 
@@ -94,4 +95,4 @@ class Setup
     }
 }
 
-Setup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : array());
+Setup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : []);

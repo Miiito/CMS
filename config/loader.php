@@ -18,7 +18,7 @@ if (!function_exists('load_config')) {
 
         // no env-specific config found, return empty array
 
-        return array();
+        return [];
 
     }
 
