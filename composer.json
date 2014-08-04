@@ -18,7 +18,8 @@
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-bootstrap": "*",
 		"yiisoft/yii2-swiftmailer": "*",
-		"mito/yii2-enhanced-assets": "*"
+		"mito/yii2-enhanced-assets": "*",
+		"mito/yii2-coding-standards": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "dev-master",

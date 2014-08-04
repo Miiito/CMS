@@ -207,11 +207,34 @@ module.exports = function(grunt) {
 					'controllers/**/*.php',
 					'commands/**/*.php',
 					'models/**/*.php',
-				]
+				],
+				options: {
+					standard: 'vendor/yiisoft/yii2-coding-standards/Yii2'
+				}
+			},
+			views: {
+				dir: [
+					'views/**/*.php',
+					'mail/**/*.php',
+					'modules/*/views/*/*',
+					'modules/*/mail/*/*',
+				],
+				options: {
+					standard: 'vendor/mito/yii2-coding-standards/Views'
+				}
+			},
+			others: {
+				dir: [
+					'config/**/*.php',
+					'setup.php',
+					'migrations/**/*.php',
+				],
+				options: {
+					standard: 'vendor/mito/yii2-coding-standards/Yii2'
+				}
 			},
 			options: {
-				bin: 'vendor/bin/phpcs',
-				standard: 'vendor/yiisoft/yii2-coding-standards/Yii2'
+				bin: 'vendor/bin/phpcs'
 			}
 		}
 	});
