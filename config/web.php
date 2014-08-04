@@ -22,10 +22,6 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'mail' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'useFileTransport' => true,
-        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
