@@ -10,7 +10,6 @@ $env_specific_local = load_config('web.local.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
     'components' => [
         'cache' => [
@@ -26,15 +25,6 @@ $config = [
         'mail' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => true,
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
