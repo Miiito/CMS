@@ -7,7 +7,6 @@ use yii\codeception\TestCase;
 use yii\helpers\Json;
 use mito\assets\PackagesController;
 
-
 class PackagesControllerTest extends TestCase
 {
     protected $tempPath='';
@@ -30,7 +29,7 @@ class PackagesControllerTest extends TestCase
     protected function createDir($dirName)
     {
         if (!file_exists($dirName)) {
-            mkdir($dirName,0777,true);
+            mkdir($dirName, 0777, true);
         }
     }
 
@@ -115,7 +114,7 @@ class PackagesControllerTest extends TestCase
             return null;
         }
         $configFile = $this->tempPath . '/main' . md5(microtime()) . '.php';
-        $fileContent = '<?php return ' . var_export($config,true) . ';';
+        $fileContent = '<?php return ' . var_export($config, true) . ';';
         file_put_contents($configFile, $fileContent);
         return $configFile;
     }
