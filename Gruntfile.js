@@ -207,6 +207,8 @@ module.exports = function(grunt) {
 					'controllers/**/*.php',
 					'commands/**/*.php',
 					'models/**/*.php',
+					'widgets/*.php',
+					'!widgets/views/*'
 				],
 				options: {
 					standard: 'vendor/yiisoft/yii2-coding-standards/Yii2'
