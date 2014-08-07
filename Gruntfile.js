@@ -84,6 +84,10 @@ module.exports = function(grunt) {
 			}
 		},
 		copykeep: {
+			localemail: {
+				src: 'config/development/common.local.example',
+				dest: 'config/development/common.local.php'
+			},
 			testroot: {
 				src: 'tests/_bootstrap.local.sample',
 				dest: 'tests/_bootstrap.local.php'
@@ -138,6 +142,23 @@ module.exports = function(grunt) {
 					]
 				}
 			},
+			localemail: {
+				options: {
+					questions: [
+						{
+							config: 'email',
+							message: 'Your email',
+							type: 'input',
+							validate: function(value) {
+								if (value === '') {
+									return 'Please enter an email address';
+								}
+								return true;
+							}
+						}
+					]
+				}
+			},
 			testroot: {
 				options: {
 					questions: [
@@ -151,6 +172,16 @@ module.exports = function(grunt) {
 			}
 		},
 		replace: {
+			localemail: {
+				src: 'config/development/common.local.php',
+				overwrite: true,
+				replacements: [{
+					from: /'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/,
+					to: function(matchedWord, index, fullText, regexMatches) {
+						return "'as dryrun' => [" + regexMatches[0] + "'email' => '" + grunt.config('email') + "'";
+					}
+				}]
+			},
 			testroot: {
 				src: 'tests/_bootstrap.local.php',
 				overwrite: true,
@@ -445,7 +476,9 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('hooks', ['clean:hooks', 'githooks']);
 
-	grunt.registerTask('postinstall', ['hooks', 'setup'/*, 'localemail'*/]);
+	grunt.registerTask('localemail', ['copykeep:localemail', 'prompt:localemail', 'replace:localemail']);
+
+	grunt.registerTask('postinstall', ['hooks', 'setup', 'localemail']);
 
 	grunt.registerTask('testroot', ['copykeep:testroot', 'copykeep:acceptancehost', 'prompt:testroot', 'replace:testroot']);
 
