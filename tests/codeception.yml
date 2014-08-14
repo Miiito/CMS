@@ -1,9 +1,9 @@
 actor: Tester
 paths:
-    tests: tests
-    log: tests/_log
-    data: tests/_data
-    helpers: tests/_helpers
+    tests: codeception
+    log: codeception/_log
+    data: codeception/_data
+    helpers: codeception/_helpers
 settings:
     bootstrap: _bootstrap.php
     suite_class: \PHPUnit_Framework_TestSuite
@@ -16,7 +16,7 @@ modules:
             dsn: ''
             user: ''
             password: ''
-            dump: tests/_data/dump.sql
+            dump: codeception/_data/dump.sql
 coverage:
     enabled: true
     whitelist:

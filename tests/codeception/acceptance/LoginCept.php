@@ -1,6 +1,6 @@
 <?php
 
-use tests\_pages\LoginPage;
+use codeception\_pages\LoginPage;
 
 $I = new WebGuy($scenario);
 $I->wantTo('ensure that login works');

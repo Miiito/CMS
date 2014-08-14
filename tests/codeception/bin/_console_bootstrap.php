@@ -8,5 +8,7 @@ defined('YII_ENV') or define('YII_ENV', 'test');
 defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
 defined('STDOUT') or define('STDOUT', fopen('php://stdout', 'w'));
 
-require(__DIR__ . '/../vendor/autoload.php');
-require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+defined('ROOT_DIR') or define('ROOT_DIR', dirname(dirname(dirname(__DIR__))));
+
+require(ROOT_DIR . '/vendor/autoload.php');
+require(ROOT_DIR . '/vendor/yiisoft/yii2/Yii.php');

@@ -1,6 +1,6 @@
 <?php
 
-use tests\_pages\ContactPage;
+use codeception\_pages\ContactPage;
 
 $I = new WebGuy($scenario);
 $I->wantTo('ensure that contact works');

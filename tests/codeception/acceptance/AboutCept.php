@@ -1,6 +1,6 @@
 <?php
 
-use tests\_pages\AboutPage;
+use codeception\_pages\AboutPage;
 
 $I = new WebGuy($scenario);
 $I->wantTo('ensure that about works');
