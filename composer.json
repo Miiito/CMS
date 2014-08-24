@@ -26,6 +26,7 @@
 		"yiisoft/yii2-debug": "*",
 		"yiisoft/yii2-gii": "*",
 		"squizlabs/php_codesniffer": "1.*",
+		"yiisoft/yii2-faker": "*",
 		"yiisoft/yii2-coding-standards": "*",
 		"codeception/codeception": "*",
 		"codeception/specify": " *",

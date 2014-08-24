@@ -4,7 +4,10 @@
  */
 return [
     'components' => [
-        'mail' => [
+        'db' => [
+            'dsn' => 'mysql:host=localhost;dbname=yii2_basic_tests',
+        ],
+        'mailer' => [
             'useFileTransport' => true,
         ],
         'urlManager' => [
