@@ -10,3 +10,5 @@ defined('ROOT_DIR') or define('ROOT_DIR', dirname(dirname(dirname(__DIR__))));
 
 require(ROOT_DIR . '/vendor/autoload.php');
 require(ROOT_DIR . '/vendor/yiisoft/yii2/Yii.php');
+
+Yii::setAlias('@tests', dirname(dirname(__DIR__)));
