@@ -1,6 +1,6 @@
 <?php
 
-require( dirname(__FILE__) . '/loader.php' );
+require( __DIR__ . '/loader.php' );
 
 $env_specific = load_config('common.php');
 $env_specific_local = load_config('common.local.php');

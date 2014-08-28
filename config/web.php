@@ -1,8 +1,8 @@
 <?php
 
-require( dirname(__FILE__) . '/loader.php' );
+require( __DIR__ . '/loader.php' );
 
-$common_cfg = require( dirname(__FILE__) . '/common.php');
+$common_cfg = require( __DIR__ . '/common.php');
 
 $env_specific = load_config('web.php');
 $env_specific_local = load_config('web.local.php');

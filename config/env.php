@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('YII_CONFIG_ENVIRONMENT')) {
-    $env_file = dirname(__FILE__) . '/ENV';
+    $env_file = __DIR__ . '/ENV';
 
     if (is_file($env_file) && is_readable($env_file)) {
         $env = file_get_contents($env_file);
