@@ -50,8 +50,7 @@
 			"runtime",
 			"web/assets",
 			"testweb/assets",
-			"tests/_log",
-			"runtime/mail"
+			"tests/_log"
 		],
 		"executable": [
 			"yii"
