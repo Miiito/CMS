@@ -50,7 +50,9 @@ class Setup
 
         if (!is_dir($env_config)) {
             echo "Warning: no configuration found for environment: $env\n";
+            mkdir($env_config);
         }
+        self::generateCookieValidationKey($env_config . '/web.local.php');
 
         file_put_contents($baseDir.'/config/ENV', $env);
     }
@@ -84,6 +86,40 @@ class Setup
                 chmod($gitHookDir.'/'.$file, 0775);
             }
         }
+    }
+
+    protected static function generateCookieValidationKey($configFile)
+    {
+        $key = self::generateRandomString();
+        if (is_file($configFile)) {
+            $content = preg_replace('/(("|\')cookieValidationKey("|\')\s*=>\s*)(""|\'\')/', "\\1'$key'", file_get_contents($configFile));
+        } else {
+            $configArray = [
+                'components' => [
+                    'cookieValidationKey' => $key,
+                ],
+            ];
+            $content =
+                "<?php\n"
+                . "return [\n"
+                . "    'components' => [\n"
+                . "        'request' => [\n"
+                . "            'cookieValidationKey' => " . var_export($key, true) . "\n"
+                . "        ]\n"
+                . "    ]\n"
+                . "];\n";
+        }
+        file_put_contents($configFile, $content);
+    }
+
+    protected static function generateRandomString()
+    {
+        if (!extension_loaded('mcrypt')) {
+            throw new Exception('The mcrypt PHP extension is required by Yii2.');
+        }
+        $length = 32;
+        $bytes = mcrypt_create_iv($length, MCRYPT_DEV_URANDOM);
+        return strtr(substr(base64_encode($bytes), 0, $length), '+/=', '_-.');
     }
 
     protected static function getBaseDir()

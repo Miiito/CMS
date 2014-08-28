@@ -38,25 +38,15 @@
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"yii\\composer\\Installer::setPermission",
-			"yii\\composer\\Installer::generateCookieValidationKey"
+			"yii\\composer\\Installer::setPermission"
 		]
 	},
 	"config": {
 		"process-timeout": 1800
 	},
 	"extra": {
-		"writable": [
-			"runtime",
-			"web/assets",
-			"testweb/assets",
-			"tests/_log"
-		],
 		"executable": [
 			"yii"
-		],
-		"config": [
-			"config/web.php"
 		]
 	},
 	"repositories": [
