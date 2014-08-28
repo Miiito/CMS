@@ -18,8 +18,3 @@ coverage:
             - ../commands/*.php
             - ../controllers/*.php
             - ../modules/*.php
-    c3url: '/nkovacs/yii2/basic/testweb/index-test.php'
-config:
-    # the entry script URL (without host info) for functional and acceptance tests
-    # PLEASE ADJUST IT TO THE ACTUAL ENTRY SCRIPT URL
-    test_entry_url: /nkovacs/yii2/basic/testweb/index-test.php
