@@ -89,8 +89,8 @@ module.exports = function(grunt) {
 				dest: 'config/development/common.local.php'
 			},
 			testroot: {
-				src: 'tests/codeception/_bootstrap.local.sample',
-				dest: 'tests/codeception/_bootstrap.local.php'
+				src: 'tests/codeception.yml.sample',
+				dest: 'tests/codeception.yml'
 			},
 			acceptancehost: {
 				src: 'tests/codeception/acceptance.suite.sample',
@@ -193,14 +193,22 @@ module.exports = function(grunt) {
 				}]
 			},
 			testroot: {
-				src: 'tests/codeception/_bootstrap.local.php',
+				src: 'tests/codeception.yml',
 				overwrite: true,
-				replacements: [{
-					from: /define\('TEST_ENTRY_URL',\s*'[^']*'\);/,
-					to: function(matchedWord, index, fullText, regexMatches) {
-						return "define('TEST_ENTRY_URL', '/" + grunt.config('testroot').replace(/^(\/)|(\/)$/g, '') + "/testweb/index-test.php');";
+				replacements: [
+					{
+						from: /c3url:.*/,
+						to: function(matchedWord, index, fullText, regexMatches) {
+							return "c3url: /" + grunt.config('testroot').replace(/^(\/)|(\/)$/g, '') + "/testweb/index-test.php";
+						}
+					},
+					{
+						from: /test_entry_url:.*/,
+						to: function(matchedWord, index, fullText, regexMatches) {
+							return "test_entry_url: /" + grunt.config('testroot').replace(/^(\/)|(\/)$/g, '') + "/testweb/index-test.php";
+						}
 					}
-				}]
+				]
 			}
 		},
 		'tinylr-findport': {
