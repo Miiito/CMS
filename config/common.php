@@ -25,9 +25,6 @@ $common = [
                 ],
             ],
         ],
-        'mail' => [
-            'class' => 'yii\swiftmailer\Mailer',
-        ],
     ],
     'params' => [
         'adminEmail' => 'admin@example.com',

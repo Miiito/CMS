@@ -2,7 +2,7 @@
 
 return [
     'components' => [
-        'mail' => [
+        'mailer' => [
             'as dryrun' => [ 'email' => 'dryrun@example.org' ]
         ],
     ],
