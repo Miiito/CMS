@@ -38,5 +38,5 @@ config/*/*.local.php
 c3tmp
 
 # codeception local config
-tests/_bootstrap.local.php
-tests/acceptance.suite.yml
+tests/codeception/_bootstrap.local.php
+tests/codeception/acceptance.suite.yml

@@ -89,12 +89,12 @@ module.exports = function(grunt) {
 				dest: 'config/development/common.local.php'
 			},
 			testroot: {
-				src: 'tests/_bootstrap.local.sample',
-				dest: 'tests/_bootstrap.local.php'
+				src: 'tests/codeception/_bootstrap.local.sample',
+				dest: 'tests/codeception/_bootstrap.local.php'
 			},
 			acceptancehost: {
-				src: 'tests/acceptance.suite.sample',
-				dest: 'tests/acceptance.suite.yml',
+				src: 'tests/codeception/acceptance.suite.sample',
+				dest: 'tests/codeception/acceptance.suite.yml',
 			}
 		},
 		shell: {
@@ -183,7 +183,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			testroot: {
-				src: 'tests/_bootstrap.local.php',
+				src: 'tests/codeception/_bootstrap.local.php',
 				overwrite: true,
 				replacements: [{
 					from: /define\('TEST_ENTRY_URL',\s*'[^']*'\);/,
