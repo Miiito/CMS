@@ -7,7 +7,7 @@ class Setup
         'runtime',
         'web/assets',
         'testweb/assets',
-        'tests/codeception/_log',
+        'tests/codeception/_output',
         'runtime/mail', //needed for tests
     ];
 

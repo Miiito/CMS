@@ -105,10 +105,20 @@ module.exports = function(grunt) {
 				}
 			},
 			codeceptbuild: {
-				command: 'vendor/bin/codecept build'
+				command: '../vendor/bin/codecept build',
+				options: {
+					execOptions: {
+						cwd: 'tests'
+					}
+				}
 			},
 			codeception: {
-				command: 'vendor/bin/codecept run --coverage --html --coverage-html'
+				command: '../vendor/bin/codecept run --coverage --html --coverage-html',
+				options: {
+					execOptions: {
+						cwd: 'tests'
+					}
+				}
 			},
 			test: {
 				command: 'echo "<%= environment %> <%= apachegrp %>"',
