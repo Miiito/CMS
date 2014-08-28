@@ -38,7 +38,8 @@
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"yii\\composer\\Installer::setPermission"
+			"yii\\composer\\Installer::setPermission",
+			"yii\\composer\\Installer::generateCookieValidationKey"
 		]
 	},
 	"config": {
@@ -47,10 +48,16 @@
 	"extra": {
 		"writable": [
 			"runtime",
-			"web/assets"
+			"web/assets",
+			"testweb/assets",
+			"tests/_log",
+			"runtime/mail"
 		],
 		"executable": [
 			"yii"
+		],
+		"config": [
+			"config/web.php"
 		]
 	},
 	"repositories": [
