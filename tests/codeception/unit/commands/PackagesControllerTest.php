@@ -11,15 +11,17 @@ class PackagesControllerTest extends TestCase
 {
     protected $tempPath='';
 
-    protected function _before()
+    protected function setUp()
     {
+        parent::setUp();
         $this->tempPath = Yii::getAlias('@runtime/test_packages');
         $this->createDir($this->tempPath);
     }
 
-    protected function _after()
+    protected function tearDown()
     {
         $this->removeDir($this->tempPath);
+        parent::tearDown();
     }
 
     /**
