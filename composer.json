@@ -32,18 +32,22 @@
 		"codeception/specify": " *",
 		"codeception/verify": " *"
 	},
-	"scripts": {
-		"post-create-project-cmd": [
-			"yii\\composer\\Installer::setPermission"
-		]
-	},
 	"config": {
 		"process-timeout": 1800
 	},
-	"extra": {
-		"executable": [
-			"yii"
+	"scripts": {
+		"post-create-project-cmd": [
+			"yii\\composer\\Installer::postCreateProject"
 		]
+	},
+	"extra": {
+		"yii\\composer\\Installer::postCreateProject": {
+			"setPermission": [
+				{
+					"yii": "0755"
+				}
+			]
+		}
 	},
 	"repositories": [
 		{
