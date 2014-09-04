@@ -1,62 +1,62 @@
 {
-	"name": "mito/yii2-app-basic",
-	"description": "Yii 2 Basic Application Template",
-	"keywords": ["yii2", "framework", "basic", "application template"],
-	"homepage": "http://www.yiiframework.com/",
-	"type": "project",
-	"license": "BSD-3-Clause",
-	"support": {
-		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
-		"forum": "http://www.yiiframework.com/forum/",
-		"wiki": "http://www.yiiframework.com/wiki/",
-		"irc": "irc://irc.freenode.net/yii",
-		"source": "https://github.com/yiisoft/yii2"
-	},
-	"minimum-stability": "dev",
-	"require": {
-		"php": ">=5.4.0",
-		"yiisoft/yii2": "*",
-		"yiisoft/yii2-bootstrap": "*",
-		"yiisoft/yii2-swiftmailer": "*",
-		"mito/yii2-enhanced-assets": "*",
-		"mito/yii2-coding-standards": "*"
-	},
-	"require-dev": {
-		"yiisoft/yii2-codeception": "dev-master",
-		"yiisoft/yii2-debug": "*",
-		"yiisoft/yii2-gii": "*",
-		"squizlabs/php_codesniffer": "1.*",
-		"yiisoft/yii2-faker": "*",
-		"yiisoft/yii2-coding-standards": "*",
-		"codeception/codeception": "*",
-		"codeception/specify": " *",
-		"codeception/verify": " *"
-	},
-	"config": {
-		"process-timeout": 1800
-	},
-	"scripts": {
-		"post-create-project-cmd": [
-			"yii\\composer\\Installer::postCreateProject"
-		]
-	},
-	"extra": {
-		"yii\\composer\\Installer::postCreateProject": {
-			"setPermission": [
-				{
-					"yii": "0755"
-				}
-			]
-		}
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/nkovacs/Codeception.git"
-		},
-		{
-			"type": "composer",
-			"url": "http://satis.mito.hu"
-		}
-	]
+    "name": "mito/yii2-app-basic",
+    "description": "Yii 2 Basic Application Template",
+    "keywords": ["yii2", "framework", "basic", "application template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "mito/yii2-enhanced-assets": "*",
+        "mito/yii2-coding-standards": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "dev-master",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "squizlabs/php_codesniffer": "1.*",
+        "yiisoft/yii2-faker": "*",
+        "yiisoft/yii2-coding-standards": "*",
+        "codeception/codeception": "*",
+        "codeception/specify": " *",
+        "codeception/verify": " *"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "yii": "0755"
+                }
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nkovacs/Codeception.git"
+        },
+        {
+            "type": "composer",
+            "url": "http://satis.mito.hu"
+        }
+    ]
 }
