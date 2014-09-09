@@ -7,6 +7,7 @@ $env_specific_local = load_config('common.local.php');
 
 $common = [
     'name' => 'Mito Yii2 base app',
+    'id' => 'basic',
     'bootstrap' => ['log'],
     'components' => [
         'db' => [

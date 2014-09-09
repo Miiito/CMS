@@ -7,8 +7,9 @@ $common_cfg = require( __DIR__ . '/common.php');
 $env_specific = load_config('web.php');
 $env_specific_local = load_config('web.local.php');
 
+$cookieSuffix = '_' . md5($common_cfg['id']);
+
 $config = [
-    'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
     'components' => [
@@ -18,6 +19,13 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'identityCookie' => ['name' => '_identity' . $cookieSuffix, 'httpOnly' => true],
+        ],
+        'request' => [
+            'csrfParam' => '_csrf' . $cookieSuffix,
+        ],
+        'session' => [
+            'name' => '_session' . $cookieSuffix,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

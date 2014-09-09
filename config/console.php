@@ -10,7 +10,7 @@ $env_specific = load_config('console.php');
 $env_specific_local = load_config('console.local.php');
 
 $config = [
-    'id' => 'basic-console',
+    'id' => $common_cfg['id'] . '-console',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\commands',
     'controllerMap' => [
