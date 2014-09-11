@@ -22,14 +22,15 @@ class Setup
             return;
         }
 
+        self::writeEnv($args[1]);
+        //self::installHooks();
+
         $server_group = self::getGroupName(count($args) > 2 ? $args[2] : self::$defaultServerGroup);
         if ($server_group === false) {
             return;
         }
 
         self::setupWritablePaths($server_group);
-        self::writeEnv($args[1]);
-        //self::installHooks();
     }
 
     protected static function getGroupName($grpName)
