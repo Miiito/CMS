@@ -252,6 +252,7 @@ module.exports = function(grunt) {
 					'components/**/*.php',
 					'modules/**/*.php',
 					'!modules/*/views/*/*',
+					'!modules/*/migrations/*',
 					'assets/**/*.php',
 					'controllers/**/*.php',
 					'commands/**/*.php',
@@ -279,6 +280,7 @@ module.exports = function(grunt) {
 					'config/**/*.php',
 					'setup.php',
 					'migrations/**/*.php',
+					'modules/*/migrations/*.php',
 				],
 				options: {
 					standard: 'vendor/mito/yii2-coding-standards/Yii2'
