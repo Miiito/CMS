@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fdd82fa927e7c247a16ac1be440c4ca3",
+    "hash": "68f6bc788a3533b3ebc6193e4c2874aa",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -183,13 +183,16 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "f3a3d6b4df70f21d02902ada78407d2e497d52df"
+                "reference": "6392423d92bf11ff2849c454f4200666e8dfdcfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-cf707f.zip",
-                "reference": "f3a3d6b4df70f21d02902ada78407d2e497d52df",
-                "shasum": "22e8f724e2cfbc4bff12d595a5865d1bacf89ea3"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-f62573.zip",
+                "reference": "6392423d92bf11ff2849c454f4200666e8dfdcfb",
+                "shasum": "4065840002471d4df32910aa3fd1761ef42bd176"
+            },
+            "require": {
+                "yiisoft/yii2": "*"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -211,7 +214,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-08-04 11:06:02"
+            "time": "2014-09-16 15:05:45"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -346,13 +349,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "af5f2213f066159e4bc51c627c4a853fec6ddc0f"
+                "reference": "5a5cf224e19f5c2e9b464d6d4b94a5f5d989d5d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/twbs-bootstrap-af5f2213f066159e4bc51c627c4a853fec6ddc0f-zip-2c402e.zip",
-                "reference": "af5f2213f066159e4bc51c627c4a853fec6ddc0f",
-                "shasum": "a0a7d4acf5da930395a847fedf4dc3ea533721ae"
+                "url": "http://satis.mito.hu/dist/twbs-bootstrap-5a5cf224e19f5c2e9b464d6d4b94a5f5d989d5d8-zip-438c63.zip",
+                "reference": "5a5cf224e19f5c2e9b464d6d4b94a5f5d989d5d8",
+                "shasum": "827a4b5d32a5a5974a1d08cd4ed3fd6be398f97a"
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
@@ -389,7 +392,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-09-04 02:00:29"
+            "time": "2014-09-16 03:59:09"
         },
         {
             "name": "yiisoft/jquery",
@@ -446,13 +449,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "cb5a2ed38d0b785eedad4240ddc56e463f9520d7"
+                "reference": "d83d3400cf3901a8d79ac70b48aee00ddbd998e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-cb5a2ed38d0b785eedad4240ddc56e463f9520d7-zip-50ac8e.zip",
-                "reference": "cb5a2ed38d0b785eedad4240ddc56e463f9520d7",
-                "shasum": "69440b1119b8f57a005cf7751b669f94f6679825"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-d83d3400cf3901a8d79ac70b48aee00ddbd998e7-zip-4a8f59.zip",
+                "reference": "d83d3400cf3901a8d79ac70b48aee00ddbd998e7",
+                "shasum": "a5a3cbac7f80d97b096c0ae59e9b3f04f90cc20f"
             },
             "require": {
                 "cebe/markdown": "0.9.*",
@@ -519,7 +522,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-09-03 23:27:13"
+            "time": "2014-09-16 03:24:12"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -527,13 +530,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4"
+                "reference": "a3ab453aa0d5e0b493207928ea220e83a6a0ae69"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4-zip-5ec453.zip",
-                "reference": "0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4",
-                "shasum": "6ebcc5fc0d39c6a7f8a76d78e45a804ea8f1e9c8"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-a3ab453aa0d5e0b493207928ea220e83a6a0ae69-zip-e54cee.zip",
+                "reference": "a3ab453aa0d5e0b493207928ea220e83a6a0ae69",
+                "shasum": "360e4a244323c205a9fbd7e5b10b4eeb11b17194"
             },
             "require": {
                 "twbs/bootstrap": "3.2.* | 3.1.* | 3.0.*",
@@ -560,7 +563,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2014-08-28 20:28:03"
+            "time": "2014-09-05 17:37:52"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -901,13 +904,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "4c3e635f8f5f31e889a4fa0d38f729f36b383697"
+                "reference": "942e90d797ea4e6c470659a8aa7cda9d52e48551"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/fzaninotto-faker-4c3e635f8f5f31e889a4fa0d38f729f36b383697-zip-1626e3.zip",
-                "reference": "4c3e635f8f5f31e889a4fa0d38f729f36b383697",
-                "shasum": "acddba633e9fef6b4213760639ba9902fb6ede37"
+                "url": "http://satis.mito.hu/dist/fzaninotto-faker-942e90d797ea4e6c470659a8aa7cda9d52e48551-zip-ed2214.zip",
+                "reference": "942e90d797ea4e6c470659a8aa7cda9d52e48551",
+                "shasum": "d87b4df23b281782b8de272d66d7ada7639ed28d"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -943,7 +946,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2014-09-03 15:46:27"
+            "time": "2014-09-15 15:53:53"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -951,13 +954,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f9f2335fccd652d2b867d068685455b1e6e4d5e3"
+                "reference": "4fb07f59e238d664a68dfb94863df42c08ffe8fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f9f2335fccd652d2b867d068685455b1e6e4d5e3",
-                "reference": "f9f2335fccd652d2b867d068685455b1e6e4d5e3",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-4fb07f59e238d664a68dfb94863df42c08ffe8fb-zip-f3ffae.zip",
+                "reference": "4fb07f59e238d664a68dfb94863df42c08ffe8fb",
+                "shasum": "97bd33059d4f362c8f6fe2d0e5326c142ab5bb11"
             },
             "require": {
                 "ext-json": "*",
@@ -975,7 +978,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -1008,7 +1011,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-09-02 21:34:22"
+            "time": "2014-09-12 00:05:08"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1016,13 +1019,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/streams.git",
-                "reference": "1a00b163e414b72b0155e35e81f3b116d6a1d07c"
+                "reference": "30d5c8e7646e004768054c4143a433c89bc9ece0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/1a00b163e414b72b0155e35e81f3b116d6a1d07c",
-                "reference": "1a00b163e414b72b0155e35e81f3b116d6a1d07c",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/guzzlehttp-streams-30d5c8e7646e004768054c4143a433c89bc9ece0-zip-234b86.zip",
+                "reference": "30d5c8e7646e004768054c4143a433c89bc9ece0",
+                "shasum": "1439d246b1ea942bdc6ecdb40805d600ff20f887"
             },
             "require": {
                 "php": ">=5.4.0"
@@ -1061,7 +1064,7 @@
                 "Guzzle",
                 "stream"
             ],
-            "time": "2014-08-20 21:24:03"
+            "time": "2014-09-15 01:45:40"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1389,13 +1392,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a1e1dd61fad66c4ddd4b289b62d378b860581bc2"
+                "reference": "d2e45a5a3558a01f8ab8c44680f18176a3a5f259"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/phpunit-phpunit-a1e1dd61fad66c4ddd4b289b62d378b860581bc2-zip-b4db65.zip",
-                "reference": "a1e1dd61fad66c4ddd4b289b62d378b860581bc2",
-                "shasum": "8fbb26b9b6cf68db69212137b45cde939701926d"
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-d2e45a5a3558a01f8ab8c44680f18176a3a5f259-zip-ac4674.zip",
+                "reference": "d2e45a5a3558a01f8ab8c44680f18176a3a5f259",
+                "shasum": "cfa97aa5bcd0b9e7c744177189114f043d855f6e"
             },
             "require": {
                 "ext-dom": "*",
@@ -1413,6 +1416,7 @@
                 "sebastian/diff": "~1.1",
                 "sebastian/environment": "~1.0",
                 "sebastian/exporter": "~1.0",
+                "sebastian/global-state": "1.0.*@dev",
                 "sebastian/version": "~1.0",
                 "symfony/yaml": "~2.0"
             },
@@ -1451,7 +1455,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-08-31 16:59:43"
+            "time": "2014-09-15 08:14:53"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1459,13 +1463,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "36e147c955bc34ab63156e9d3a1f1d23538fdfc7"
+                "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/phpunit-phpunit-mock-objects-36e147c955bc34ab63156e9d3a1f1d23538fdfc7-zip-8a5b5f.zip",
-                "reference": "36e147c955bc34ab63156e9d3a1f1d23538fdfc7",
-                "shasum": "6097b235e779226fe9154374279293d1f82b1335"
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-mock-objects-3d40ae857a3941ede714be45079e85f9e956b4b3-zip-860c0b.zip",
+                "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3",
+                "shasum": "3dff24ed85a29cf1986d0fa68494a5cfabe5be44"
             },
             "require": {
                 "doctrine/instantiator": "~1.0,>=1.0.1",
@@ -1506,7 +1510,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-08-18 20:24:14"
+            "time": "2014-09-10 14:10:18"
         },
         {
             "name": "sebastian/comparator",
@@ -1682,13 +1686,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "8ab105f1fbf947408f69f476aba8ce8180503968"
+                "reference": "c7d59948d6e82818e1bdff7cadb6c34710eb7dc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/sebastian-exporter-8ab105f1fbf947408f69f476aba8ce8180503968-zip-070398.zip",
-                "reference": "8ab105f1fbf947408f69f476aba8ce8180503968",
-                "shasum": "d6948dfb2418d00db2abd396a2d5b95c5fc16288"
+                "url": "http://satis.mito.hu/dist/sebastian-exporter-c7d59948d6e82818e1bdff7cadb6c34710eb7dc0-zip-a859f0.zip",
+                "reference": "c7d59948d6e82818e1bdff7cadb6c34710eb7dc0",
+                "shasum": "28e78272c7ad644acad6630d739f5e8523e16a70"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1739,7 +1743,58 @@
                 "export",
                 "exporter"
             ],
-            "time": "2014-08-13 23:54:49"
+            "time": "2014-09-10 00:51:36"
+        },
+        {
+            "name": "sebastian/global-state",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/global-state.git",
+                "reference": "cd2f406aa90b591e1c45023c3a8d77edcb417bac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://satis.mito.hu/dist/sebastian-global-state-cd2f406aa90b591e1c45023c3a8d77edcb417bac-zip-a7fbff.zip",
+                "reference": "cd2f406aa90b591e1c45023c3a8d77edcb417bac",
+                "shasum": "7784e0ed444143fd7ad56719c1f2854939869d01"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "suggest": {
+                "ext-uopz": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Snapshotting of global state",
+            "homepage": "http://www.github.com/sebastianbergmann/global-state",
+            "keywords": [
+                "global state"
+            ],
+            "time": "2014-09-04 07:21:11"
         },
         {
             "name": "sebastian/version",
@@ -2149,13 +2204,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-codeception.git",
-                "reference": "05833719fc2cc14d6914e7c080267b067009b26e"
+                "reference": "9b2a01ff4798c683d1c85f74b9969cf68f7c482b"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-codeception-05833719fc2cc14d6914e7c080267b067009b26e-zip-e3cb81.zip",
-                "reference": "05833719fc2cc14d6914e7c080267b067009b26e",
-                "shasum": "1d6cf4ce0cf5bb174dba286d3bc4875a5576f805"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-codeception-9b2a01ff4798c683d1c85f74b9969cf68f7c482b-zip-2f83d2.zip",
+                "reference": "9b2a01ff4798c683d1c85f74b9969cf68f7c482b",
+                "shasum": "27f47287afd2b2884fbc2b8cc1e8a007061ce4a0"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -2181,7 +2236,7 @@
                 "codeception",
                 "yii2"
             ],
-            "time": "2014-08-24 10:14:35"
+            "time": "2014-09-12 10:42:54"
         },
         {
             "name": "yiisoft/yii2-coding-standards",
@@ -2257,13 +2312,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "b83cbe8e35bbfc99d95549309186914fb6f33ca7"
+                "reference": "9c96250d43fc85324bfdc7dd24b4df25640ff782"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-b83cbe8e35bbfc99d95549309186914fb6f33ca7-zip-b89c8b.zip",
-                "reference": "b83cbe8e35bbfc99d95549309186914fb6f33ca7",
-                "shasum": "499a2d75def6e4413e4b3c0242395c2d52c79560"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-9c96250d43fc85324bfdc7dd24b4df25640ff782-zip-24424f.zip",
+                "reference": "9c96250d43fc85324bfdc7dd24b4df25640ff782",
+                "shasum": "e858d9acdd301c3c9945d5bebfffc06dba7639b5"
             },
             "require": {
                 "yiisoft/yii2": "*",
@@ -2291,7 +2346,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2014-08-28 20:28:03"
+            "time": "2014-09-11 16:43:52"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -2299,13 +2354,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-faker.git",
-                "reference": "6b06fe189e0e3717b57e7a18fed7134f3a3f9dfb"
+                "reference": "4b4d43158e7c190b2116aa9b70bd3f068d154e19"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-faker-6b06fe189e0e3717b57e7a18fed7134f3a3f9dfb-zip-341149.zip",
-                "reference": "6b06fe189e0e3717b57e7a18fed7134f3a3f9dfb",
-                "shasum": "a028a7644cd699b880685851b22a82efcc97e0c8"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-faker-4b4d43158e7c190b2116aa9b70bd3f068d154e19-zip-9f2fa2.zip",
+                "reference": "4b4d43158e7c190b2116aa9b70bd3f068d154e19",
+                "shasum": "b0984156dbab869f7358e8c3725e5de7a8a9966a"
             },
             "require": {
                 "fzaninotto/faker": "*",
@@ -2333,7 +2388,7 @@
                 "faker",
                 "yii2"
             ],
-            "time": "2014-09-03 23:27:13"
+            "time": "2014-09-06 00:26:02"
         },
         {
             "name": "yiisoft/yii2-gii",
@@ -2341,13 +2396,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "3062e56767747143d75553d52795e048959dfee0"
+                "reference": "04de419ebb46f7ae90525c1741ccf94fc6b27191"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-3062e56767747143d75553d52795e048959dfee0-zip-aac344.zip",
-                "reference": "3062e56767747143d75553d52795e048959dfee0",
-                "shasum": "912826fad56d3643c18c8931ce89b4e0078e78f7"
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-04de419ebb46f7ae90525c1741ccf94fc6b27191-zip-3b9f5c.zip",
+                "reference": "04de419ebb46f7ae90525c1741ccf94fc6b27191",
+                "shasum": "6d9f4f5eea97f23f17d4a0fa0d47acfde91a31bc"
             },
             "require": {
                 "phpspec/php-diff": ">=1.0.2",
@@ -2376,7 +2431,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-09-03 18:09:30"
+            "time": "2014-09-15 20:39:19"
         }
     ],
     "aliases": [
