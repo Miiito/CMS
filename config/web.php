@@ -7,7 +7,7 @@ $common_cfg = require( __DIR__ . '/common.php');
 $env_specific = load_config('web.php');
 $env_specific_local = load_config('web.local.php');
 
-$cookieSuffix = '_' . md5($common_cfg['id'] . '$' . (isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : ''));
+$cookieSuffix = '_' . md5($common_cfg['id'] . '$' . (isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : ''));
 
 $config = [
     'components' => [
