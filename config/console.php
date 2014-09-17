@@ -11,12 +11,10 @@ $env_specific_local = load_config('console.local.php');
 
 $config = [
     'id' => $common_cfg['id'] . '-console',
-    'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\commands',
     'controllerMap' => [
         'packages' => 'mito\assets\PackagesController',
     ],
-    'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

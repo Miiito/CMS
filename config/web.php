@@ -10,8 +10,6 @@ $env_specific_local = load_config('web.local.php');
 $cookieSuffix = '_' . md5($common_cfg['id'] . '$' . (isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : ''));
 
 $config = [
-    'basePath' => dirname(__DIR__),
-    'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
