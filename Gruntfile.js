@@ -498,7 +498,12 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('localemail', ['copykeep:localemail', 'prompt:localemail', 'replace:localemail']);
 
-	grunt.registerTask('postinstall', ['hooks', 'setup', 'localemail']);
+	if (!grunt.file.exists('config/ENV')) {
+		grunt.registerTask('postinstall', ['hooks', 'setup', 'localemail']);
+	} else {
+		grunt.registerTask('postinstall', 'app is already installed, do nothing', function() {
+		});
+	}
 
 	grunt.registerTask('testroot', ['copykeep:testroot', 'copykeep:acceptancehost', 'prompt:testroot', 'replace:testroot']);
 
