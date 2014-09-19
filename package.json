@@ -1,31 +1,29 @@
 {
-  "name": "grunttest",
-  "version": "0.1.0",
+  "name": "SZRT",
+  "version": "1.0.0",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-sass": "~0.7.3",
-    "grunt-contrib-watch": "~0.6.1",
-    "tiny-lr-fork": "0.0.5",
-    "grunt-sass": "^0.12.1",
-    "node-sass": "^0.8.4",
-    "grunt-contrib-imagemin": "~0.7.0",
-    "grunt-prompt": "^1.1.0",
-    "grunt-shell": "~0.7.0",
-    "grunt-phpcs": "^0.2.2",
-    "grunt-contrib-copy": "^0.5.0",
-    "get-packages": "git+ssh://git@gitlab.mito.hu:2222/gg.kovacs/getpackages.git",
-    "jit-grunt": "^0.6.0",
-    "grunt-githooks": "^0.3.1",
-    "grunt-contrib-clean": "^0.5.0",
-    "time-grunt": "^0.3.1",
-    "grunt-phplint": "0.0.5",
-    "execSync": "^1.0.1-pre",
-    "grunt-text-replace": "^0.3.11"
+    "get-packages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git",
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-clean": "^0.2.4",
+    "gulp-combine-media-queries": "0.0.1",
+    "gulp-concat": "^2.3.3",
+    "gulp-csso": "^0.2.7",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jshint": "^1.7.1",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-sass": "^0.7.2",
+    "gulp-size": "^0.4.0",
+    "gulp-uglify": "^0.3.1",
+    "jshint-stylish": "^0.2.0",
+    "node-bourbon": "^1.2.3",
+    "gulp-if": "^1.2.2",
+    "gulp-batch": "^0.4.1",
+    "gulp-ngmin": "^0.3.0",
+    "event-stream": "^3.1.5"
   },
-  "scripts": {
-    "postinstall": "grunt postinstall"
+  "engines": {
+    "node": ">=0.10.0"
   }
 }
