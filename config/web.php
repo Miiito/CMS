@@ -38,7 +38,7 @@ $config = [
                 'yii\web\JqueryAsset' => [
                     'class' => 'app\assets\JqueryAsset',
                     'fallback' => 'app\assets\JqueryAssetLocal',
-                    'check'=>'window.jQuery',
+                    'check' => 'window.jQuery',
                 ],
             ],
         ],

@@ -30,7 +30,8 @@
         "yiisoft/yii2-coding-standards": "*",
         "codeception/codeception": "*",
         "codeception/specify": " *",
-        "codeception/verify": " *"
+        "codeception/verify": " *",
+        "fabpot/php-cs-fixer": "*"
     },
     "config": {
         "process-timeout": 1800

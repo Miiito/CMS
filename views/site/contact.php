@@ -1,7 +1,7 @@
 <?php
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\captcha\Captcha;
 
 /**
  * @var yii\web\View $this

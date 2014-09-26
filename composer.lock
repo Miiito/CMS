@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8601e59f1c77d453457ce4ecaf8affcc",
+    "hash": "3b33a05fd2589dcbf060e87e756a8666",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1004,6 +1004,55 @@
                 "instantiate"
             ],
             "time": "2014-08-25 15:09:25"
+        },
+        {
+            "name": "fabpot/php-cs-fixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
+                "reference": "99f8f8a10d0cc15ff5ce40d6e11bb785a0897488"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://satis.mito.hu/dist/fabpot-php-cs-fixer-99f8f8a10d0cc15ff5ce40d6e11bb785a0897488-zip-89307a.zip",
+                "reference": "99f8f8a10d0cc15ff5ce40d6e11bb785a0897488",
+                "shasum": "b20e72c2cbfa13553839a5bf40d7074847460cd7"
+            },
+            "require": {
+                "php": ">=5.3.6",
+                "sebastian/diff": "~1.1",
+                "symfony/console": "~2.1",
+                "symfony/filesystem": "~2.1",
+                "symfony/finder": "~2.1",
+                "symfony/stopwatch": "~2.5"
+            },
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\CS": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A script to automatically fix Symfony Coding Standard",
+            "time": "2014-09-17 17:22:46"
         },
         {
             "name": "facebook/webdriver",
@@ -2253,6 +2302,53 @@
             "time": "2014-07-28 13:20:53"
         },
         {
+            "name": "symfony/filesystem",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "75f5f5c8ff1497a2071f9c77484390087e379406"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://satis.mito.hu/dist/symfony-filesystem-75f5f5c8ff1497a2071f9c77484390087e379406-zip-29dff2.zip",
+                "reference": "75f5f5c8ff1497a2071f9c77484390087e379406",
+                "shasum": "eb284b9d711d9551767a802725de6a81ced1db06"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-09-04 21:09:17"
+        },
+        {
             "name": "symfony/finder",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Finder",
@@ -2298,6 +2394,53 @@
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
             "time": "2014-09-03 09:12:11"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Stopwatch",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Stopwatch.git",
+                "reference": "1514a74517c22a6bbc632bab8755199151af3d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://satis.mito.hu/dist/symfony-stopwatch-1514a74517c22a6bbc632bab8755199151af3d63-zip-00697f.zip",
+                "reference": "1514a74517c22a6bbc632bab8755199151af3d63",
+                "shasum": "3df74ae0a88c2195dbe1ab387f0786b711cbf28b"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-08-14 16:37:29"
         },
         {
             "name": "symfony/yaml",
