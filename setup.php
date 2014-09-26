@@ -55,7 +55,7 @@ class Setup
         }
         self::generateCookieValidationKey($env_config . '/web.local.php');
 
-        file_put_contents($baseDir.'/config/ENV', $env);
+        file_put_contents($baseDir . '/config/ENV', $env);
     }
 
     protected static function setupWritablePaths($server_group)
@@ -63,11 +63,11 @@ class Setup
         $baseDir = self::getBaseDir();
 
         foreach (self::$serverWritablePaths as $path) {
-            if (!is_dir($baseDir.'/'.$path)) {
-                mkdir($baseDir.'/'.$path, 02775);
+            if (!is_dir($baseDir . '/' . $path)) {
+                mkdir($baseDir . '/' . $path, 02775);
             }
-            chgrp($baseDir.'/'.$path, $server_group);
-            chmod($baseDir.'/'.$path, 02775);
+            chgrp($baseDir . '/' . $path, $server_group);
+            chmod($baseDir . '/' . $path, 02775);
         }
     }
 
@@ -83,8 +83,8 @@ class Setup
                 if ($file == '.' || $file == '..') {
                     continue;
                 }
-                copy($hookDir.'/'.$file, $gitHookDir.'/'.$file);
-                chmod($gitHookDir.'/'.$file, 0775);
+                copy($hookDir . '/' . $file, $gitHookDir . '/' . $file);
+                chmod($gitHookDir . '/' . $file, 0775);
             }
         }
     }
