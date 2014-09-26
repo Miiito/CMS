@@ -2,6 +2,7 @@
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
     ->exclude('node_modules')
+    ->exclude('runtime')
     ->notName('AcceptanceTester.php')
     ->notName('UnitTester.php')
     ->notName('FunctionalTester.php')
