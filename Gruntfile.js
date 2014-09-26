@@ -270,6 +270,7 @@ module.exports = function(grunt) {
 					'mail/**/*.php',
 					'modules/*/views/*/*',
 					'modules/*/mail/*/*',
+					'widgets/views/*'
 				],
 				options: {
 					standard: 'vendor/mito/yii2-coding-standards/Views'
