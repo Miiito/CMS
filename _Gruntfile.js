@@ -477,6 +477,7 @@ module.exports = function(grunt) {
 	grunt.registerMultiTask('copykeep', 'Copy source to destination if destination does not exist', function() {
 		var source = this.data.src,
 		    destination = this.data.dest;
+		    console.log(this.data);
 		if (!grunt.file.exists(destination)) {
 			grunt.file.copy(source, destination);
 		}
