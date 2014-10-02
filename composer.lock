@@ -16,9 +16,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c068162161154a4b85110ea1e7dd3d7897ce2b72",
+                "url": "http://satis.mito.hu/dist/bower-asset-bootstrap-c068162161154a4b85110ea1e7dd3d7897ce2b72-zip-5e57ff.zip",
                 "reference": "c068162161154a4b85110ea1e7dd3d7897ce2b72",
-                "shasum": ""
+                "shasum": "bbe6336aad7aa53ac23237477babcc0141ef7050"
             },
             "require": {
                 "bower-asset/jquery": ">=1.9.0"
@@ -67,9 +67,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery/zipball/4dec426aa2a6cbabb1b064319ba7c272d594a688",
+                "url": "http://satis.mito.hu/dist/bower-asset-jquery-4dec426aa2a6cbabb1b064319ba7c272d594a688-zip-5022d4.zip",
                 "reference": "4dec426aa2a6cbabb1b064319ba7c272d594a688",
-                "shasum": ""
+                "shasum": "de831115dff080c1b362f049f153fa4f475d8c1d"
             },
             "require-dev": {
                 "bower-asset/qunit": "1.14.0",
@@ -110,9 +110,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/ebd3493bfbe032aa568c3574546402a60edd3ce5",
+                "url": "http://satis.mito.hu/dist/bower-asset-jquery-inputmask-ebd3493bfbe032aa568c3574546402a60edd3ce5-zip-087cdc.zip",
                 "reference": "ebd3493bfbe032aa568c3574546402a60edd3ce5",
-                "shasum": ""
+                "shasum": "6a191341f0f54bc95e8f02d190c5ca575e459d30"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -162,9 +162,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/de452f89aea23f126f7b219f576abda1c0823825",
+                "url": "http://satis.mito.hu/dist/bower-asset-punycode-de452f89aea23f126f7b219f576abda1c0823825-zip-64db60.zip",
                 "reference": "de452f89aea23f126f7b219f576abda1c0823825",
-                "shasum": ""
+                "shasum": "ae0c35b00a0993333bc33a6233c7c992ddfa332d"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -190,9 +190,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6",
+                "url": "http://satis.mito.hu/dist/bower-asset-yii2-pjax-520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6-zip-cdd5b2.zip",
                 "reference": "520f8c12b5a417e21d2cd0df499fa2a4e4e9a9d6",
-                "shasum": ""
+                "shasum": "47a06cec346238701174d464f40ae5e72eb11b52"
             },
             "require": {
                 "bower-asset/jquery": ">=1.8"
@@ -216,9 +216,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/markdown/zipball/6a3c3737e9c1f4670f39a771f77b536126788ad2",
+                "url": "http://satis.mito.hu/dist/cebe-markdown-6a3c3737e9c1f4670f39a771f77b536126788ad2-zip-f2cd90.zip",
                 "reference": "6a3c3737e9c1f4670f39a771f77b536126788ad2",
-                "shasum": ""
+                "shasum": "3998688d84399db4184df0969909f25403d26cdd"
             },
             "require": {
                 "lib-pcre": "*",
@@ -275,9 +275,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/6f389f0f25b90d0b495308efcfa073981177f0fd",
+                "url": "http://satis.mito.hu/dist/ezyang-htmlpurifier-6f389f0f25b90d0b495308efcfa073981177f0fd-zip-4891c9.zip",
                 "reference": "6f389f0f25b90d0b495308efcfa073981177f0fd",
-                "shasum": ""
+                "shasum": "45b80c14fe54eb209ce931276ecbc981236f5329"
             },
             "require": {
                 "php": ">=5.2"
@@ -426,9 +426,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5d973e59cf58a0c847f298de84374c96b42b17b3",
+                "url": "http://satis.mito.hu/dist/squizlabs-php_codesniffer-5d973e59cf58a0c847f298de84374c96b42b17b3-zip-dfca6a.zip",
                 "reference": "5d973e59cf58a0c847f298de84374c96b42b17b3",
-                "shasum": ""
+                "shasum": "026b40dc998a5f86c5d92c19d09bd7919de5881e"
             },
             "require": {
                 "ext-tokenizer": "*",
@@ -501,9 +501,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/9359e595d8649804946c039ac6ff6916948a5320",
+                "url": "http://satis.mito.hu/dist/swiftmailer-swiftmailer-9359e595d8649804946c039ac6ff6916948a5320-zip-0957e3.zip",
                 "reference": "9359e595d8649804946c039ac6ff6916948a5320",
-                "shasum": ""
+                "shasum": "e4611340cf7e45f7c25e030538fb1830765ef37a"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -549,13 +549,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "e16233a290f369b850f5caa047f2aa94791520d1"
+                "reference": "ff199165d979447d24aafa9bf7b9eed5e814f136"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/e16233a290f369b850f5caa047f2aa94791520d1",
-                "reference": "e16233a290f369b850f5caa047f2aa94791520d1",
-                "shasum": ""
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-ff199165d979447d24aafa9bf7b9eed5e814f136-zip-e9ceb6.zip",
+                "reference": "ff199165d979447d24aafa9bf7b9eed5e814f136",
+                "shasum": "195315f8bac3616b901383995eb1023fc5ef5dec"
             },
             "require": {
                 "bower-asset/jquery": "2.1.*@stable | 1.11.*@stable",
@@ -629,7 +629,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-10-01 10:25:08"
+            "time": "2014-10-01 01:36:29"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -641,9 +641,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/362bda685d5d9424bf59ad315d7c76fbde27bdc7",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-bootstrap-362bda685d5d9424bf59ad315d7c76fbde27bdc7-zip-d79aa0.zip",
                 "reference": "362bda685d5d9424bf59ad315d7c76fbde27bdc7",
-                "shasum": ""
+                "shasum": "927d5dd9280d78348590e17ef8a51f8099499229"
             },
             "require": {
                 "bower-asset/bootstrap": "3.2.* | 3.1.*",
@@ -687,9 +687,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/458cae9af4bf1ddffdd91133610582eabd30c732",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-composer-458cae9af4bf1ddffdd91133610582eabd30c732-zip-e7b889.zip",
                 "reference": "458cae9af4bf1ddffdd91133610582eabd30c732",
-                "shasum": ""
+                "shasum": "75aea4ae2ef9116474f2bfc5e67b8cb80f716579"
             },
             "require": {
                 "composer-plugin-api": "1.0.0"
@@ -734,9 +734,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/4ac514cee17ddcb910705d906d3482d3d9d891d9",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-swiftmailer-4ac514cee17ddcb910705d906d3482d3d9d891d9-zip-71e77e.zip",
                 "reference": "4ac514cee17ddcb910705d906d3482d3d9d891d9",
-                "shasum": ""
+                "shasum": "6ab1ac258ded98b0cc10ac1eae7d564a92900ad8"
             },
             "require": {
                 "swiftmailer/swiftmailer": "*",
@@ -786,9 +786,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twitter/typeahead.js/zipball/5f198b87d1af845da502ea9df93a5e84801ce742",
+                "url": "http://satis.mito.hu/dist/bower-asset-typeahead-js-5f198b87d1af845da502ea9df93a5e84801ce742-zip-c8342f.zip",
                 "reference": "5f198b87d1af845da502ea9df93a5e84801ce742",
-                "shasum": ""
+                "shasum": "e8b934f9995f45de75b361e31d76bae5a279b85c"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -889,9 +889,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Specify/zipball/0cabe95241bec511917e9804b211a3a91645d026",
+                "url": "http://satis.mito.hu/dist/codeception-specify-0cabe95241bec511917e9804b211a3a91645d026-zip-3c3f8c.zip",
                 "reference": "0cabe95241bec511917e9804b211a3a91645d026",
-                "shasum": ""
+                "shasum": "8b28e4adf621fdefb884cee3d2d13e7806c5e401"
             },
             "require": {
                 "myclabs/deep-copy": "*",
@@ -927,9 +927,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Verify/zipball/21897622100b9d584043ef39bcec13945352a452",
+                "url": "http://satis.mito.hu/dist/codeception-verify-21897622100b9d584043ef39bcec13945352a452-zip-6a400e.zip",
                 "reference": "21897622100b9d584043ef39bcec13945352a452",
-                "shasum": ""
+                "shasum": "cc0cc7ef62765121ff593ae3576afa47177d87c1"
             },
             "require-dev": {
                 "phpunit/phpunit": "3.7.*"
@@ -961,9 +961,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/26404e0c90565b614ee76b988b9bc8790d77f590",
+                "url": "http://satis.mito.hu/dist/doctrine-instantiator-26404e0c90565b614ee76b988b9bc8790d77f590-zip-249d6b.zip",
                 "reference": "26404e0c90565b614ee76b988b9bc8790d77f590",
-                "shasum": ""
+                "shasum": "101464585e497292560cbac52b8137faeb5b0e7d"
             },
             "require": {
                 "php": "~5.3"
@@ -1015,9 +1015,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/b5ecc02235bae6519cb017dc91cc9cfbd9a47fd3",
+                "url": "http://satis.mito.hu/dist/fabpot-php-cs-fixer-b5ecc02235bae6519cb017dc91cc9cfbd9a47fd3-zip-d544ca.zip",
                 "reference": "b5ecc02235bae6519cb017dc91cc9cfbd9a47fd3",
-                "shasum": ""
+                "shasum": "a6d41629e123c3997d5a3491a126645abaca025f"
             },
             "require": {
                 "php": ">=5.3.6",
@@ -1065,9 +1065,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/342df507312ea5ae5337be47e16e4268d7ed661f",
+                "url": "http://satis.mito.hu/dist/facebook-webdriver-342df507312ea5ae5337be47e16e4268d7ed661f-zip-716510.zip",
                 "reference": "342df507312ea5ae5337be47e16e4268d7ed661f",
-                "shasum": ""
+                "shasum": "330037e83f524acc101eeccab072b970781f70d7"
             },
             "require": {
                 "php": ">=5.3.19"
@@ -1105,9 +1105,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1ce76e851997c7ac51d7f76e5b4cd01ae50e607f",
+                "url": "http://satis.mito.hu/dist/fzaninotto-faker-1ce76e851997c7ac51d7f76e5b4cd01ae50e607f-zip-ba66dc.zip",
                 "reference": "1ce76e851997c7ac51d7f76e5b4cd01ae50e607f",
-                "shasum": ""
+                "shasum": "0f52d88dfbca4f5f6b46bec6461a47819b7c4f0e"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1155,9 +1155,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/514ee50a5aaa46f8006bc5dc1c9a39d55202983d",
+                "url": "http://satis.mito.hu/dist/guzzlehttp-guzzle-514ee50a5aaa46f8006bc5dc1c9a39d55202983d-zip-abedcc.zip",
                 "reference": "514ee50a5aaa46f8006bc5dc1c9a39d55202983d",
-                "shasum": ""
+                "shasum": "c098d5d6d96b4606fea2579b335b55fa42955d83"
             },
             "require": {
                 "ext-json": "*",
@@ -1220,9 +1220,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/30d5c8e7646e004768054c4143a433c89bc9ece0",
+                "url": "http://satis.mito.hu/dist/guzzlehttp-streams-30d5c8e7646e004768054c4143a433c89bc9ece0-zip-234b86.zip",
                 "reference": "30d5c8e7646e004768054c4143a433c89bc9ece0",
-                "shasum": ""
+                "shasum": "1439d246b1ea942bdc6ecdb40805d600ff20f887"
             },
             "require": {
                 "php": ">=5.4.0"
@@ -1273,9 +1273,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/a7f8ab87fed4efe80e576387cd34d40e93169ce5",
+                "url": "http://satis.mito.hu/dist/myclabs-deep-copy-a7f8ab87fed4efe80e576387cd34d40e93169ce5-zip-16a5f5.zip",
                 "reference": "a7f8ab87fed4efe80e576387cd34d40e93169ce5",
-                "shasum": ""
+                "shasum": "6695e2a1a4cbb7f1a1e8295bd6aecf41ac088d73"
             },
             "require": {
                 "php": ">=5.4.0"
@@ -1315,9 +1315,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/30e103d19519fe678ae64a60d77884ef3d71b28a",
+                "url": "http://satis.mito.hu/dist/phpspec-php-diff-30e103d19519fe678ae64a60d77884ef3d71b28a-zip-b63c58.zip",
                 "reference": "30e103d19519fe678ae64a60d77884ef3d71b28a",
-                "shasum": ""
+                "shasum": "373f7058c6bbb87fcac090cff7a7a59cec91f81c"
             },
             "type": "library",
             "autoload": {
@@ -1349,9 +1349,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0f0063f283597359ea5cb4e1afdf1a14b0ac5038",
+                "url": "http://satis.mito.hu/dist/phpunit-php-code-coverage-0f0063f283597359ea5cb4e1afdf1a14b0ac5038-zip-dca38f.zip",
                 "reference": "0f0063f283597359ea5cb4e1afdf1a14b0ac5038",
-                "shasum": ""
+                "shasum": "0e72d43da8b91b9da6ba4a46072e71f9c6a77f90"
             },
             "require": {
                 "php": ">=5.3.3",
@@ -1411,9 +1411,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "url": "http://satis.mito.hu/dist/phpunit-php-file-iterator-acd690379117b042d1c8af1fafd61bde001bf6bb-zip-831201.zip",
                 "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb",
-                "shasum": ""
+                "shasum": "a4377d765416565309b685c4c5f8b860789d0491"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1456,9 +1456,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "url": "http://satis.mito.hu/dist/phpunit-php-text-template-206dfefc0ffe9cebf65c413e3d0e809c82fbf00a-zip-dce9d3.zip",
                 "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
-                "shasum": ""
+                "shasum": "3b17ef6da606ae4dd89531fe40358bf74a831911"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1500,9 +1500,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "url": "http://satis.mito.hu/dist/phpunit-php-timer-19689d4354b295ee3d8c54b4f42c3efb69cbc17c-zip-04e2aa.zip",
                 "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
-                "shasum": ""
+                "shasum": "b22c540093e9a43b172a028229342d7ed97ccb43"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1544,9 +1544,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ad4e1e23ae01b483c16f600ff1bebec184588e32",
+                "url": "http://satis.mito.hu/dist/phpunit-php-token-stream-ad4e1e23ae01b483c16f600ff1bebec184588e32-zip-b28aa4.zip",
                 "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
-                "shasum": ""
+                "shasum": "0e1ce05022d115d266015069d418ce6ce3f3c381"
             },
             "require": {
                 "ext-tokenizer": "*",
@@ -1594,9 +1594,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5ee7af96d62a3fe9cf466fab1b505ac8dc1796c6",
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-5ee7af96d62a3fe9cf466fab1b505ac8dc1796c6-zip-31341a.zip",
                 "reference": "5ee7af96d62a3fe9cf466fab1b505ac8dc1796c6",
-                "shasum": ""
+                "shasum": "98b0075e62bc6e42db9b7f0cea90807e2c9fdb48"
             },
             "require": {
                 "ext-dom": "*",
@@ -1665,9 +1665,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3d40ae857a3941ede714be45079e85f9e956b4b3",
+                "url": "http://satis.mito.hu/dist/phpunit-phpunit-mock-objects-3d40ae857a3941ede714be45079e85f9e956b4b3-zip-860c0b.zip",
                 "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3",
-                "shasum": ""
+                "shasum": "3dff24ed85a29cf1986d0fa68494a5cfabe5be44"
             },
             "require": {
                 "doctrine/instantiator": "~1.0,>=1.0.1",
@@ -1720,9 +1720,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/e54a01c0da1b87db3c5a3c4c5277ddf331da4aef",
+                "url": "http://satis.mito.hu/dist/sebastian-comparator-e54a01c0da1b87db3c5a3c4c5277ddf331da4aef-zip-c2bfb9.zip",
                 "reference": "e54a01c0da1b87db3c5a3c4c5277ddf331da4aef",
-                "shasum": ""
+                "shasum": "3c1c1ff1e3ac771b1539f166aaa670c423969e0f"
             },
             "require": {
                 "php": ">=5.3.3",
@@ -1785,9 +1785,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/5843509fed39dee4b356a306401e9dd1a931fec7",
+                "url": "http://satis.mito.hu/dist/sebastian-diff-5843509fed39dee4b356a306401e9dd1a931fec7-zip-8a1f8b.zip",
                 "reference": "5843509fed39dee4b356a306401e9dd1a931fec7",
-                "shasum": ""
+                "shasum": "f7a8ed6cadcf40fdcf415b03478c54e068862351"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1837,9 +1837,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/10c7467da0622f7848cc5cadc0828c3359254df4",
+                "url": "http://satis.mito.hu/dist/sebastian-environment-10c7467da0622f7848cc5cadc0828c3359254df4-zip-43847a.zip",
                 "reference": "10c7467da0622f7848cc5cadc0828c3359254df4",
-                "shasum": ""
+                "shasum": "84785665bdb6566a7be215767fbf3c0742f7fe07"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1888,9 +1888,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/c7d59948d6e82818e1bdff7cadb6c34710eb7dc0",
+                "url": "http://satis.mito.hu/dist/sebastian-exporter-c7d59948d6e82818e1bdff7cadb6c34710eb7dc0-zip-a859f0.zip",
                 "reference": "c7d59948d6e82818e1bdff7cadb6c34710eb7dc0",
-                "shasum": ""
+                "shasum": "28e78272c7ad644acad6630d739f5e8523e16a70"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1953,9 +1953,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/cd2f406aa90b591e1c45023c3a8d77edcb417bac",
+                "url": "http://satis.mito.hu/dist/sebastian-global-state-cd2f406aa90b591e1c45023c3a8d77edcb417bac-zip-a7fbff.zip",
                 "reference": "cd2f406aa90b591e1c45023c3a8d77edcb417bac",
-                "shasum": ""
+                "shasum": "7784e0ed444143fd7ad56719c1f2854939869d01"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2004,9 +2004,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/b6e1f0cf6b9e1ec409a0d3e2f2a5fb0998e36b43",
+                "url": "http://satis.mito.hu/dist/sebastian-version-b6e1f0cf6b9e1ec409a0d3e2f2a5fb0998e36b43-zip-ee05a0.zip",
                 "reference": "b6e1f0cf6b9e1ec409a0d3e2f2a5fb0998e36b43",
-                "shasum": ""
+                "shasum": "98b9999d9de8ca90888cf8f4d5c49f8e3606a205"
             },
             "type": "library",
             "autoload": {
@@ -2040,9 +2040,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/442ecf5f92616594e04c47749e4e024b1cfc2e19",
+                "url": "http://satis.mito.hu/dist/symfony-browser-kit-442ecf5f92616594e04c47749e4e024b1cfc2e19-zip-6ebd9b.zip",
                 "reference": "442ecf5f92616594e04c47749e4e024b1cfc2e19",
-                "shasum": ""
+                "shasum": "6cd53906016933a2e9af86477d702492a0b1936d"
             },
             "require": {
                 "php": ">=5.3.3",
@@ -2095,9 +2095,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/7049924cf0b7f350e5a099ea988e713ebf7590fe",
+                "url": "http://satis.mito.hu/dist/symfony-console-7049924cf0b7f350e5a099ea988e713ebf7590fe-zip-f725ac.zip",
                 "reference": "7049924cf0b7f350e5a099ea988e713ebf7590fe",
-                "shasum": ""
+                "shasum": "390ddb2aefcf7a60c5de094570929c88f4b9ab00"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2152,9 +2152,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/0c11572e1420ae1e59309bb188f8daed5545717c",
+                "url": "http://satis.mito.hu/dist/symfony-css-selector-0c11572e1420ae1e59309bb188f8daed5545717c-zip-bd47ca.zip",
                 "reference": "0c11572e1420ae1e59309bb188f8daed5545717c",
-                "shasum": ""
+                "shasum": "3cfa2c16d6baa2f8d5b31805ff0d58612d102845"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2203,9 +2203,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/14adb9c3b16796097d8d48f9393099422fde5c59",
+                "url": "http://satis.mito.hu/dist/symfony-dom-crawler-14adb9c3b16796097d8d48f9393099422fde5c59-zip-533c85.zip",
                 "reference": "14adb9c3b16796097d8d48f9393099422fde5c59",
-                "shasum": ""
+                "shasum": "45fe0faed836fd34661d684368c17c43cee65152"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2256,9 +2256,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/93d237c3da7565a9ad2b4b6a74af73f4e3c0c305",
+                "url": "http://satis.mito.hu/dist/symfony-event-dispatcher-93d237c3da7565a9ad2b4b6a74af73f4e3c0c305-zip-c87d24.zip",
                 "reference": "93d237c3da7565a9ad2b4b6a74af73f4e3c0c305",
-                "shasum": ""
+                "shasum": "65abd3e0c6813585b9a82342f7458eeaa8f4be54"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2314,9 +2314,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/7d97789ea01c3c76ecaa59b954d162777033cbd4",
+                "url": "http://satis.mito.hu/dist/symfony-filesystem-7d97789ea01c3c76ecaa59b954d162777033cbd4-zip-0846c1.zip",
                 "reference": "7d97789ea01c3c76ecaa59b954d162777033cbd4",
-                "shasum": ""
+                "shasum": "53009415d5f400bfc8628258a62d6e11b0cd50b1"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2361,9 +2361,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/ceb2c693cffbe5255b623b2543456235a25672c1",
+                "url": "http://satis.mito.hu/dist/symfony-finder-ceb2c693cffbe5255b623b2543456235a25672c1-zip-51fdc8.zip",
                 "reference": "ceb2c693cffbe5255b623b2543456235a25672c1",
-                "shasum": ""
+                "shasum": "af6216db271283301fea4a23ebac754fd04ad804"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2408,9 +2408,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/f7cca9c342ce395d2aa17383d0f9a409d81ca585",
+                "url": "http://satis.mito.hu/dist/symfony-stopwatch-f7cca9c342ce395d2aa17383d0f9a409d81ca585-zip-ea790a.zip",
                 "reference": "f7cca9c342ce395d2aa17383d0f9a409d81ca585",
-                "shasum": ""
+                "shasum": "95aab26f625252ab3e03deec34fccb8348836862"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2455,9 +2455,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/656e03eeedc827e4830ac43547eae10bacaa1bbb",
+                "url": "http://satis.mito.hu/dist/symfony-yaml-656e03eeedc827e4830ac43547eae10bacaa1bbb-zip-6e2c7d.zip",
                 "reference": "656e03eeedc827e4830ac43547eae10bacaa1bbb",
-                "shasum": ""
+                "shasum": "164623c5c55b8ae52b9504188dca687e55ac9e64"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -2501,9 +2501,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/e47cb29fce1b6f54c56736017b1ee62c694d063d",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-codeception-e47cb29fce1b6f54c56736017b1ee62c694d063d-zip-8aac5c.zip",
                 "reference": "e47cb29fce1b6f54c56736017b1ee62c694d063d",
-                "shasum": ""
+                "shasum": "56eade6b4201f7e20d789726e17c72f6b0922e78"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -2546,9 +2546,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-coding-standards/zipball/2b884f9736640256af4dbfe0259dd001efeacabc",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-coding-standards-2b884f9736640256af4dbfe0259dd001efeacabc-zip-7299ec.zip",
                 "reference": "2b884f9736640256af4dbfe0259dd001efeacabc",
-                "shasum": ""
+                "shasum": "f1125f250a2719ebe9281a0d5266805ccc6ef4db"
             },
             "require": {
                 "php": ">=5.4.0",
@@ -2614,9 +2614,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/db038896862b2b221639017ea021de9b02a51eeb",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-debug-db038896862b2b221639017ea021de9b02a51eeb-zip-ed430d.zip",
                 "reference": "db038896862b2b221639017ea021de9b02a51eeb",
-                "shasum": ""
+                "shasum": "0f75a18130d0ab66a9746b6a053dd857bda1e632"
             },
             "require": {
                 "yiisoft/yii2": "*",
@@ -2661,9 +2661,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/7c4de16797547786bc53bd108ca04c4893257f41",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-faker-7c4de16797547786bc53bd108ca04c4893257f41-zip-76ec2f.zip",
                 "reference": "7c4de16797547786bc53bd108ca04c4893257f41",
-                "shasum": ""
+                "shasum": "1add15aa664207e0567545e596d387b1ee99c856"
             },
             "require": {
                 "fzaninotto/faker": "*",
@@ -2708,9 +2708,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/72fcfc5bcdf2cd08132f8c247073488b832b54bd",
+                "url": "http://satis.mito.hu/dist/yiisoft-yii2-gii-72fcfc5bcdf2cd08132f8c247073488b832b54bd-zip-ff9703.zip",
                 "reference": "72fcfc5bcdf2cd08132f8c247073488b832b54bd",
-                "shasum": ""
+                "shasum": "cb8892ca7700ce221041712bf8db887f3926a20d"
             },
             "require": {
                 "bower-asset/typeahead.js": "0.10.*",
