@@ -1,3 +1,6 @@
+#!/bin/sh
+
+## GRUNT-GITHOOKS START
 die() { echo "$@" 1>&2 ; exit 1; }
 
 # git-sh-setup.sh workarounds
@@ -124,7 +127,7 @@ else
 	fi
 fi
 
-(cd {{gruntfileDirectory}} && {{command}}{{#if task}} {{task}}{{/if}}{{#if args}} {{args}}{{/if}})
+(cd {{gulpfileDirectory}} && gulp commit)
 exitcode=$?
 
 if [ $stashed -eq 1 ]; then
@@ -137,3 +140,5 @@ if [ $exitcode -ne 0 ]; then
 fi
 
 exit $exitcode
+
+## GRUNT-GITHOOKS END

@@ -4,6 +4,7 @@
 /**
  * Requires
  */
+var path = require('path');
 var gulp = require('gulp');
 var es = require('event-stream');
 var gp = require('get-packages').init({
@@ -88,7 +89,7 @@ var styles = function(isProd) {
 	var cssPaths = gp.getCssPaths();
 	var streams = cssPaths.map(function(cssPath) {
 		var dest = isProd ? cssPath.dist : cssPath.dev;
-		return gulp.src(cssPath.sources + '/*.{scss,sass}')
+		return gulp.src(path.join(cssPath.sources, '*.{scss,sass}'))
 			.pipe($.changed(dest))
 			// Libsass
 			.pipe($.sass({
@@ -159,7 +160,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
 	var imagePaths = gp.getImagePaths();
 	var streams = imagePaths.map(function(imagePath) {
-		return gulp.src(imagePath.sources + '/**/*.{png,jpg,jpeg,gif}')
+		return gulp.src(path.join(imagePath.sources, '**', '*.{png,jpg,jpeg,gif}'))
 			.pipe($.imagemin({
 				optimizationLevel: 3,
 				progressive: true,
@@ -176,7 +177,7 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
 	var fontPaths = gp.getFontPaths();
 	var streams = fontPaths.map(function(fontPath) {
-		return gulp.src(fontPath.sources + '/**/*.{woff,ttf,svg,eot}')
+		return gulp.src(path.join(fontPath.sources, '**', '*.{woff,ttf,svg,eot}'))
 			.pipe(gulp.dest(fontPath.dest));
 	});
 	return es.merge.apply(null, streams);
@@ -203,7 +204,7 @@ gulp.task('compile', ['clean'], function() {
 gulp.task('copy-non-images', function() {
 	var imagePaths = gp.getImagePaths();
 	var streams = imagePaths.map(function(imagePath) {
-		return gulp.src(imagePath.sources + '/**/!(*.png|*.jpg|*.jpeg|*.gif)')
+		return gulp.src(path.join(imagePath.sources, '**', '!(*.png|*.jpg|*.jpeg|*.gif)'))
 			.pipe(gulp.dest(imagePath.dest));
 	});
 	return es.merge.apply(null, streams);
@@ -213,7 +214,6 @@ gulp.task('copy-non-images', function() {
  * PHPLint
  */
 gulp.task('phplint', function() {
-	var path = require('path');
 	var fileList = require('execSync').exec('git diff-index --cached --name-only --diff-filter=ACMR HEAD').stdout.split('\n');
 	var phplint = require('phplint');
 
@@ -336,6 +336,64 @@ gulp.task('setup:testroot', function() {
 });
 
 /**
+ * Tinylr findport
+ */
+// gulp.task('tinylr-findport', function() {
+// 	var tinylr = require('tiny-lr-fork');
+// 	var server = tinylr();
+// 	var task = this.data.task;
+// 	var load = this.data.load;
+// 	var rename = this.data.rename;
+// 	var target = this.data.target;
+
+// 	var startPort = false;
+// 	if (grunt.file.exists('.lrport')) {
+// 		startPort = parseInt(grunt.file.read('.lrport'),10);
+// 	}
+
+// 	function tryPort(num) {
+// 		if (num === undefined) {
+// 			num = 0;
+// 		}
+// 		if (num == 10) {
+// 			grunt.fatal('Failed to find port after 10 attempts.');
+// 		}
+// 		var port = 35729 + Math.floor((Math.random()*10000)+1);
+// 		if (startPort) {
+// 			port = startPort;
+// 			startPort = false;
+// 		}
+// 		grunt.log.writeln('Try port:' +port);
+// 		server.listen(port, function(err) {
+// 			if(err) {
+// 				if (err.code === 'EADDRINUSE') {
+// 					tryPort();
+// 				} else {
+// 					grunt.fatal(err);
+// 				}
+// 			} else {
+// 				server.close();
+// 				grunt.file.write('.lrport', port);
+// 				grunt.log.write('Found port: ');
+// 				grunt.log.writeln(port.toString().green.bold);
+// 				var os = require("os");
+// 				grunt.log.writeln('\tssh -L 35729:localhost:' + port + ' ' + os.hostname());
+// 				grunt.config.set(task+'.'+target+'.options.livereload', port);
+// 				if (load) {
+// 					grunt.loadNpmTasks(load);
+// 					if (rename) {
+// 						grunt.renameTask(rename, task);
+// 					}
+// 				}
+// 				grunt.task.run(task);
+// 			}
+// 		});
+// 	}
+
+// 	tryPort();
+// });
+
+/**
  * Codecept build
  */
 gulp.task('codeceptbuild', $.shell.task('../vendor/bin/codecept build', {
@@ -370,19 +428,11 @@ gulp.task('hooks', function() {
 	var streams = [];
 	streams.push(gulp.src('.git/hooks/pre-commit', {read: false})
 		.pipe($.rimraf()));
-	// ...
-	// githooks: {
-	// 	staged: {
-	// 		options: {
-	// 			hashbang: '#!/bin/sh',
-	// 			template: 'hooks/staged.hbs',
-	// 			startMarker: '## GRUNT-GITHOOKS START',
-	// 			endMarker: '## GRUNT-GITHOOKS END'
-	// 		},
-	// 		'pre-commit': 'commit'
-	// 	}
-	// }
-	// ...
+
+	streams.push(gulp.src('hooks/staged')
+		.pipe($.replace('{{gulpfileDirectory}}', __dirname))
+		.pipe($.rename('pre-commit'))
+		.pipe(gulp.dest('.git/hooks/')));
 });
 
 /**
