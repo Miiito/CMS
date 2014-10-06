@@ -108,6 +108,7 @@ var styles = function(isProd) {
 				browsers: ['last 3 version'],
 				cascade: false
 			}), $.combineMediaQueries(), $.csso()))
+			.pipe($.rename({dirname: '.'}))
 			.pipe(gulp.dest(dest));
 			// .pipe(browserSync.reload({stream: true}));
 	});
@@ -432,6 +433,7 @@ gulp.task('hooks', function() {
 	streams.push(gulp.src('hooks/staged')
 		.pipe($.replace('{{gulpfileDirectory}}', __dirname))
 		.pipe($.rename('pre-commit'))
+		.pipe($.chmod(755))
 		.pipe(gulp.dest('.git/hooks/')));
 });
 
