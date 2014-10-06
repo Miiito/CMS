@@ -439,7 +439,7 @@ gulp.task('hooks', function() {
  * Commit
  */
 gulp.task('commit', function() {
-	gulp.start('phplint', 'jshint');
+	gulp.start('phplint', 'jslint');
 });
 
 /**
