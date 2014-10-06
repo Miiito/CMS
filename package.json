@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "get-packages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git#v1.1.x",
     "gulp-sane-watch": "0.0.1",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.1",
@@ -33,7 +32,8 @@
     "gulp-plumber": "^0.6.6",
     "gulp-jscs": "^1.1.2",
     "browser-sync": "^1.5.2",
-    "gulp-changed": "^1.0.0"
+    "gulp-changed": "^1.0.0",
+    "get-packages": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
