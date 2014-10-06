@@ -1,3 +1,4 @@
+/* jshint node: true */
 'use strict';
 
 /**
@@ -21,7 +22,6 @@ var $ = require('gulp-load-plugins')();
  * @type {Object}
  */
 var defaults = {
-	environment: 'dev', // dev || prod
 	apachegrp: '',
 	copykeep: {
 		localemail: {
@@ -82,12 +82,14 @@ var defaults = {
 
 /**
  * Styles
+ * @param {Boolean} isProd
  */
-gulp.task('styles', function() {
+var styles = function(isProd) {
 	var cssPaths = gp.getCssPaths();
-	var isProd = (defaults.environment === 'prod');
 	var streams = cssPaths.map(function(cssPath) {
+		var dest = isProd ? cssPath.dist : cssPath.dev;
 		return gulp.src(cssPath.sources + '/*.{scss,sass}')
+			.pipe($.changed(dest))
 			// Libsass
 			.pipe($.sass({
 				// includePaths: require('node-bourbon').includePaths, // include bourbon
@@ -105,10 +107,24 @@ gulp.task('styles', function() {
 				browsers: ['last 3 version'],
 				cascade: false
 			}), $.combineMediaQueries(), $.csso()))
-			.pipe(gulp.dest(isProd ? cssPath.dist : cssPath.dev));
+			.pipe(gulp.dest(dest));
 			// .pipe(browserSync.reload({stream: true}));
 	});
 	return es.merge.apply(null, streams);
+};
+
+/**
+ * Styles src
+ */
+gulp.task('styles:src', function() {
+	return styles(false);
+});
+
+/**
+ * Styles dist
+ */
+gulp.task('styles:dist', function() {
+	return styles(true);
 });
 
 /**
@@ -178,8 +194,7 @@ gulp.task('clean', function() {
  * Compile
  */
 gulp.task('compile', ['clean'], function() {
-	defaults.environment = 'prod';
-	gulp.start('styles', 'scripts', 'images', 'fonts', 'copy-non-images');
+	gulp.start('styles:dist', 'scripts', 'images', 'fonts', 'copy-non-images');
 });
 
 /**
@@ -277,9 +292,24 @@ gulp.task('setup', function() {
 				}
 				return false;
 			}
+		}, {
+			type: 'input',
+			name: 'email',
+			message: 'Your email',
+			validate: function(value) {
+				if (value === '') {
+					return 'Please enter an email address';
+				}
+				return true;
+			}
 		}], function(res) {
 			gulp.src('')
 				.pipe($.shell(['php setup.php ' + res.environment + ' ' + defaults.apachegrp]));
+
+			gulp.src(defaults.copykeep.localemail.src)
+				.pipe($.rename(defaults.copykeep.localemail.destFile))
+				.pipe($.replace(/'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/, '\'as dryrun\' => [ \'email\' => \'' + res.email + '\' '))
+				.pipe(gulp.dest(defaults.copykeep.localemail.destPath));
 		}));
 });
 
@@ -302,29 +332,6 @@ gulp.task('setup:testroot', function() {
 			gulp.src(defaults.copykeep.acceptancehost.src)
 				.pipe($.rename(defaults.copykeep.acceptancehost.destFile))
 				.pipe(gulp.dest(defaults.copykeep.acceptancehost.destPath));
-		}));
-});
-
-/**
- * Setup local email
- */
-gulp.task('setup:localemail', function() {
-	return gulp.src('')
-		.pipe($.prompt.prompt({
-			type: 'input',
-			name: 'email',
-			message: 'Your email',
-			validate: function(value) {
-				if (value === '') {
-					return 'Please enter an email address';
-				}
-				return true;
-			}
-		}, function(res) {
-			gulp.src(defaults.copykeep.localemail.src)
-				.pipe($.rename(defaults.copykeep.localemail.destFile))
-				.pipe($.replace(/'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/, '\'as dryrun\' => [ \'email\' => \'' + res.email + '\' '))
-				.pipe(gulp.dest(defaults.copykeep.localemail.destPath));
 		}));
 });
 
@@ -353,17 +360,29 @@ gulp.task('test', ['codeceptbuild'], function() {
  * Post install
  */
 gulp.task('postinstall', function() {
-	gulp.start('hooks', 'setup', 'setup:localemail');
+	gulp.start('hooks', 'setup');
 });
 
 /**
  * Hooks
  */
-// - githooks
 gulp.task('hooks', function() {
 	var streams = [];
 	streams.push(gulp.src('.git/hooks/pre-commit', {read: false})
 		.pipe($.rimraf()));
+	// ...
+	// githooks: {
+	// 	staged: {
+	// 		options: {
+	// 			hashbang: '#!/bin/sh',
+	// 			template: 'hooks/staged.hbs',
+	// 			startMarker: '## GRUNT-GITHOOKS START',
+	// 			endMarker: '## GRUNT-GITHOOKS END'
+	// 		},
+	// 		'pre-commit': 'commit'
+	// 	}
+	// }
+	// ...
 });
 
 /**
@@ -415,12 +434,12 @@ gulp.task('default', function() {
 /**
  * Watch
  */
-gulp.task('watch', ['styles'/*, 'browser-sync'*/], function() {
+gulp.task('watch', ['styles:src'/*, 'browser-sync'*/], function() {
 	// Watch .js files
-	// gulp.watch(gp.getAllJsFile(), browserSync.reload);
+	// $.saneWatch(gp.getAllJsFile(), browserSync.reload);
 
 	// Watch .scss files
-	gulp.watch(gp.getAllCssPath(), $.batch({timeout: 250}, function() {
-		gulp.start('styles');
-	}));
+	$.saneWatch(gp.getAllCssPath(), function() {
+		gulp.start('styles:src');
+	});
 });

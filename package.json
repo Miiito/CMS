@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "get-packages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git",
+    "get-packages": "git+http://gitlab.mito.hu/gg.kovacs/getpackages.git#v1.1.x",
+    "gulp-sane-watch": "0.0.1",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.1",
     "gulp-combine-media-queries": "0.1.0",
@@ -11,12 +12,12 @@
     "gulp-csso": "^0.2.9",
     "gulp-imagemin": "^1.0.1",
     "gulp-jshint": "^1.8.5",
-    "gulp-load-plugins": "^0.6.0",
+    "gulp-load-plugins": "^0.7.0",
     "gulp-sass": "^1.0.0",
     "gulp-uglify": "^1.0.1",
     "jshint-stylish": "^1.0.0",
     "node-bourbon": "^1.2.3",
-    "gulp-if": "^1.2.4",
+    "gulp-if": "^1.2.5",
     "gulp-batch": "^1.0.1",
     "gulp-ngmin": "^0.3.0",
     "event-stream": "^3.1.7",
@@ -27,11 +28,12 @@
     "gulp-shell": "^0.2.9",
     "gulp-replace": "^0.4.0",
     "gulp-prompt": "^0.1.1",
-    "gulp-rimraf": "^0.1.0",
+    "gulp-rimraf": "^0.1.1",
     "gulp-ruby-sass": "^0.7.1",
-    "gulp-plumber": "^0.6.5",
+    "gulp-plumber": "^0.6.6",
     "gulp-jscs": "^1.1.2",
-    "browser-sync": "^1.5.2"
+    "browser-sync": "^1.5.2",
+    "gulp-changed": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
