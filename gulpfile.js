@@ -11,7 +11,7 @@ var gp = require('get-packages').init({
 	applicationPath: '.',
 	yiiPackagesCommand: 'yii packages'
 });
-// var browserSync = require('browser-sync');
+// var browserSync = require('browser-sync'); // (npm install --save-dev browser-sync)
 
 /**
  * Load gulp plugins
@@ -93,13 +93,13 @@ var styles = function(isProd) {
 			.pipe($.changed(dest))
 			// Libsass
 			.pipe($.sass({
-				// includePaths: require('node-bourbon').includePaths, // include bourbon
+				// includePaths: require('node-bourbon').includePaths, // include bourbon (npm install node-bourbon --save-dev)
 				errLogToConsole: true
 			}))
-			// Rubysass
-			// .pipe($.plumber())
+			// Rubysass (npm install --save-dev gulp-ruby-sass)
+			// .pipe($.plumber()) // (npm install --save-dev gulp-plumber)
 			// .pipe($.rubySass({
-			// 	// loadPath: require('node-bourbon').includePaths, // include bourbon
+			// 	// loadPath: require('node-bourbon').includePaths, // include bourbon (npm install node-bourbon --save-dev)
 			// 	style: 'expanded',
 			// 	precision: 10,
 			// 	container: '~/tmp'
@@ -107,9 +107,10 @@ var styles = function(isProd) {
 			.pipe($.if(isProd, $.autoprefixer({
 				browsers: ['last 3 version'],
 				cascade: false
-			}), $.combineMediaQueries(), $.csso()))
+			}), $.csso()))
 			.pipe($.rename({dirname: '.'}))
-			.pipe(gulp.dest(dest));
+			.pipe(gulp.dest(dest))
+			.pipe($.livereload(defaults.port));
 			// .pipe(browserSync.reload({stream: true}));
 	});
 	return es.merge.apply(null, streams);
@@ -148,7 +149,7 @@ gulp.task('scripts', function() {
 	var streams = buildJs.map(function(jsFile) {
 		return gulp.src(jsFile.sources)
 			.pipe($.concat(jsFile.concatFilename))
-			// .pipe($.ngmin()) // angularjs ngmin
+			// .pipe($.ngAnnotate()) // ng-annotate (npm install --save-dev gulp-ng-annotate)
 			.pipe($.uglify())
 			.pipe(gulp.dest(jsFile.dest));
 	});
@@ -187,9 +188,9 @@ gulp.task('fonts', function() {
 /**
  * Clean
  */
-gulp.task('clean', function() {
-	var distPaths = gp.getAllDistPath();
-	return gulp.src(distPaths, {read: false}).pipe($.rimraf());
+gulp.task('clean', function(cb) {
+	var del = require('del');
+	del(gp.getAllDistPath(), cb);
 });
 
 /**
@@ -337,62 +338,39 @@ gulp.task('setup:testroot', function() {
 });
 
 /**
- * Tinylr findport
+ * Findport
  */
-// gulp.task('tinylr-findport', function() {
-// 	var tinylr = require('tiny-lr-fork');
-// 	var server = tinylr();
-// 	var task = this.data.task;
-// 	var load = this.data.load;
-// 	var rename = this.data.rename;
-// 	var target = this.data.target;
+gulp.task('findport', function(cb) {
+	var lrPortFilepath = '.lrport';
+	var fs = require('fs');
+	var chalk = require('chalk');
+	var portfinder = require('portfinder');
 
-// 	var startPort = false;
-// 	if (grunt.file.exists('.lrport')) {
-// 		startPort = parseInt(grunt.file.read('.lrport'),10);
-// 	}
+	var basePort = null;
+	if (fs.existsSync(lrPortFilepath)) {
+		basePort = parseInt(fs.readFileSync(lrPortFilepath), 10);
+	}
 
-// 	function tryPort(num) {
-// 		if (num === undefined) {
-// 			num = 0;
-// 		}
-// 		if (num == 10) {
-// 			grunt.fatal('Failed to find port after 10 attempts.');
-// 		}
-// 		var port = 35729 + Math.floor((Math.random()*10000)+1);
-// 		if (startPort) {
-// 			port = startPort;
-// 			startPort = false;
-// 		}
-// 		grunt.log.writeln('Try port:' +port);
-// 		server.listen(port, function(err) {
-// 			if(err) {
-// 				if (err.code === 'EADDRINUSE') {
-// 					tryPort();
-// 				} else {
-// 					grunt.fatal(err);
-// 				}
-// 			} else {
-// 				server.close();
-// 				grunt.file.write('.lrport', port);
-// 				grunt.log.write('Found port: ');
-// 				grunt.log.writeln(port.toString().green.bold);
-// 				var os = require("os");
-// 				grunt.log.writeln('\tssh -L 35729:localhost:' + port + ' ' + os.hostname());
-// 				grunt.config.set(task+'.'+target+'.options.livereload', port);
-// 				if (load) {
-// 					grunt.loadNpmTasks(load);
-// 					if (rename) {
-// 						grunt.renameTask(rename, task);
-// 					}
-// 				}
-// 				grunt.task.run(task);
-// 			}
-// 		});
-// 	}
+	if (basePort === null) {
+		basePort = 35729 + Math.floor((Math.random() * 10000) + 1);
+	}
 
-// 	tryPort();
-// });
+	portfinder.basePort = basePort;
+
+	portfinder.getPort(function(err, port) {
+		if (err === null) {
+			defaults.port = port;
+			console.log(chalk.gray('----------------------------------------'));
+			console.log('Found port: ' + chalk.green(port));
+			console.log('Command: ' + chalk.yellow('ssh -L 35729:localhost:' + port + ' ' + require('os').hostname()));
+			console.log(chalk.gray('----------------------------------------'));
+			fs.writeFileSync(lrPortFilepath, port);
+		} else {
+			console.log(chalk.red('Failed to find port.'));
+		}
+		cb();
+	});
+});
 
 /**
  * Codecept build
@@ -419,22 +397,29 @@ gulp.task('test', ['codeceptbuild'], function() {
  * Post install
  */
 gulp.task('postinstall', function() {
-	gulp.start('hooks', 'setup');
+	var fs = require('fs');
+	if (!fs.existsSync(path.join('config', 'ENV'))) {
+		gulp.start('hooks', 'setup');
+	}
+});
+
+/**
+ * Clean hooks
+ */
+gulp.task('clean:hooks', function(cb) {
+	var del = require('del');
+	del(['.git/hooks/pre-commit'], cb);
 });
 
 /**
  * Hooks
  */
-gulp.task('hooks', function() {
-	var streams = [];
-	streams.push(gulp.src('.git/hooks/pre-commit', {read: false})
-		.pipe($.rimraf()));
-
-	streams.push(gulp.src('hooks/staged')
+gulp.task('hooks', ['clean:hooks'], function() {
+	return gulp.src('hooks/staged')
 		.pipe($.replace('{{gulpfileDirectory}}', __dirname))
 		.pipe($.rename('pre-commit'))
 		.pipe($.chmod(755))
-		.pipe(gulp.dest('.git/hooks/')));
+		.pipe(gulp.dest('.git/hooks/'));
 });
 
 /**
@@ -486,12 +471,16 @@ gulp.task('default', function() {
 /**
  * Watch
  */
-gulp.task('watch', ['styles:src'/*, 'browser-sync'*/], function() {
-	// Watch .js files
-	// $.saneWatch(gp.getAllJsFile(), browserSync.reload);
+gulp.task('watch', ['findport'], function() {
+	gulp.start('styles:src'/*, 'browser-sync'*/, function() {
+		// Watch .js files
+		// $.saneWatch(gp.getAllJsFile(), function() {
+		// 	browserSync.reload();
+		// });
 
-	// Watch .scss files
-	$.saneWatch(gp.getAllCssPath(), function() {
-		gulp.start('styles:src');
+		// Watch .scss files
+		$.saneWatch(gp.getAllCssPath(), function() {
+			gulp.start('styles:src');
+		});
 	});
 });
