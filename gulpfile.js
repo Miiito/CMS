@@ -107,7 +107,8 @@ var styles = function(isProd) {
 			.pipe($.if(isProd, $.autoprefixer({
 				browsers: ['last 3 version'],
 				cascade: false
-			}), $.csso()))
+			})))
+			.pipe($.if(isProd, $.csso()))
 			.pipe($.rename({dirname: '.'}))
 			.pipe(gulp.dest(dest))
 			.pipe($.livereload(defaults.port));
