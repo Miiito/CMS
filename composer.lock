@@ -317,13 +317,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "f174d3bc2e4a3bea776191db3d4a042a1d1f23b0"
+                "reference": "b7560cf5f22be391932f61df30e4644e6faaa759"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.1.1-d5a867.zip",
-                "reference": "f174d3bc2e4a3bea776191db3d4a042a1d1f23b0",
-                "shasum": "94ad371b10a1b575de88df2f44d65fc38f651d0b"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.1.1-15167d.zip",
+                "reference": "b7560cf5f22be391932f61df30e4644e6faaa759",
+                "shasum": "a5445d122845216238df02ed0996b2ea96984d11"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -348,7 +348,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-10-13 12:00:03"
+            "time": "2014-10-13 12:14:01"
         },
         {
             "name": "swiftmailer/swiftmailer",
