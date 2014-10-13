@@ -113,7 +113,7 @@ module.exports = function(grunt) {
 				}
 			},
 			codeception: {
-				command: '../vendor/bin/codecept run --coverage --html --coverage-html',
+				command: '../vendor/bin/codecept run --html',
 				options: {
 					execOptions: {
 						cwd: 'tests'

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b593a41cba5d9354c90ffb468b96af6",
+    "hash": "740363313fd9e81dc171a85e815f0a69",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -2395,16 +2395,16 @@
         },
         {
             "name": "yiisoft/yii2-codeception",
-            "version": "dev-master",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-codeception.git",
-                "reference": "e4c331f800031fb0d94556101750c8409c37b5e1"
+                "reference": "2d19dde0b11db3a06bec245b6d2b4343fe59ea39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/e4c331f800031fb0d94556101750c8409c37b5e1",
-                "reference": "e4c331f800031fb0d94556101750c8409c37b5e1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/2d19dde0b11db3a06bec245b6d2b4343fe59ea39",
+                "reference": "2d19dde0b11db3a06bec245b6d2b4343fe59ea39",
                 "shasum": ""
             },
             "require": {
@@ -2436,7 +2436,7 @@
                 "codeception",
                 "yii2"
             ],
-            "time": "2014-10-12 20:44:45"
+            "time": "2014-10-12 17:09:06"
         },
         {
             "name": "yiisoft/yii2-coding-standards",
@@ -2653,7 +2653,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "yiisoft/yii2-codeception": 20,
         "yiisoft/yii2-coding-standards": 20,
         "mito/yii2-coding-standards": 20
     },

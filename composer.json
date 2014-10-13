@@ -21,7 +21,7 @@
         "mito/yii2-enhanced-assets": "0.1.*"
     },
     "require-dev": {
-        "yiisoft/yii2-codeception": "dev-master",
+        "yiisoft/yii2-codeception": "~2.0",
         "yiisoft/yii2-debug": "~2.0",
         "yiisoft/yii2-gii": "~2.0",
         "squizlabs/php_codesniffer": "1.*",
@@ -55,10 +55,6 @@
         }
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/nkovacs/Codeception.git"
-        },
         {
             "type": "composer",
             "url": "http://satis.mito.hu"
