@@ -14,6 +14,7 @@ $config = [
     'controllerNamespace' => 'app\commands',
     'controllerMap' => [
         'packages' => 'mito\assets\PackagesController',
+        'assetscleanup' => 'mito\assets\CleanupController',
     ],
     'components' => [
         'cache' => [

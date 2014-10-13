@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "beb89a3d7a68e4540fee891e51a8fb28",
+    "hash": "8765b1539e6662ed2fdb2ff7822235f3",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -313,17 +313,17 @@
         },
         {
             "name": "mito/yii2-enhanced-assets",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "522857e220a184510fb30e396047b0a711b5d643"
+                "reference": "f174d3bc2e4a3bea776191db3d4a042a1d1f23b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.1.0-12af49.zip",
-                "reference": "522857e220a184510fb30e396047b0a711b5d643",
-                "shasum": "154e14a89668873e922031c6adc5ad036697e045"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.1.1-d5a867.zip",
+                "reference": "f174d3bc2e4a3bea776191db3d4a042a1d1f23b0",
+                "shasum": "94ad371b10a1b575de88df2f44d65fc38f651d0b"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -348,7 +348,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-09-17 16:15:19"
+            "time": "2014-10-13 12:00:03"
         },
         {
             "name": "swiftmailer/swiftmailer",
