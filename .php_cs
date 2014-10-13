@@ -12,6 +12,12 @@ $finder = Symfony\CS\Finder\DefaultFinder::create()
 ;
 
 return Symfony\CS\Config\Config::create()
-    ->fixers(['psr2', 'ordered_use', 'short_array_syntax', 'unused_use', 'operators_spaces', 'new_with_braces', 'concat_with_spaces'])
+    ->fixers([
+        'psr0',
+        'encoding', 'short_tag', // psr1
+        'braces', 'elseif', 'eof_ending', 'function_declaration', 'indentation', 'line_after_namespace', 'linefeed', 'lowercase_constants',
+        'lowercase_keywords', 'multiple_use', 'php_closing_tag', 'trailing_spaces', 'visibility', // psr2
+        'ordered_use', 'short_array_syntax', 'unused_use', 'operators_spaces', 'new_with_braces', 'concat_with_spaces'
+    ])
     ->finder($finder)
 ;
