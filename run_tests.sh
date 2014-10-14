@@ -1,7 +1,7 @@
 #!/bin/sh
 
 dir=$(basename $(pwd))
-git submodule update --init && composer install --prefer-dist && npm install && grunt postinstall --environment="development" --email="noreply@mito.hu" && grunt testroot --testroot="$dir"
+git submodule update --init && composer install --prefer-dist && npm install && grunt postinstall --environment="development" --email="noreply@mito.hu" && grunt testroot --testroot="/cirunner/$dir"
 ec=$?
 if [ $ec -ne 0 ]; then
 	exit $ec
