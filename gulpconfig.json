@@ -46,6 +46,7 @@
       "dir": [
         "config/**/*.php",
         "setup.php",
+        "testsetup.php",
         "migrations/**/*.php",
         "modules/*/migrations/*.php"
       ],
