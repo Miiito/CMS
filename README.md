@@ -1,6 +1,8 @@
 Yii 2 Basic Application Template
 ================================
 
+[![build status](http://gitlab-ci.mito.hu/projects/1/status.png?ref=gulp_basic_template)](http://gitlab-ci.mito.hu/projects/1?ref=gulp_basic_template)
+
 Yii 2 Basic Application Template is a skeleton Yii 2 application best for
 rapidly creating small projects.
 
