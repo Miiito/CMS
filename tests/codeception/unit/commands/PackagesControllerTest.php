@@ -3,13 +3,13 @@
 namespace tests\unit\commands;
 
 use Yii;
+use mito\assets\PackagesController;
 use yii\codeception\TestCase;
 use yii\helpers\Json;
-use mito\assets\PackagesController;
 
 class PackagesControllerTest extends TestCase
 {
-    protected $tempPath='';
+    protected $tempPath = '';
 
     protected function setUp()
     {
@@ -85,9 +85,9 @@ class PackagesControllerTest extends TestCase
     protected function runPackagesControllerAction($actionId, $config = null, array $args = [])
     {
         if ($config === null) {
-            $controller=$this->createPackagesController();
+            $controller = $this->createPackagesController();
         } else {
-            $controller=$this->createMockPackagesController($config);
+            $controller = $this->createMockPackagesController($config);
         }
         ob_start();
         ob_implicit_flush(false);
@@ -129,57 +129,57 @@ class PackagesControllerTest extends TestCase
     {
         $globalPackages = [
             'nocompile' => [
-                'name'=>'NocompileAsset',
-                'namespace'=>'app\assets',
-                'type'=>'\mito\assets\FallbackAssetBundle',
-                'sourcePath'=>'@app/assets/nocompile/src',
-                'devJs'=>['js/test.js'],
-                'js'=>['js/test.min.js'],
+                'name' => 'NocompileAsset',
+                'namespace' => 'app\assets',
+                'type' => '\mito\assets\FallbackAssetBundle',
+                'sourcePath' => '@app/assets/nocompile/src',
+                'devJs' => ['js/test.js'],
+                'js' => ['js/test.min.js'],
             ],
             'compile' => [
-                'name'=>'CompileAsset',
-                'namespace'=>'app\assets',
-                'type'=>'\mito\assets\AssetBundle',
-                'devPath'=>"@app/assets/compile/src",
-                'distPath'=>"@app/assets/compile/dist",
-                'devJs'=> ['js/combined1.js'=>['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
-                'js'=>['js/combined1.js', 'js/nocombine.js'],
-                'scssPath'=>'scss',
-                'imgPath'=>'img',
-                'fontPath'=>'fonts',
-                'css'=>['css/screen.css','css/print.css','css/main.css','css/form.css'],
+                'name' => 'CompileAsset',
+                'namespace' => 'app\assets',
+                'type' => '\mito\assets\AssetBundle',
+                'devPath' => "@app/assets/compile/src",
+                'distPath' => "@app/assets/compile/dist",
+                'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
+                'js' => ['js/combined1.js', 'js/nocombine.js'],
+                'scssPath' => 'scss',
+                'imgPath' => 'img',
+                'fontPath' => 'fonts',
+                'css' => ['css/screen.css','css/print.css','css/main.css','css/form.css'],
             ],
         ];
 
         $modulePackages = [
             'test' => [
                 'test' => [
-                    'name'=>'TestAsset',
-                    'namespace'=>'app\modules\test\assets',
-                    'type'=>'\mito\assets\AssetBundle',
-                    'devPath'=>"@app/modules/test/assets/test/src",
-                    'distPath'=>"@app/modules/test/assets/test/dist",
-                    'devJs'=> ['js/combined1.js'=>['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
-                    'js'=>['js/combined1.js', 'js/nocombine.js'],
-                    'scssPath'=>'scss',
-                    'imgPath'=>'img',
-                    'fontPath'=>'fonts',
-                    'css'=>['css/screen.css','css/print.css','css/main.css','css/form.css'],
+                    'name' => 'TestAsset',
+                    'namespace' => 'app\modules\test\assets',
+                    'type' => '\mito\assets\AssetBundle',
+                    'devPath' => "@app/modules/test/assets/test/src",
+                    'distPath' => "@app/modules/test/assets/test/dist",
+                    'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
+                    'js' => ['js/combined1.js', 'js/nocombine.js'],
+                    'scssPath' => 'scss',
+                    'imgPath' => 'img',
+                    'fontPath' => 'fonts',
+                    'css' => ['css/screen.css','css/print.css','css/main.css','css/form.css'],
                 ],
             ],
             'nametest' => [
                 'test' => [
-                    'name'=>'TestAsset',
-                    'namespace'=>'app\modules\nametest\assets',
-                    'type'=>'\mito\assets\AssetBundle',
-                    'devPath'=>"@app/modules/nametest/assets/test/src",
-                    'distPath'=>"@app/modules/nametest/assets/test/dist",
-                    'devJs'=> ['js/combined1.js'=>['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
-                    'js'=>['js/combined1.js', 'js/nocombine.js'],
-                    'scssPath'=>'scss',
-                    'imgPath'=>'img',
-                    'fontPath'=>'fonts',
-                    'css'=>['css/screen.css','css/print.css','css/main.css','css/form.css'],
+                    'name' => 'TestAsset',
+                    'namespace' => 'app\modules\nametest\assets',
+                    'type' => '\mito\assets\AssetBundle',
+                    'devPath' => "@app/modules/nametest/assets/test/src",
+                    'distPath' => "@app/modules/nametest/assets/test/dist",
+                    'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
+                    'js' => ['js/combined1.js', 'js/nocombine.js'],
+                    'scssPath' => 'scss',
+                    'imgPath' => 'img',
+                    'fontPath' => 'fonts',
+                    'css' => ['css/screen.css','css/print.css','css/main.css','css/form.css'],
                 ],
             ],
         ];

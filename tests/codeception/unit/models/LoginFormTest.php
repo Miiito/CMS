@@ -3,8 +3,8 @@
 namespace tests\codeception\unit\models;
 
 use Yii;
-use yii\codeception\TestCase;
 use app\models\User;
+use yii\codeception\TestCase;
 
 class LoginFormTest extends TestCase
 {
@@ -31,7 +31,7 @@ class LoginFormTest extends TestCase
 
     public function testLoginWrongPassword()
     {
-        $model = $this->mockUser(new User);
+        $model = $this->mockUser(new User());
 
         $model->username = 'demo';
         $model->password = 'wrong-password';

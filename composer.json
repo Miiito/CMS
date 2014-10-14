@@ -12,25 +12,26 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
-        "mito/yii2-enhanced-assets": "*",
-        "mito/yii2-coding-standards": "*"
+        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2-bootstrap": "~2.0",
+        "yiisoft/yii2-swiftmailer": "~2.0",
+        "mito/yii2-enhanced-assets": "~0.1.1"
     },
     "require-dev": {
-        "yiisoft/yii2-codeception": "dev-master",
-        "yiisoft/yii2-debug": "*",
-        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-codeception": "~2.0",
+        "yiisoft/yii2-debug": "~2.0",
+        "yiisoft/yii2-gii": "~2.0",
         "squizlabs/php_codesniffer": "1.*",
-        "yiisoft/yii2-faker": "*",
-        "yiisoft/yii2-coding-standards": "*",
-        "codeception/codeception": "*",
+        "yiisoft/yii2-faker": "~2.0",
+        "yiisoft/yii2-coding-standards": "*@dev",
+        "mito/yii2-coding-standards": "*@dev",
+        "codeception/codeception": "2.*",
         "codeception/specify": " *",
-        "codeception/verify": " *"
+        "codeception/verify": " *",
+        "fabpot/php-cs-fixer": "*@dev"
     },
     "config": {
         "process-timeout": 1800
@@ -54,10 +55,6 @@
         }
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/nkovacs/Codeception.git"
-        },
         {
             "type": "composer",
             "url": "http://satis.mito.hu"

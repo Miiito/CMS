@@ -3,9 +3,9 @@
 namespace app\components;
 
 use yii\base\Behavior;
+use yii\base\InvalidConfigException;
 use yii\mail\BaseMailer;
 use yii\mail\MailEvent;
-use yii\base\InvalidConfigException;
 
 /**
  * MailerDryRun intercepts messages, unsets their to, cc and bcc fields,

@@ -33,12 +33,13 @@ $config = [
             'showScriptName' => false,
         ],
         'assetManager' => [
+            'class' => '\mito\assets\AssetManager',
             'bundles' => [
                 // override default jquery asset to use cdn with fallback
                 'yii\web\JqueryAsset' => [
                     'class' => 'app\assets\JqueryAsset',
                     'fallback' => 'app\assets\JqueryAssetLocal',
-                    'check'=>'window.jQuery',
+                    'check' => 'window.jQuery',
                 ],
             ],
         ],
