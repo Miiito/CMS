@@ -13,6 +13,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		environment: grunt.option('environment') || false,
 		email: grunt.option('email') || false,
+		testroot: grunt.option('testroot') || false,
 		apachegrp: grunt.option('apachegrp') || '',
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
@@ -179,7 +180,10 @@ module.exports = function(grunt) {
 						{
 							config: 'testroot',
 							message: 'Base URL of this app (e.g. "/me/yii2/basic")',
-							type: 'input'
+							type: 'input',
+							when: function(answers) {
+								return grunt.config.get('testroot') === false;
+							}
 						}
 					]
 				}
