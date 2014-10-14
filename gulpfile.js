@@ -73,6 +73,34 @@ var styles = function(isProd) {
 };
 
 /**
+ * Setup
+ */
+var setup = function(environment, apachegrp, email) {
+    gulp.src('')
+        .pipe($.shell(['php setup.php ' + environment + ' ' + apachegrp]));
+
+    gulp.src(config.copykeep.localemail.src)
+        .pipe($.rename(config.copykeep.localemail.destFile))
+        .pipe($.replace(/'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/, '\'as dryrun\' => [ \'email\' => \'' + email + '\' '))
+        .pipe(gulp.dest(config.copykeep.localemail.destPath));
+};
+
+/**
+ * Setup testroot
+ */
+var setupTestroot = function(testroot) {
+    gulp.src(config.copykeep.testroot.src)
+        .pipe($.rename(config.copykeep.testroot.destFile))
+        .pipe($.replace(/c3url:.*/, 'c3url: /' + testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
+        .pipe($.replace(/test_entry_url:.*/, 'test_entry_url: /' + testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
+        .pipe(gulp.dest(config.copykeep.testroot.destPath));
+
+    gulp.src(config.copykeep.acceptancehost.src)
+        .pipe($.rename(config.copykeep.acceptancehost.destFile))
+        .pipe(gulp.dest(config.copykeep.acceptancehost.destPath));
+};
+
+/**
  * Styles src
  */
 gulp.task('styles:src', function() {
@@ -263,63 +291,63 @@ gulp.task('phpcsdiff', function() {
  * Setup
  */
 gulp.task('setup', function() {
-    return gulp.src('')
-        .pipe($.prompt.prompt([{
-            type: 'list',
-            name: 'environment',
-            message: 'Select environment',
-            choices: ['development', 'staging', 'production', 'other']
-        }, {
-            type: 'input',
-            name: 'environment',
-            message: 'Type custom environment',
-            when: function(res) {
-                if (res.environment === 'other') {
+    var argv = require('yargs').argv;
+    var apachegrp = argv.apachegrp || config.apachegrp;
+
+    if (typeof argv.environment === 'string' &&
+        typeof argv.email === 'string') {
+        setup(argv.environment, apachegrp, argv.email);
+    } else {
+        return gulp.src('')
+            .pipe($.prompt.prompt([{
+                type: 'list',
+                name: 'environment',
+                message: 'Select environment',
+                choices: ['development', 'staging', 'production', 'other']
+            }, {
+                type: 'input',
+                name: 'environment',
+                message: 'Type custom environment',
+                when: function(res) {
+                    if (res.environment === 'other') {
+                        return true;
+                    }
+                    return false;
+                }
+            }, {
+                type: 'input',
+                name: 'email',
+                message: 'Your email',
+                validate: function(value) {
+                    if (value === '') {
+                        return 'Please enter an email address';
+                    }
                     return true;
                 }
-                return false;
-            }
-        }, {
-            type: 'input',
-            name: 'email',
-            message: 'Your email',
-            validate: function(value) {
-                if (value === '') {
-                    return 'Please enter an email address';
-                }
-                return true;
-            }
-        }], function(res) {
-            gulp.src('')
-                .pipe($.shell(['php setup.php ' + res.environment + ' ' + config.apachegrp]));
-
-            gulp.src(config.copykeep.localemail.src)
-                .pipe($.rename(config.copykeep.localemail.destFile))
-                .pipe($.replace(/'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/, '\'as dryrun\' => [ \'email\' => \'' + res.email + '\' '))
-                .pipe(gulp.dest(config.copykeep.localemail.destPath));
-        }));
+            }], function(res) {
+                setup(res.environment, apachegrp, res.email);
+            }));
+    }
 });
 
 /**
  * Setup testroot
  */
 gulp.task('setup:testroot', function() {
-    return gulp.src('')
-        .pipe($.prompt.prompt({
-            type: 'input',
-            name: 'testroot',
-            message: 'Base URL of this app (e.g. "/me/yii2/basic")'
-        }, function(res) {
-            gulp.src(config.copykeep.testroot.src)
-                .pipe($.rename(config.copykeep.testroot.destFile))
-                .pipe($.replace(/c3url:.*/, 'c3url: /' + res.testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
-                .pipe($.replace(/test_entry_url:.*/, 'test_entry_url: /' + res.testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
-                .pipe(gulp.dest(config.copykeep.testroot.destPath));
+    var argv = require('yargs').argv;
 
-            gulp.src(config.copykeep.acceptancehost.src)
-                .pipe($.rename(config.copykeep.acceptancehost.destFile))
-                .pipe(gulp.dest(config.copykeep.acceptancehost.destPath));
-        }));
+    if (typeof argv.testroot === 'string') {
+        setupTestroot(argv.testroot);
+    } else {
+        return gulp.src('')
+            .pipe($.prompt.prompt({
+                type: 'input',
+                name: 'testroot',
+                message: 'Base URL of this app (e.g. "/me/yii2/basic")'
+            }, function(res) {
+                setupTestroot(res.testroot);
+            }));
+    }
 });
 
 /**
