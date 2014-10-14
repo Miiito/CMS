@@ -1,6 +1,7 @@
 #!/bin/sh
 
-git submodule update --init && composer install --prefer-dist && npm install && grunt postinstall --environment="development" --email="noreply@mito.hu" && grunt testroot --testroot=/me/yii2/basic
+dir=$(basename $(pwd))
+git submodule update --init && composer install --prefer-dist && npm install && grunt postinstall --environment="development" --email="noreply@mito.hu" && grunt testroot --testroot="$dir"
 ec=$?
 if [ $ec -ne 0 ]; then
 	exit $ec
