@@ -10,7 +10,7 @@
   ],
   "requireOperatorBeforeLineBreak": true,
   "requireCamelCaseOrUpperCaseIdentifiers": true,
-  "validateIndentation": "\t",
+  "validateIndentation": 4,
   "validateQuoteMarks": "'",
 
   "disallowMultipleLineStrings": true,

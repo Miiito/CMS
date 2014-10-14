@@ -1,0 +1,58 @@
+{
+  "apachegrp": "",
+  "copykeep": {
+    "localemail": {
+      "src": "config/development/common.local.example",
+      "destPath": "config/development",
+      "destFile": "common.local.php"
+    },
+    "testroot": {
+      "src": "tests/codeception.yml.sample",
+      "destPath": "tests",
+      "destFile": "codeception.yml"
+    },
+    "acceptancehost": {
+      "src": "tests/codeception/acceptance.suite.sample",
+      "destPath": "tests/codeception",
+      "destFile": "acceptance.suite.yml"
+    }
+  },
+  "phpcs": {
+    "application": {
+      "dir": [
+        "components/**/*.php",
+        "modules/**/*.php",
+        "!modules/*/views/*/*",
+        "!modules/*/migrations/*",
+        "assets/**/*.php",
+        "controllers/**/*.php",
+        "commands/**/*.php",
+        "models/**/*.php",
+        "widgets/*.php",
+        "!widgets/views/*"
+      ],
+      "standard": "vendor/yiisoft/yii2-coding-standards/Yii2"
+    },
+    "views": {
+      "dir": [
+        "views/**/*.php",
+        "mail/**/*.php",
+        "modules/*/views/*/*",
+        "modules/*/mail/*/*"
+      ],
+      "standard": "vendor/mito/yii2-coding-standards/Views"
+    },
+    "others": {
+      "dir": [
+        "config/**/*.php",
+        "setup.php",
+        "migrations/**/*.php",
+        "modules/*/migrations/*.php"
+      ],
+      "standard": "vendor/mito/yii2-coding-standards/Yii2"
+    },
+    "options": {
+      "bin": "vendor/bin/phpcs"
+    }
+  }
+}
