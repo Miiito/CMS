@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		environment: grunt.option('environment') || false,
+		email: grunt.option('email') || false,
 		apachegrp: grunt.option('apachegrp') || '',
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
@@ -164,6 +165,9 @@ module.exports = function(grunt) {
 									return 'Please enter an email address';
 								}
 								return true;
+							},
+							when: function(answers) {
+								return grunt.config.get('email') === false;
 							}
 						}
 					]
