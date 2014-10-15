@@ -1,6 +1,6 @@
 <?php
 // @codingStandardsIgnoreStart
-class TestSetup
+class testsetup
 // @codingStandardsIgnoreEnd
 {
     protected static $copyConfig = [
@@ -50,8 +50,7 @@ class TestSetup
         );
 
         file_put_contents('tests/codeception.yml', $contents);
-
     }
 }
 
-TestSetup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : []);
+testsetup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : []);
