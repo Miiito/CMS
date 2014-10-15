@@ -110,7 +110,7 @@ gulp.task('styles:src', function() {
 /**
  * Styles dist
  */
-gulp.task('styles:dist', function() {
+gulp.task('styles:dist', ['clean'], function() {
     return styles(true);
 });
 
@@ -135,7 +135,7 @@ gulp.task('jscs', function() {
 /**
  * Scripts
  */
-gulp.task('scripts', function() {
+gulp.task('scripts', ['clean', 'jshint'], function() {
     var buildJs = gp.getBuildJs();
     var streams = buildJs.map(function(jsFile) {
         return gulp.src(jsFile.sources)
@@ -150,7 +150,7 @@ gulp.task('scripts', function() {
 /**
  * Images
  */
-gulp.task('images', function() {
+gulp.task('images', ['clean'], function() {
     var imagePaths = gp.getImagePaths();
     var streams = imagePaths.map(function(imagePath) {
         return gulp.src(path.join(imagePath.sources, '**', '*.{png,jpg,jpeg,gif}'))
@@ -167,7 +167,7 @@ gulp.task('images', function() {
 /**
  * Fonts
  */
-gulp.task('fonts', function() {
+gulp.task('fonts', ['clean'], function() {
     var fontPaths = gp.getFontPaths();
     var streams = fontPaths.map(function(fontPath) {
         return gulp.src(path.join(fontPath.sources, '**', '*.{woff,ttf,svg,eot}'))
@@ -187,21 +187,17 @@ gulp.task('clean', function(cb) {
 /**
  * Compile
  */
-gulp.task('compile', ['clean', 'jshint'], function() {
-    gulp.start('styles:dist', 'scripts', 'images', 'fonts', 'copy-non-images');
-});
+gulp.task('compile', ['styles:dist', 'scripts', 'images', 'fonts', 'copy-non-images']);
 
 /**
  * Build
  */
-gulp.task('build', function() {
-    gulp.start('compile');
-});
+gulp.task('build', ['compile']);
 
 /**
  * Copy non images
  */
-gulp.task('copy-non-images', function() {
+gulp.task('copy-non-images', ['clean'], function() {
     var imagePaths = gp.getImagePaths();
     var streams = imagePaths.map(function(imagePath) {
         return gulp.src(path.join(imagePath.sources, '**', '!(*.png|*.jpg|*.jpeg|*.gif)'))
@@ -232,9 +228,7 @@ gulp.task('phplint', function() {
 /**
  * PHPCS
  */
-gulp.task('phpcs', function() {
-    gulp.start('phpcs:application', 'phpcs:views', 'phpcs:others');
-});
+gulp.task('phpcs', ['phpcs:application', 'phpcs:views', 'phpcs:others']);
 
 /**
  * PHPCS application
@@ -395,16 +389,14 @@ gulp.task('codeceptbuild', $.shell.task('../vendor/bin/codecept build', {
 /**
  * Codeception
  */
-gulp.task('codeception', $.shell.task('../vendor/bin/codecept run --coverage --html --coverage-html', {
+gulp.task('codeception', ['codeceptbuild'], $.shell.task('../vendor/bin/codecept run --html', {
     cwd: 'tests'
 }));
 
 /**
  * Test
  */
-gulp.task('test', ['codeceptbuild'], function() {
-    gulp.start('codeception');
-});
+gulp.task('test', ['codeception']);
 
 /**
  * Post install
@@ -438,9 +430,7 @@ gulp.task('hooks', ['clean:hooks'], function() {
 /**
  * Commit
  */
-gulp.task('commit', function() {
-    gulp.start('phplint', 'jshint');
-});
+gulp.task('commit', ['phplint', 'jshint', 'jscs']);
 
 /**
  * Default
