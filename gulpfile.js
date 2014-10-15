@@ -187,7 +187,7 @@ gulp.task('clean', function(cb) {
 /**
  * Compile
  */
-gulp.task('compile', ['clean'], function() {
+gulp.task('compile', ['clean', 'jshint'], function() {
     gulp.start('styles:dist', 'scripts', 'images', 'fonts', 'copy-non-images');
 });
 
