@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8765b1539e6662ed2fdb2ff7822235f3",
+    "hash": "eb76b70035c1823b8910ab9912c945fb",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -102,16 +102,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.31",
+            "version": "3.1.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "2b485a3f9329c829b40872e4463c42143b0c6405"
+                "reference": "bb776eb7e7be594fa77d5598e6f89d96029a8bac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/2b485a3f9329c829b40872e4463c42143b0c6405",
-                "reference": "2b485a3f9329c829b40872e4463c42143b0c6405",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/bb776eb7e7be594fa77d5598e6f89d96029a8bac",
+                "reference": "bb776eb7e7be594fa77d5598e6f89d96029a8bac",
                 "shasum": ""
             },
             "require": {
@@ -313,17 +313,17 @@
         },
         {
             "name": "mito/yii2-enhanced-assets",
-            "version": "0.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "b7560cf5f22be391932f61df30e4644e6faaa759"
+                "reference": "c1accc308ba9796c58205ab00bab638f2fde5858"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.1.1-15167d.zip",
-                "reference": "b7560cf5f22be391932f61df30e4644e6faaa759",
-                "shasum": "a5445d122845216238df02ed0996b2ea96984d11"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-dev-master-e0d72b.zip",
+                "reference": "c1accc308ba9796c58205ab00bab638f2fde5858",
+                "shasum": "256f5d01b84430bb208ecba97ed1c1480c9e271c"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -348,7 +348,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-10-13 12:14:01"
+            "time": "2014-10-13 12:00:57"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -817,20 +817,20 @@
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252"
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8806c41c178ad4a2e87294b851d730779555d252",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/f976e5de371104877ebc89bd8fecb0019ed9c119",
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.3"
+                "php": ">=5.3,<8.0-DEV"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
@@ -867,7 +867,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-04 22:48:25"
+            "time": "2014-10-13 12:58:55"
         },
         {
             "name": "fabpot/php-cs-fixer",
@@ -875,12 +875,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "c98931cff73ef26bcf5f405f6ca02ef81dae1765"
+                "reference": "45a7ff3b135bb0abc5463a2055e4a8657b16ba55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/c98931cff73ef26bcf5f405f6ca02ef81dae1765",
-                "reference": "c98931cff73ef26bcf5f405f6ca02ef81dae1765",
+                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/45a7ff3b135bb0abc5463a2055e4a8657b16ba55",
+                "reference": "45a7ff3b135bb0abc5463a2055e4a8657b16ba55",
                 "shasum": ""
             },
             "require": {
@@ -890,6 +890,7 @@
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/filesystem": "~2.1",
                 "symfony/finder": "~2.1",
+                "symfony/process": "~2.3",
                 "symfony/stopwatch": "~2.5"
             },
             "bin": [
@@ -917,7 +918,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-10-12 19:05:18"
+            "time": "2014-10-14 21:49:55"
         },
         {
             "name": "facebook/webdriver",
@@ -2351,6 +2352,53 @@
             "time": "2014-09-27 08:35:39"
         },
         {
+            "name": "symfony/process",
+            "version": "v2.5.5",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process.git",
+                "reference": "8a1ec96c4e519cee0fb971ea48a1eb7369dda54b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/8a1ec96c4e519cee0fb971ea48a1eb7369dda54b",
+                "reference": "8a1ec96c4e519cee0fb971ea48a1eb7369dda54b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Process\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-09-23 05:25:11"
+        },
+        {
             "name": "symfony/stopwatch",
             "version": "v2.5.5",
             "target-dir": "Symfony/Component/Stopwatch",
@@ -2704,6 +2752,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mito/yii2-enhanced-assets": 20,
         "yiisoft/yii2-coding-standards": 20,
         "mito/yii2-coding-standards": 20,
         "fabpot/php-cs-fixer": 20
