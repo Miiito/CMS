@@ -1,10 +1,8 @@
 <?php
 
 if (!function_exists('load_config')) {
-
     function load_config($config_name)
     {
-
         if (!defined('YII_CONFIG_ENVIRONMENT')) {
             // define YII_CONFIG_ENVIRONMENT, YII_DEBUG and YII_TRACE_LEVEL
             $env = __DIR__ . '/env.php';
@@ -19,7 +17,5 @@ if (!function_exists('load_config')) {
         // no env-specific config found, return empty array
 
         return [];
-
     }
-
 }

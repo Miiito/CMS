@@ -1,6 +1,6 @@
 <?php
 // @codingStandardsIgnoreStart
-class Setup
+class setup
 // @codingStandardsIgnoreEnd
 {
     protected static $serverWritablePaths = [
@@ -132,4 +132,4 @@ class Setup
     }
 }
 
-Setup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : []);
+setup::run(isset($_SERVER['argv']) ? $_SERVER['argv'] : []);
