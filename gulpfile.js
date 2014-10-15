@@ -128,7 +128,7 @@ gulp.task('jshint', function() {
  * JSCS
  */
 gulp.task('jscs', function() {
-    return gulp.src(gp.getAllJsFile())
+    return gulp.src(gp.getAllJsFile(), {base: process.cwd()})
         .pipe($.jscs('.jscsrc'));
 });
 
