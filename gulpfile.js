@@ -430,7 +430,7 @@ gulp.task('hooks', ['clean:hooks'], function() {
 /**
  * Commit
  */
-gulp.task('commit', ['phplint', 'jshint', 'jscs']);
+gulp.task('commit', ['phplint', 'jshint', 'jscs', 'phpcsdiff']);
 
 /**
  * Default
