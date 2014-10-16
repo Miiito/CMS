@@ -133,6 +133,22 @@ gulp.task('jscs', function() {
 });
 
 /**
+ * JSCSDiff
+ */
+gulp.task('jscsdiff', function() {
+    var fileList = require('execSync').exec('git diff-index --name-only --diff-filter=ACMR HEAD').stdout.split('\n');
+
+    fileList = fileList.map(function(file) {
+        return path.resolve(file);
+    });
+
+    fileList = gp.util.match(fileList, gp.getAllJsFile());
+
+    return gulp.src(fileList, {base: process.cwd()})
+        .pipe($.jscs('.jscsrc'));
+});
+
+/**
  * Scripts
  */
 gulp.task('scripts', ['clean', 'jshint'], function() {
@@ -271,14 +287,22 @@ gulp.task('phpcs:others', function() {
  */
 gulp.task('phpcsdiff', function() {
     var fileList = require('execSync').exec('git diff-index --name-only --diff-filter=ACMR HEAD').stdout.split('\n');
-    fileList = gp.util.match(fileList, config.phpcs.application.dir);
 
-    return gulp.src(fileList)
-        .pipe($.phpcs({
-            bin: config.phpcs.options.bin,
-            standard: config.phpcs.application.standard
-        }))
-        .pipe($.phpcs.reporter('log'));
+    function streamify(dir, standard) {
+        var filtered = gp.util.match(fileList, dir);
+        return gulp.src(filtered)
+            .pipe($.phpcs({
+                bin: config.phpcs.options.bin,
+                standard: standard
+            }))
+            .pipe($.phpcs.reporter('log'));
+    }
+
+    return es.merge.apply(null, [
+        streamify(config.phpcs.application.dir, config.phpcs.application.standard),
+        streamify(config.phpcs.views.dir, config.phpcs.views.standard),
+        streamify(config.phpcs.others.dir, config.phpcs.others.standard)
+    ]);
 });
 
 /**
