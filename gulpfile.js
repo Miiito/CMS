@@ -25,18 +25,6 @@ var $ = require('gulp-load-plugins')();
 var config = require('./gulpconfig.json');
 
 /**
- * Error reporter
- */
-var errorReporter = function() {
-    return es.map(function(file, cb) {
-        if (!file.jshint.success) {
-            process.exit(1);
-        }
-        cb(null, file);
-    });
-};
-
-/**
  * Styles
  * @param {Boolean} isProd
  */
@@ -118,8 +106,20 @@ gulp.task('styles:dist', ['clean'], function() {
  * JSHint
  */
 gulp.task('jshint', function() {
+    /**
+     * Error reporter
+     */
+    var errorReporter = function() {
+        return es.map(function(file, cb) {
+            if (!file.jshint.success) {
+                process.exit(1);
+            }
+            cb(null, file);
+        });
+    };
+
     return gulp.src(gp.getAllJsFile())
-        .pipe($.jshint('.jshintrc'))
+        .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe(errorReporter());
 });
