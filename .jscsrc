@@ -9,7 +9,6 @@
     "catch"
   ],
   "requireOperatorBeforeLineBreak": true,
-  "requireCamelCaseOrUpperCaseIdentifiers": true,
   "validateIndentation": 4,
   "validateQuoteMarks": "'",
 

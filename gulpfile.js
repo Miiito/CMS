@@ -33,7 +33,9 @@ var styles = function(isProd) {
     var streams = cssPaths.map(function(cssPath) {
         var dest = isProd ? cssPath.dist : cssPath.dev;
         return gulp.src(path.join(cssPath.sources, '*.{scss,sass}'))
-            .pipe($.changed(dest))
+            .pipe($.changed(dest, {
+                extension: '.css'
+            }))
             // Libsass
             .pipe($.sass({
                 // includePaths: require('node-bourbon').includePaths, // include bourbon (npm install node-bourbon --save-dev)
@@ -96,6 +98,13 @@ gulp.task('styles:src', function() {
 });
 
 /**
+ * Styles src with finport
+ */
+gulp.task('styles:findport', ['findport'], function() {
+    return styles(false);
+});
+
+/**
  * Styles dist
  */
 gulp.task('styles:dist', ['clean'], function() {
@@ -105,14 +114,27 @@ gulp.task('styles:dist', ['clean'], function() {
 /**
  * JSHint
  */
-gulp.task('jshint', function() {
-    /**
-     * Error reporter
-     */
+gulp.task('jshint', ['jshint:hinting'], function(cb) {
+    if (config.jshintExitCode) {
+        cb({
+            showStack: false,
+            toString: function() { return "Jshint error"; }
+        });
+    } else {
+        cb();
+    }
+});
+
+/**
+ * JSHint hinting
+ */
+gulp.task('jshint:hinting', function() {
+    config.jshintExitCode = 0;
+
     var errorReporter = function() {
         return es.map(function(file, cb) {
             if (!file.jshint.success) {
-                process.exit(1);
+                config.jshintExitCode = 1;
             }
             cb(null, file);
         });
@@ -393,7 +415,8 @@ gulp.task('findport', function(cb) {
             config.port = port;
             console.log(chalk.gray('----------------------------------------'));
             console.log('Found port: ' + chalk.green(port));
-            console.log('Command: ' + chalk.yellow('ssh -L 35729:localhost:' + port + ' ' + require('os').hostname()));
+            console.log('Command: ')
+            console.log(chalk.yellow('ssh -L 35729:localhost:' + port + ' ' + require('os').hostname()));
             console.log(chalk.gray('----------------------------------------'));
             fs.writeFileSync(lrPortFilepath, port);
         } else {
@@ -499,16 +522,40 @@ gulp.task('default', function() {
 /**
  * Watch
  */
-gulp.task('watch', ['findport'], function() {
-    gulp.start('styles:src'/*, 'browser-sync'*/, function() {
-        // Watch .js files
-        // $.saneWatch(gp.getAllJsFile(), function() {
-        //  browserSync.reload();
-        // });
+gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
+    // Watch .js files
+    // $.saneWatch(gp.getAllJsFile(), function() {
+    //     browserSync.reload();
+    // });
 
-        // Watch .scss files
-        $.saneWatch(gp.getAllCssPath(), function() {
-            gulp.start('styles:src');
-        });
+    // Start live reload server immediately, don't wait for change
+    $.livereload.listen(config.port);
+
+    // Watch .js files (causes page reload)
+    // $.saneWatch(gp.getAllJsFile(), {
+    //     callbackDelay: 300
+    // }, function(file, root) {
+    //     gulp.src(path.join(root, file))
+    //         .pipe($.livereload(config.port));
+    // });
+
+    // Watch .scss files
+    $.saneWatch(gp.getAllCssPath(), {
+        callbackDelay: 300
+    }, function() {
+        gulp.start('styles:src');
+    });
+
+    // Watch images
+    var rs = [];
+    for (var i = 0, l = gp.getImagePaths().length; i < l; i++) {
+        rs.push(path.join(gp.getImagePaths()[i].sources, '**', '*.{png,jpg,jpeg,gif}'));
+    }
+
+    $.saneWatch(rs, {
+        callbackDelay: 300
+    }, function(file, root) {
+        gulp.src(path.join(root, file))
+            .pipe($.livereload(config.port));
     });
 });
