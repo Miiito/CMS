@@ -533,7 +533,7 @@ gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
 
     // Watch .js files (causes page reload)
     // $.saneWatch(gp.getAllJsFile(), {
-    //     callbackDelay: 300
+    //     debounce: 300
     // }, function(file, root) {
     //     gulp.src(path.join(root, file))
     //         .pipe($.livereload(config.port));
@@ -541,7 +541,7 @@ gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
 
     // Watch .scss files
     $.saneWatch(gp.getAllCssPath(), {
-        callbackDelay: 300
+        debounce: 300
     }, function() {
         gulp.start('styles:src');
     });
@@ -553,7 +553,7 @@ gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
     }
 
     $.saneWatch(rs, {
-        callbackDelay: 300
+        debounce: 300
     }, function(file, root) {
         gulp.src(path.join(root, file))
             .pipe($.livereload(config.port));
