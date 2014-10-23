@@ -5,6 +5,16 @@ $config = [
         'assetManager' => [
             'linkAssets' => true,
         ],
+        // livereload snippet
+        /*
+        'view' => [
+            'on beforeRender' => function($event) {
+                $event->sender->registerJsFile('http://localhost:35729/livereload.js?snipver=1', [
+                    'position' => \yii\web\View::POS_HEAD,
+                ]);
+            }
+        ],
+        */
     ],
     'bootstrap' => [],
     'modules' => [
