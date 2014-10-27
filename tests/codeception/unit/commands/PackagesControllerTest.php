@@ -122,10 +122,9 @@ class PackagesControllerTest extends TestCase
     }
 
     /**
-     * creates all the required files for the test
-     * @return array config
+     * Data provider for createFiles
      */
-    public function createFiles()
+    public function filesProvider()
     {
         $globalPackages = [
             'nocompile' => [
@@ -142,8 +141,8 @@ class PackagesControllerTest extends TestCase
                 'type' => '\mito\assets\AssetBundle',
                 'devPath' => "@app/assets/compile/src",
                 'distPath' => "@app/assets/compile/dist",
-                'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
-                'js' => ['js/combined1.js', 'js/nocombine.js'],
+                'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/combined2.js' => ['js/file3.js', 'js/file4.js'], 'js/nocombine.js'],
+                'js' => ['js/combined1.js', 'js/combined2.js', 'js/nocombine.js'],
                 'scssPath' => 'scss',
                 'imgPath' => 'img',
                 'fontPath' => 'fonts',
@@ -161,7 +160,7 @@ class PackagesControllerTest extends TestCase
                     'distPath' => "@app/modules/test/assets/test/dist",
                     'devJs' => ['js/combined1.js' => ['js/file1.js', 'js/file2.js'], 'js/nocombine.js'],
                     'js' => ['js/combined1.js', 'js/nocombine.js'],
-                    'scssPath' => 'scss',
+                    'cssSourcePaths' => ['scss', 'less'],
                     'imgPath' => 'img',
                     'fontPath' => 'fonts',
                     'css' => ['css/screen.css','css/print.css','css/main.css','css/form.css'],
@@ -184,6 +183,17 @@ class PackagesControllerTest extends TestCase
             ],
         ];
 
+        return [
+            [$globalPackages, $modulePackages],
+        ];
+    }
+
+    /**
+     * creates all the required files for the test
+     * @return array config
+     */
+    public function createFiles($globalPackages, $modulePackages)
+    {
         $packageAttributes = [
             'devJs',
             'js',
@@ -191,6 +201,7 @@ class PackagesControllerTest extends TestCase
             'devPath',
             'distPath',
             'scssPath',
+            'cssSourcePaths',
             'imgPath',
             'fontPath',
             'css',
@@ -407,10 +418,11 @@ class " . $package['name'] . " extends " . $package['type'] . "
     /**
      * Tests getPaths
      * @depends testLoadMockConfig
+     * @dataProvider filesProvider
      */
-    public function testGetPaths()
+    public function testGetPaths($globalPackages, $modulePackages)
     {
-        $config = $this->createFiles();
+        $config = $this->createFiles($globalPackages, $modulePackages);
         $alias = Yii::getAlias('@app');
         Yii::setAlias('@app', $this->tempPath);
 
@@ -450,10 +462,11 @@ class " . $package['name'] . " extends " . $package['type'] . "
      * Tests main action
      * @depends testReturnsJson
      * @depends testLoadMockConfig
+     * @dataProvider filesProvider
      */
-    public function testActionIndex()
+    public function testActionIndex($globalPackages, $modulePackages)
     {
-        $config = $this->createFiles();
+        $config = $this->createFiles($globalPackages, $modulePackages);
         $alias = Yii::getAlias('@app');
         Yii::setAlias('@app', $this->tempPath);
 
@@ -492,6 +505,7 @@ class " . $package['name'] . " extends " . $package['type'] . "
 
         foreach ($expected as $name => $config) {
             $path = $config['path'];
+            $cssSources = [];
             foreach ($config['yes'] as $package) {
                 $this->assertContains([
                     'sources' => $path . '/assets/' . $package . '/src',
@@ -499,6 +513,103 @@ class " . $package['name'] . " extends " . $package['type'] . "
                     'module' => $name,
                 ], $toTest, 'Expected package missing from packages');
             }
+        }
+
+        $expected = [];
+
+        $allPackages = array_values($globalPackages);
+        foreach ($modulePackages as $oneModulePackages) {
+            $allPackages = array_merge($allPackages, array_values($oneModulePackages));
+        }
+
+        foreach ($allPackages as $package) {
+            if (!array_key_exists('devPath', $package)) {
+                continue;
+            }
+            $found = false;
+
+            $packageDistPath = Yii::getAlias($package['distPath']);
+            $packageDevPath = Yii::getAlias($package['devPath']);
+
+            foreach ($decoded['packages'] as $config) {
+
+                $cssDev = $packageDevPath . '/css';
+                $cssDist = $packageDistPath . '/css';
+
+                $cssSources = false;
+
+                if (array_key_exists('cssSourcePaths', $package)) {
+                    $cssSources = $package['cssSourcePaths'];
+                } elseif (array_key_exists('scssPath', $package)) {
+                    $cssSources = [$package['scssPath']];
+                }
+
+                $actualCssSources = false;
+                $actualCssDev = false;
+                $actualCssDist = false;
+                if (isset($config['cssfiles']) && count($config['cssfiles'])) {
+                    $actualCssSources = $config['cssfiles'][0]['sources'];
+                    $actualCssDev = $config['cssfiles'][0]['dev'];
+                    $actualCssDist = $config['cssfiles'][0]['dist'];
+                }
+
+                if ($actualCssDev !== $cssDev || $actualCssDist !== $cssDist || $actualCssSources !== $cssSources) {
+                    continue;
+                }
+
+                if (array_key_exists('devJs', $package)) {
+
+                    if (!array_key_exists('jsfiles', $config)) {
+                        continue;
+                    }
+
+                    $jsfiles = $config['jsfiles'];
+
+                    $jssources = [];
+
+                    foreach ($package['devJs'] as $combined => $files) {
+                        if (is_numeric($combined)) {
+                            continue;
+                        }
+                        foreach ($files as &$sourceFile) {
+                            $sourceFile = rtrim($packageDevPath, '/') . '/' . ltrim($sourceFile, '/');
+                        }
+                        $jssources[] = [
+                            'sources' => $files,
+                            'dist' => rtrim($packageDistPath, '/') . '/' . ltrim($combined, '/'),
+                        ];
+                    }
+
+                    if (count($jssources) !== count($jsfiles)) {
+                        continue;
+                    }
+
+                    $allFound = true;
+                    foreach ($jssources as $expectedJs) {
+                        $found2 = false;
+                        foreach ($jsfiles as $actualJs) {
+                            if (!array_key_exists('dist', $actualJs) || !array_key_exists('sources', $actualJs)) {
+                                continue;
+                            }
+                            if ($expectedJs['dist'] === $actualJs['dist'] && $expectedJs['sources'] === $actualJs['sources']) {
+                                $found2 = true;
+                                break;
+                            }
+                        }
+                        if (!$found2) {
+                            $allFound = false;
+                        }
+                    }
+                    if (!$allFound) {
+                        continue;
+                    }
+                }
+
+                $found = true;
+                break;
+            }
+
+            $this->assertTrue($found, 'Package not found');
         }
 
         Yii::setAlias('@app', $alias);

@@ -16,9 +16,9 @@ class AppAsset extends \mito\assets\AssetBundle
     public $devPath = '@app/assets/main/src';
     public $distPath = '@app/assets/main/dist';
     public $imgPath = null;
-    public $scssPath = 'scss';
+    public $cssSourcePaths = ['scss'];
     public $css = [
-        'css/site.css',
+        'css/site.css'
     ];
     public $devJs = [
         'js/combined.js' => [ 'js/someplugin.js', 'js/site.js' ],

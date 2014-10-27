@@ -1,6 +1,8 @@
 Yii 2 Basic Application Template
 ================================
 
+[![build status](http://gitlab-ci.mito.hu/projects/1/status.png?ref=gulp_basic_template)](http://gitlab-ci.mito.hu/projects/1?ref=gulp_basic_template)
+
 Yii 2 Basic Application Template is a skeleton Yii 2 application best for
 rapidly creating small projects.
 
@@ -45,7 +47,7 @@ composer install
 npm install
 ~~~
 
-Run `grunt setup` to choose an environment.
+Run `gulp setup` to choose an environment.
 
 
 CONFIGURATION
@@ -71,13 +73,14 @@ return [
 
 Also check and edit the other files in the `config/` directory to customize your application.
 
-GRUNT
+GULP
 -----
 
 The following commands are available:
 
 * setup : choose environment
 * phpcs : run php codesniffer on source code
+* jscs : run js codesniffer on source code
 * hint : run jshint on javascript files; will use .jshintrc files
 * watch : watch scss files for changes and regenerate css files; starts a livereload server on a random port
 * build : generate minified js, css, optimize images and copy fonts; will run hint and abort if it fails
@@ -85,7 +88,7 @@ The following commands are available:
 To use the livereload server over ssh, forward the random port selected by the watch command to localhost:35729, e.g.:
     ssh -L 35729:localhost:39307 dev.mito.hu
 
-Some directories are excluded from the phpcs task (views, migrations, configs etc.). Check the gruntfile for details.
+Some directories are excluded from the phpcs task (views, migrations, configs etc.). Check the gulpfile for details.
 
 ASSETS
 ------
