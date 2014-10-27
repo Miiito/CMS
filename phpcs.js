@@ -29,9 +29,11 @@ for (var target in config.phpcs) {
                     console.log(stderr);
                     errored = true;
                 }
-            });
 
-            stream.push(file);
+                stream.push(file);
+                callback();
+            });
+        })).pipe(through.obj(function(file, enc, callback) {
             callback();
         }));
     })(bin, standard, stream);
