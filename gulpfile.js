@@ -26,16 +26,14 @@ var config = require('./gulpconfig.json');
 
 /**
  * Styles
- * @param {Boolean} isProd
+ * @param  {Boolean} isProd
+ * @param  {String}  changedFile
  */
-var styles = function(isProd) {
-    var cssPaths = gp.getCssPaths();
+var styles = function(isProd, changedFile) {
+    var cssPaths = gp.getCssPaths(changedFile);
     var streams = cssPaths.map(function(cssPath) {
         var dest = isProd ? cssPath.dist : cssPath.dev;
         return gulp.src(path.join(cssPath.sources, '*.{scss,sass}'))
-            .pipe($.changed(dest, {
-                extension: '.css'
-            }))
             // Libsass
             .pipe($.sass({
                 // includePaths: require('node-bourbon').includePaths, // include bourbon (npm install node-bourbon --save-dev)
@@ -89,13 +87,6 @@ var setupTestroot = function(testroot) {
         .pipe($.rename(config.copykeep.acceptancehost.destFile))
         .pipe(gulp.dest(config.copykeep.acceptancehost.destPath));
 };
-
-/**
- * Styles src
- */
-gulp.task('styles:src', function() {
-    return styles(false);
-});
 
 /**
  * Styles src with finport
@@ -532,30 +523,23 @@ gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
     $.livereload.listen(config.port);
 
     // Watch .js files (causes page reload)
-    // $.saneWatch(gp.getAllJsFile(), {
-    //     debounce: 300
-    // }, function(file, root) {
-    //     gulp.src(path.join(root, file))
-    //         .pipe($.livereload(config.port));
-    // });
+    $.saneWatch(gp.getAllJsFile(), {
+        debounce: 300
+    }, function(filename, filepath) {
+        $.livereload.changed(path.join(filepath, filename), config.port);
+    });
 
     // Watch .scss files
     $.saneWatch(gp.getAllCssPath(), {
         debounce: 300
-    }, function() {
-        gulp.start('styles:src');
+    }, function(filename, filepath) {
+        styles(false, path.join(filepath, filename));
     });
 
     // Watch images
-    var rs = [];
-    for (var i = 0, l = gp.getImagePaths().length; i < l; i++) {
-        rs.push(path.join(gp.getImagePaths()[i].sources, '**', '*.{png,jpg,jpeg,gif}'));
-    }
-
-    $.saneWatch(rs, {
+    $.saneWatch(gp.getAllImagePaths(), {
         debounce: 300
-    }, function(file, root) {
-        gulp.src(path.join(root, file))
-            .pipe($.livereload(config.port));
+    }, function(filename, filepath) {
+        $.livereload.changed(path.join(filepath, filename), config.port);
     });
 });
