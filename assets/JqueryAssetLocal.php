@@ -15,7 +15,7 @@ namespace app\assets;
  */
 class JqueryAssetLocal extends \mito\assets\AssetBundle
 {
-    public $sourcePath = '@vendor/bower/jquery';
+    public $sourcePath = '@bower/jquery/dist';
     public $devJs = [ 'jquery.js' ];
     public $js = [ 'jquery.min.js' ];
 }
