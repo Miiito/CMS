@@ -30,10 +30,10 @@ var config = require('./gulpconfig.json');
  * @param  {String}  changedFile
  */
 var styles = function(isProd, changedFile) {
-    var cssPaths = gp.getCssPaths(changedFile);
-    var streams = cssPaths.map(function(cssPath) {
-        var dest = isProd ? cssPath.dist : cssPath.dev;
-        return gulp.src(path.join(cssPath.sources, '*.{scss,sass}'))
+    var stylesPaths = gp.getStylesPathsByFilepath(changedFile);
+    var streams = stylesPaths.map(function(stylePaths) {
+        var dest = isProd ? stylePaths.dist : stylePaths.dev;
+        return gulp.src(path.join(stylePaths.sources, '*.{scss,sass}'))
             // Libsass
             .pipe($.sass({
                 // includePaths: require('node-bourbon').includePaths, // include bourbon (npm install node-bourbon --save-dev)
@@ -131,7 +131,7 @@ gulp.task('jshint:hinting', function() {
         });
     };
 
-    return gulp.src(gp.getAllJsFile())
+    return gulp.src(gp.getScriptsSourcePath())
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe(errorReporter());
@@ -141,7 +141,7 @@ gulp.task('jshint:hinting', function() {
  * JSCS
  */
 gulp.task('jscs', function() {
-    return gulp.src(gp.getAllJsFile(), {base: process.cwd()})
+    return gulp.src(gp.getScriptsSourcePath(), {base: process.cwd()})
         .pipe($.jscs('.jscsrc'));
 });
 
@@ -155,7 +155,7 @@ gulp.task('jscsdiff', function() {
         return path.resolve(file);
     });
 
-    fileList = gp.util.match(fileList, gp.getAllJsFile());
+    fileList = gp.util.match(fileList, gp.getScriptsSourcePath());
 
     return gulp.src(fileList, {base: process.cwd()})
         .pipe($.jscs('.jscsrc'));
@@ -165,13 +165,13 @@ gulp.task('jscsdiff', function() {
  * Scripts
  */
 gulp.task('scripts', ['clean', 'jshint'], function() {
-    var buildJs = gp.getBuildJs();
-    var streams = buildJs.map(function(jsFile) {
-        return gulp.src(jsFile.sources)
-            .pipe($.concat(jsFile.concatFilename))
+    var scriptsToBuild = gp.getScriptsToBuild();
+    var streams = scriptsToBuild.map(function(scriptPaths) {
+        return gulp.src(scriptPaths.sources)
+            .pipe($.concat(scriptPaths.concatFilename))
             // .pipe($.ngAnnotate()) // ng-annotate (npm install --save-dev gulp-ng-annotate)
             .pipe($.uglify())
-            .pipe(gulp.dest(jsFile.dest));
+            .pipe(gulp.dest(scriptPaths.dest));
     });
     return es.merge.apply(null, streams);
 });
@@ -180,15 +180,15 @@ gulp.task('scripts', ['clean', 'jshint'], function() {
  * Images
  */
 gulp.task('images', ['clean'], function() {
-    var imagePaths = gp.getImagePaths();
-    var streams = imagePaths.map(function(imagePath) {
-        return gulp.src(path.join(imagePath.sources, '**', '*.{png,jpg,jpeg,gif}'))
+    var imagesPaths = gp.getImagesPaths();
+    var streams = imagesPaths.map(function(imagePaths) {
+        return gulp.src(path.join(imagePaths.sources, '**', '*.{png,jpg,jpeg,gif}'))
             .pipe($.imagemin({
                 optimizationLevel: 3,
                 progressive: true,
                 interlaced: true
             }))
-            .pipe(gulp.dest(imagePath.dest));
+            .pipe(gulp.dest(imagePaths.dest));
     });
     return es.merge.apply(null, streams);
 });
@@ -197,10 +197,10 @@ gulp.task('images', ['clean'], function() {
  * Fonts
  */
 gulp.task('fonts', ['clean'], function() {
-    var fontPaths = gp.getFontPaths();
-    var streams = fontPaths.map(function(fontPath) {
-        return gulp.src(path.join(fontPath.sources, '**', '*.{woff,ttf,svg,eot}'))
-            .pipe(gulp.dest(fontPath.dest));
+    var fontsPaths = gp.getFontsPaths();
+    var streams = fontsPaths.map(function(fontPaths) {
+        return gulp.src(path.join(fontPaths.sources, '**', '*.{woff,ttf,svg,eot}'))
+            .pipe(gulp.dest(fontPaths.dest));
     });
     return es.merge.apply(null, streams);
 });
@@ -210,7 +210,7 @@ gulp.task('fonts', ['clean'], function() {
  */
 gulp.task('clean', function(cb) {
     var del = require('del');
-    del(gp.getAllDistPath(), cb);
+    del(gp.getPackagesDistPath(), cb);
 });
 
 /**
@@ -227,10 +227,10 @@ gulp.task('build', ['compile']);
  * Copy non images
  */
 gulp.task('copy-non-images', ['clean'], function() {
-    var imagePaths = gp.getImagePaths();
-    var streams = imagePaths.map(function(imagePath) {
-        return gulp.src(path.join(imagePath.sources, '**', '!(*.png|*.jpg|*.jpeg|*.gif)'))
-            .pipe(gulp.dest(imagePath.dest));
+    var imagesPaths = gp.getImagesPaths();
+    var streams = imagesPaths.map(function(imagePaths) {
+        return gulp.src(path.join(imagePaths.sources, '**', '!(*.png|*.jpg|*.jpeg|*.gif)'))
+            .pipe(gulp.dest(imagePaths.dest));
     });
     return es.merge.apply(null, streams);
 });
@@ -406,7 +406,7 @@ gulp.task('findport', function(cb) {
             config.port = port;
             console.log(chalk.gray('----------------------------------------'));
             console.log('Found port: ' + chalk.green(port));
-            console.log('Command: ')
+            console.log('Command: ');
             console.log(chalk.yellow('ssh -L 35729:localhost:' + port + ' ' + require('os').hostname()));
             console.log(chalk.gray('----------------------------------------'));
             fs.writeFileSync(lrPortFilepath, port);
@@ -515,7 +515,7 @@ gulp.task('default', function() {
  */
 gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
     // Watch .js files
-    // $.saneWatch(gp.getAllJsFile(), function() {
+    // $.saneWatch(gp.getScriptsSourcePath(), function() {
     //     browserSync.reload();
     // });
 
@@ -523,21 +523,21 @@ gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
     $.livereload.listen(config.port);
 
     // Watch .js files (causes page reload)
-    $.saneWatch(gp.getAllJsFile(), {
+    $.saneWatch(gp.getScriptsSourcePath(), {
         debounce: 300
     }, function(filename, filepath) {
         $.livereload.changed(path.join(filepath, filename), config.port);
     });
 
     // Watch .scss files
-    $.saneWatch(gp.getAllCssPath(), {
+    $.saneWatch(gp.getStylesSourcePathWithGlob(), {
         debounce: 300
     }, function(filename, filepath) {
         styles(false, path.join(filepath, filename));
     });
 
     // Watch images
-    $.saneWatch(gp.getAllImagePaths(), {
+    $.saneWatch(gp.getImagesSourcePathWithGlob(), {
         debounce: 300
     }, function(filename, filepath) {
         $.livereload.changed(path.join(filepath, filename), config.port);
