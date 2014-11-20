@@ -247,9 +247,6 @@ gulp.task('phplint', function() {
     });
 
     var stream = phplint(fileList);
-    stream.fail(function(err) {
-        process.exit(1);
-    });
 
     return stream;
 });
