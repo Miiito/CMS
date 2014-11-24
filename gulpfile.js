@@ -11,7 +11,6 @@ var gp = require('get-packages').init({
     applicationPath: '.',
     yiiPackagesCommand: 'yii packages'
 });
-// var browserSync = require('browser-sync'); // (npm install --save-dev browser-sync)
 
 /**
  * Load gulp plugins
@@ -26,8 +25,8 @@ var config = require('./gulpconfig.json');
 
 /**
  * Styles
- * @param  {Boolean} isProd
- * @param  {String}  changedFile
+ * @param {Boolean} isProd
+ * @param {String}  changedFile
  */
 var styles = function(isProd, changedFile) {
     var stylesPaths = gp.getStylesPathsByFilepath(changedFile);
@@ -55,13 +54,15 @@ var styles = function(isProd, changedFile) {
             .pipe($.rename({dirname: '.'}))
             .pipe(gulp.dest(dest))
             .pipe($.if(!isProd, $.livereload(config.port)));
-            // .pipe(browserSync.reload({stream: true}));
     });
     return es.merge.apply(null, streams);
 };
 
 /**
  * Setup
+ * @param {String} environment
+ * @param {String} apachegrp
+ * @param {String} email
  */
 var setup = function(environment, apachegrp, email) {
     gulp.src('')
@@ -75,6 +76,7 @@ var setup = function(environment, apachegrp, email) {
 
 /**
  * Setup testroot
+ * @param {String} testroot
  */
 var setupTestroot = function(testroot) {
     gulp.src(config.copykeep.testroot.src)
@@ -109,7 +111,9 @@ gulp.task('jshint', ['jshint:hinting'], function(cb) {
     if (config.jshintExitCode) {
         cb({
             showStack: false,
-            toString: function() { return "Jshint error"; }
+            toString: function() {
+                return 'Jshint error';
+            }
         });
     } else {
         cb();
@@ -183,6 +187,7 @@ gulp.task('images', ['clean'], function() {
     var imagesPaths = gp.getImagesPaths();
     var streams = imagesPaths.map(function(imagePaths) {
         return gulp.src(path.join(imagePaths.sources, '**', '*.{png,jpg,jpeg,gif}'))
+            .pipe($.changed(imagePaths.dest))
             .pipe($.imagemin({
                 optimizationLevel: 3,
                 progressive: true,
@@ -206,11 +211,37 @@ gulp.task('fonts', ['clean'], function() {
 });
 
 /**
+ * Clean without images
+ */
+gulp.task('clean:without-images', function(cb) {
+    var del = require('del');
+    del(gp.getPackagesDistPathWithoutImageDir(), cb);
+});
+
+/**
  * Clean
  */
-gulp.task('clean', function(cb) {
-    var del = require('del');
-    del(gp.getPackagesDistPath(), cb);
+gulp.task('clean', ['clean:without-images'], function() {
+    var fs = require('fs');
+    var imagesPaths = gp.getImagesPaths();
+    var streams = imagesPaths.map(function(imagePaths) {
+        return gulp.src(path.join(imagePaths.dest, '**', '*.{png,jpg,jpeg,gif}'))
+            .pipe($.changed(imagePaths.sources, {
+                hasChanged: function(stream, cb, sourceFile, targetPath) {
+                    if (!fs.existsSync(targetPath)) {
+                        stream.push(sourceFile);
+                    }
+                    cb();
+                }
+            }))
+            .pipe((function() {
+                function remove(file, cb) {
+                    fs.unlinkSync(file.path);
+                    cb(null, file);
+                }
+                return es.map(remove);
+            })());
+    });
 });
 
 /**
@@ -490,32 +521,9 @@ gulp.task('default', function() {
 });
 
 /**
- * Browser sync
- */
-// gulp.task('browser-sync', function() {
-//  browserSync({
-//      proxy: 'playground',
-//      port: 8301,
-//      open: false
-//  });
-// });
-
-/**
- * Reload all browsers
- */
-// gulp.task('bs-reload', function() {
-//  browserSync.reload();
-// });
-
-/**
  * Watch
  */
-gulp.task('watch', ['styles:findport'/*, 'browser-sync'*/], function() {
-    // Watch .js files
-    // $.saneWatch(gp.getScriptsSourcePath(), function() {
-    //     browserSync.reload();
-    // });
-
+gulp.task('watch', ['styles:findport'], function() {
     // Start live reload server immediately, don't wait for change
     $.livereload.listen(config.port);
 
