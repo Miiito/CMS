@@ -225,7 +225,7 @@ gulp.task('clean', ['clean:without-images'], function() {
     var fs = require('fs');
     var imagesPaths = gp.getImagesPaths();
     var streams = imagesPaths.map(function(imagePaths) {
-        return gulp.src(path.join(imagePaths.dest, '**', '*.{png,jpg,jpeg,gif}'))
+        return gulp.src(path.join(imagePaths.dest, '**', '*'))
             .pipe($.changed(imagePaths.sources, {
                 hasChanged: function(stream, cb, sourceFile, targetPath) {
                     if (!fs.existsSync(targetPath)) {
@@ -236,8 +236,10 @@ gulp.task('clean', ['clean:without-images'], function() {
             }))
             .pipe((function() {
                 function remove(file, cb) {
-                    fs.unlinkSync(file.path);
-                    cb(null, file);
+                    if (!fs.statSync(file.path).isDirectory()) {
+                        fs.unlinkSync(file.path);
+                    }
+                    cb(null);
                 }
                 return es.map(remove);
             })());
