@@ -26,6 +26,19 @@ $common = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                    'maxLogFiles' => 10,
+                    'except' => [
+                        'yii\web\HttpException:404',
+                    ],
+                ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'logFile' => '@runtime/logs/404.log',
+                    'levels' => ['error', 'warning'],
+                    'maxLogFiles' => 10,
+                    'categories' => [
+                        'yii\web\HttpException:404',
+                    ],
                 ],
             ],
         ],
