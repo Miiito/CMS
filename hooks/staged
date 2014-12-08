@@ -127,7 +127,7 @@ else
 	fi
 fi
 
-(cd {{gulpfileDirectory}} && gulp commit)
+(gulp commit)
 exitcode=$?
 
 if [ $stashed -eq 1 ]; then

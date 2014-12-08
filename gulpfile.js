@@ -489,7 +489,6 @@ gulp.task('clean:hooks', function(cb) {
  */
 gulp.task('hooks', ['clean:hooks'], function() {
     return gulp.src('hooks/staged')
-        .pipe($.replace('{{gulpfileDirectory}}', __dirname))
         .pipe($.rename('pre-commit'))
         .pipe($.chmod(755))
         .pipe(gulp.dest('.git/hooks/'));
