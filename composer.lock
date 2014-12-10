@@ -317,17 +317,17 @@
         },
         {
             "name": "mito/yii2-enhanced-assets",
-            "version": "0.2.4",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "9574439ae99723766f54b4a4a3fa3eaddac2c8a3"
+                "reference": "a551e4273bb55e85a4b50c738ad8b6aadb9abf6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.2.4-7fa15d.zip",
-                "reference": "9574439ae99723766f54b4a4a3fa3eaddac2c8a3",
-                "shasum": "fd470f646dc3727914723f9c26416d349f0f8cf1"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.2.5-7c773e.zip",
+                "reference": "a551e4273bb55e85a4b50c738ad8b6aadb9abf6f",
+                "shasum": "e3a95b37341851f34c26e47b5140f897856a8c23"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -352,7 +352,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2014-11-20 10:39:50"
+            "time": "2014-12-09 15:47:04"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -878,12 +878,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "4ca80648533e0d0a35f0cda8409da1bbc1c5e08d"
+                "reference": "cf473f6b143efc56cb2b1b54d49fa7a3d25b6cb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/4ca80648533e0d0a35f0cda8409da1bbc1c5e08d",
-                "reference": "4ca80648533e0d0a35f0cda8409da1bbc1c5e08d",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/cf473f6b143efc56cb2b1b54d49fa7a3d25b6cb3",
+                "reference": "cf473f6b143efc56cb2b1b54d49fa7a3d25b6cb3",
                 "shasum": ""
             },
             "require": {
@@ -925,7 +925,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-12-09 00:10:13"
+            "time": "2014-12-09 20:34:40"
         },
         {
             "name": "facebook/webdriver",
