@@ -16,6 +16,6 @@ namespace app\assets;
 class JqueryAsset extends \mito\assets\FallbackAssetBundle
 {
     public $sourcePath = null;
-    public $devJs = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js' ];
-    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' ];
+    public $devJs = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js' ];
+    public $js = [ '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' ];
 }
