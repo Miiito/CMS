@@ -298,7 +298,8 @@ gulp.task('phpcs:application', function() {
             bin: config.phpcs.options.bin,
             standard: config.phpcs.application.standard
         }))
-        .pipe($.phpcs.reporter('log'));
+        .pipe($.phpcs.reporter('log'))
+        .pipe($.phpcs.reporter('fail'));
 });
 
 /**
@@ -310,7 +311,8 @@ gulp.task('phpcs:views', function() {
             bin: config.phpcs.options.bin,
             standard: config.phpcs.views.standard
         }))
-        .pipe($.phpcs.reporter('log'));
+        .pipe($.phpcs.reporter('log'))
+        .pipe($.phpcs.reporter('fail'));
 });
 
 /**
@@ -322,7 +324,8 @@ gulp.task('phpcs:others', function() {
             bin: config.phpcs.options.bin,
             standard: config.phpcs.others.standard
         }))
-        .pipe($.phpcs.reporter('log'));
+        .pipe($.phpcs.reporter('log'))
+        .pipe($.phpcs.reporter('fail'));
 });
 
 /**
@@ -338,14 +341,14 @@ gulp.task('phpcsdiff', function() {
                 bin: config.phpcs.options.bin,
                 standard: standard
             }))
-            .pipe($.phpcs.reporter('log'));
+            .pipe($.phpcs.reporter('log'))
     }
 
     return es.merge.apply(null, [
         streamify(config.phpcs.application.dir, config.phpcs.application.standard),
         streamify(config.phpcs.views.dir, config.phpcs.views.standard),
         streamify(config.phpcs.others.dir, config.phpcs.others.standard)
-    ]);
+    ]).pipe($.phpcs.reporter('fail'));
 });
 
 /**
