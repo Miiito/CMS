@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5f99853e9360d0aff6d9fdc49588cc5a",
+    "hash": "19ad9ceea452ab05ebee5fcffb1b7f46",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -55,47 +55,6 @@
                 "mobile-first",
                 "responsive",
                 "web"
-            ]
-        },
-        {
-            "name": "bower-asset/chai",
-            "version": "1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/chaijs/chai.git",
-                "reference": "c8b3208ce4237d4e0b16508174d616f155c984a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/chaijs/chai/zipball/c8b3208ce4237d4e0b16508174d616f155c984a2",
-                "reference": "c8b3208ce4237d4e0b16508174d616f155c984a2",
-                "shasum": ""
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": "chai.js",
-                "bower-asset-ignore": [
-                    "build",
-                    "components",
-                    "lib",
-                    "node_modules",
-                    "support",
-                    "test",
-                    "index.js",
-                    "Makefile",
-                    ".*"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic.",
-            "keywords": [
-                "assert",
-                "assertion",
-                "chai",
-                "test",
-                "testing"
             ]
         },
         {
@@ -191,54 +150,6 @@
                 "jQuery",
                 "mask",
                 "plugins"
-            ]
-        },
-        {
-            "name": "bower-asset/mocha",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mochajs/mocha.git",
-                "reference": "5cabbb9f90f85f178aa61d21ddc8abce010ac8e8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mochajs/mocha/zipball/5cabbb9f90f85f178aa61d21ddc8abce010ac8e8",
-                "reference": "5cabbb9f90f85f178aa61d21ddc8abce010ac8e8",
-                "shasum": ""
-            },
-            "type": "bower-asset-library",
-            "extra": {
-                "bower-asset-main": [
-                    "mocha.js",
-                    "mocha.css"
-                ],
-                "bower-asset-ignore": [
-                    "bin",
-                    "editors",
-                    "images",
-                    "lib",
-                    "support",
-                    "test",
-                    ".gitignore",
-                    ".npmignore",
-                    ".travis.yml",
-                    "component.json",
-                    "index.js",
-                    "Makefile",
-                    "package.json"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "simple, flexible, fun test framework",
-            "keywords": [
-                "bdd",
-                "mocha",
-                "tap",
-                "tdd",
-                "test"
             ]
         },
         {
@@ -729,6 +640,111 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "bower-asset/chai",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chaijs/chai.git",
+                "reference": "c8b3208ce4237d4e0b16508174d616f155c984a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chaijs/chai/zipball/c8b3208ce4237d4e0b16508174d616f155c984a2",
+                "reference": "c8b3208ce4237d4e0b16508174d616f155c984a2",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "chai.js",
+                "bower-asset-ignore": [
+                    "build",
+                    "components",
+                    "lib",
+                    "node_modules",
+                    "support",
+                    "test",
+                    "index.js",
+                    "Makefile",
+                    ".*"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "chai",
+                "test",
+                "testing"
+            ]
+        },
+        {
+            "name": "bower-asset/mocha",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mochajs/mocha.git",
+                "reference": "5cabbb9f90f85f178aa61d21ddc8abce010ac8e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mochajs/mocha/zipball/5cabbb9f90f85f178aa61d21ddc8abce010ac8e8",
+                "reference": "5cabbb9f90f85f178aa61d21ddc8abce010ac8e8",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "mocha.js",
+                    "mocha.css"
+                ],
+                "bower-asset-ignore": [
+                    "bin",
+                    "editors",
+                    "images",
+                    "lib",
+                    "support",
+                    "test",
+                    ".gitignore",
+                    ".npmignore",
+                    ".travis.yml",
+                    "component.json",
+                    "index.js",
+                    "Makefile",
+                    "package.json"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "simple, flexible, fun test framework",
+            "keywords": [
+                "bdd",
+                "mocha",
+                "tap",
+                "tdd",
+                "test"
+            ]
+        },
+        {
+            "name": "bower-asset/sinon-chai",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/domenic/sinon-chai.git",
+                "reference": "f63422a45c43274866305e3cb30b918637222171"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/domenic/sinon-chai/zipball/f63422a45c43274866305e3cb30b918637222171",
+                "reference": "f63422a45c43274866305e3cb30b918637222171",
+                "shasum": ""
+            },
+            "type": "bower-asset-library"
+        },
         {
             "name": "bower-asset/typeahead.js",
             "version": "v0.10.5",

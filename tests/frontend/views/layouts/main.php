@@ -1,6 +1,9 @@
 <?php
 use app\tests\frontend\assets\MochaAsset;
 use app\tests\frontend\assets\ChaiAsset;
+use app\tests\frontend\assets\MochaSinonAsset;
+use app\tests\frontend\assets\SinonChaiAsset;
+use app\tests\frontend\assets\LecheAsset;
 use yii\helpers\Html;
 
 /**
@@ -9,6 +12,9 @@ use yii\helpers\Html;
  */
 MochaAsset::register($this);
 ChaiAsset::register($this);
+SinonChaiAsset::register($this);
+MochaSinonAsset::register($this);
+LecheAsset::register($this);
 
 $this->registerJs("
     mocha.setup('bdd');
