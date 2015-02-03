@@ -7,6 +7,7 @@ class testsetup
         'tests/codeception.yml.sample' => 'tests/codeception.yml',
         'tests/codeception/acceptance.suite.sample' => 'tests/codeception/acceptance.suite.yml',
         'config/development/common.local.example' => 'config/development/common.local.php',
+        'tests/frontend/config.json.sample' => 'tests/frontend/config.json',
     ];
 
     public static function run($args)
@@ -18,6 +19,7 @@ class testsetup
 
         $email = $args[1];
         $testroot = '/' . trim($args[2], '/') . '/testweb/index-test.php';
+        $frontendtestroot = '/' . trim($args[2], '/') . '/tests/web/index-test.php';
 
         foreach (self::$copyConfig as $src => $dest) {
             if (!is_file($dest)) {
@@ -50,6 +52,17 @@ class testsetup
         );
 
         file_put_contents('tests/codeception.yml', $contents);
+
+        $contents = file_get_contents('tests/frontend/config.json');
+
+        $contents = preg_replace(
+            '/"path":.*/',
+            '"path": "' . $frontendtestroot . '"',
+            $contents
+        );
+
+        file_put_contents('tests/frontend/config.json', $contents);
+
     }
 }
 

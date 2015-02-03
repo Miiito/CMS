@@ -11,6 +11,9 @@ cd tests
 ec1=$?
 cd ..
 
+npm install mocha-phantomjs
+node_modules/.bin/mocha-phantomjs "http://mito:mito@playground/cirunner/$dir/tests/web/index-test.php"
+
 npm install glob-stream through2
 node phpcs.js
 ec2=$?
