@@ -15,6 +15,11 @@
             "src": "tests/codeception/acceptance.suite.sample",
             "destPath": "tests/codeception",
             "destFile": "acceptance.suite.yml"
+        },
+        "mochaconfig": {
+            "src": "tests/frontend/config.json.sample",
+            "destPath": "tests/frontend",
+            "destFile": "config.json"
         }
     },
     "phpcs": {

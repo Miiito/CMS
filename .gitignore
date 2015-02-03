@@ -40,3 +40,6 @@ c3tmp
 # codeception local config
 tests/codeception.yml
 tests/codeception/acceptance.suite.yml
+
+# mocha config
+tests/frontend/config.json

@@ -9,6 +9,7 @@ class setup
         'testweb/assets',
         'tests/codeception/_output',
         'runtime/mail', //needed for tests
+        'tests/web/assets',
     ];
 
     protected static $defaultServerGroup = 'apache';

@@ -1,6 +1,6 @@
 (function($) {
     $(function() {
         console.log($.fn.jquery);
-        someplugin.test();
+        console.log(someplugin.test());
     });
 })(jQuery);

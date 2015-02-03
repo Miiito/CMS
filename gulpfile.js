@@ -88,6 +88,11 @@ var setupTestroot = function(testroot) {
     gulp.src(config.copykeep.acceptancehost.src)
         .pipe($.rename(config.copykeep.acceptancehost.destFile))
         .pipe(gulp.dest(config.copykeep.acceptancehost.destPath));
+
+    gulp.src(config.copykeep.mochaconfig.src)
+        .pipe($.rename(config.copykeep.mochaconfig.destFile))
+        .pipe($.replace(/"path":.*/, '"path": "/' + testroot.replace(/^(\/)|(\/)$/g, '') + '/tests/web/index-test.php"'))
+        .pipe(gulp.dest(config.copykeep.mochaconfig.destPath));
 };
 
 /**
@@ -465,9 +470,26 @@ gulp.task('codeception', ['codeceptbuild'], $.shell.task('../vendor/bin/codecept
 }));
 
 /**
+ * Frontend mocha tests
+ */
+gulp.task('mocha', function() {
+    var fs = require('fs');
+    if (!fs.existsSync('./tests/frontend/config.json')) {
+        return;
+    }
+    var mochaConfig = require('./tests/frontend/config.json');
+    var mochaPhantomJS = require('gulp-mocha-phantomjs');
+
+    var stream = mochaPhantomJS();
+    stream.write({path: mochaConfig.host + mochaConfig.path});
+    stream.end();
+    return stream;
+});
+
+/**
  * Test
  */
-gulp.task('test', ['codeception']);
+gulp.task('test', ['codeception', 'mocha']);
 
 /**
  * Post install
