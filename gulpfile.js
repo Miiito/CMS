@@ -59,6 +59,24 @@ var styles = function(isProd, changedFile) {
 };
 
 /**
+ * Get setup source
+ * @param  {Object} obj
+ * @return {String}
+ */
+var getSetupSource = function(obj) {
+    var fs = require('fs');
+    var src = obj.src;
+    var destFullPath = path.join(obj.destPath, obj.destFile);
+    var isExists = fs.existsSync(destFullPath);
+
+    if (isExists) {
+        src = destFullPath;
+    }
+
+    return src;
+};
+
+/**
  * Setup
  * @param {String} environment
  * @param {String} apachegrp
@@ -68,7 +86,7 @@ var setup = function(environment, apachegrp, email) {
     gulp.src('')
         .pipe($.shell(['php setup.php ' + environment + ' ' + apachegrp]));
 
-    gulp.src(config.copykeep.localemail.src)
+    gulp.src(getSetupSource(config.copykeep.localemail))
         .pipe($.rename(config.copykeep.localemail.destFile))
         .pipe($.replace(/'as dryrun' => \[(\s*)'email'\s*=>\s*'[^']*'/, '\'as dryrun\' => [ \'email\' => \'' + email + '\' '))
         .pipe(gulp.dest(config.copykeep.localemail.destPath));
@@ -79,17 +97,17 @@ var setup = function(environment, apachegrp, email) {
  * @param {String} testroot
  */
 var setupTestroot = function(testroot) {
-    gulp.src(config.copykeep.testroot.src)
+    gulp.src(getSetupSource(config.copykeep.testroot))
         .pipe($.rename(config.copykeep.testroot.destFile))
         .pipe($.replace(/c3url:.*/, 'c3url: /' + testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
         .pipe($.replace(/test_entry_url:.*/, 'test_entry_url: /' + testroot.replace(/^(\/)|(\/)$/g, '') + '/testweb/index-test.php'))
         .pipe(gulp.dest(config.copykeep.testroot.destPath));
 
-    gulp.src(config.copykeep.acceptancehost.src)
+    gulp.src(getSetupSource(config.copykeep.acceptancehost))
         .pipe($.rename(config.copykeep.acceptancehost.destFile))
         .pipe(gulp.dest(config.copykeep.acceptancehost.destPath));
 
-    gulp.src(config.copykeep.mochaconfig.src)
+    gulp.src(getSetupSource(config.copykeep.mochaconfig))
         .pipe($.rename(config.copykeep.mochaconfig.destFile))
         .pipe($.replace(/"path":.*?(,\s*$|$)/m, '"path": "/' + testroot.replace(/^(\/)|(\/)$/g, '') + '/tests/web/index-test.php"$1'))
         .pipe(gulp.dest(config.copykeep.mochaconfig.destPath));
@@ -346,7 +364,7 @@ gulp.task('phpcsdiff', function() {
                 bin: config.phpcs.options.bin,
                 standard: standard
             }))
-            .pipe($.phpcs.reporter('log'))
+            .pipe($.phpcs.reporter('log'));
     }
 
     return es.merge.apply(null, [
