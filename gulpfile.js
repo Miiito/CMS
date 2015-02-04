@@ -91,7 +91,7 @@ var setupTestroot = function(testroot) {
 
     gulp.src(config.copykeep.mochaconfig.src)
         .pipe($.rename(config.copykeep.mochaconfig.destFile))
-        .pipe($.replace(/"path":.*/, '"path": "/' + testroot.replace(/^(\/)|(\/)$/g, '') + '/tests/web/index-test.php"'))
+        .pipe($.replace(/"path":.*?(,\s*$|$)/m, '"path": "/' + testroot.replace(/^(\/)|(\/)$/g, '') + '/tests/web/index-test.php"$1'))
         .pipe(gulp.dest(config.copykeep.mochaconfig.destPath));
 };
 
