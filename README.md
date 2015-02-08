@@ -48,7 +48,22 @@ composer install
 npm install
 ~~~
 
-Run `gulp setup` to choose an environment.
+To choose an environment, run:
+
+~~~
+gulp setup
+~~~
+
+To be able to run the tests, you have to set up the base URL of your appplication with this command:
+
+~~~
+gulp setup:testroot
+~~~
+
+Enter the path of your application's web root without the domain and without the "web" directory.
+For example, if your appilcation can be reached at the "http://dev.mito.hu/me/yii2/basic/web", then enter "me/yii2/basic".
+To change the domain, edit `/tests/codeception/acceptance.suite.yml` and `/tests/frontend/config.json`.
+You can now run the tests with the `gulp test` command.
 
 
 CONFIGURATION
