@@ -63,6 +63,7 @@ gulp setup:testroot
 Enter the path of your application's web root without the domain and without the "web" directory.
 For example, if your application can be reached at "http://dev.mito.hu/me/yii2/basic/web", then enter "me/yii2/basic".
 To change the domain, edit `/tests/codeception/acceptance.suite.yml` and `/tests/frontend/config.json`.
+To use WebDriver instead of PhpBrowser, edit `/tests/codeception/acceptance.suite.yml`.
 You can now run the tests with the `gulp test` command.
 
 
