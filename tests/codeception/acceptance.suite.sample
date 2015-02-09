@@ -8,4 +8,5 @@ modules:
             auth: ['mito', 'mito']
 #        WebDriver:
 #            url: 'http://mito:mito@playground'
+#            host: '192.168.88.24'
 #            browser: 'phantomjs'
