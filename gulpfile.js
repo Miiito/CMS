@@ -492,10 +492,10 @@ gulp.task('codeception', ['codeceptbuild'], $.shell.task('../vendor/bin/codecept
  */
 gulp.task('mocha', function() {
     var fs = require('fs');
-    if (!fs.existsSync('./tests/frontend/config.json')) {
+    if (!fs.existsSync('./tests/mocha/config.json')) {
         return;
     }
-    var mochaConfig = require('./tests/frontend/config.json');
+    var mochaConfig = require('./tests/mocha/config.json');
     var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
     var stream = mochaPhantomJS();

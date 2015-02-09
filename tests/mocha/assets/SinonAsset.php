@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\assets;
+namespace app\tests\mocha\assets;
 
 class SinonAsset extends \yii\web\AssetBundle
 {
@@ -8,6 +8,6 @@ class SinonAsset extends \yii\web\AssetBundle
         'position' => \yii\web\View::POS_BEGIN,
     ];
 
-    public $sourcePath = '@app/tests/frontend/assets/vendor';
+    public $sourcePath = '@app/tests/mocha/assets/vendor';
     public $js = [ 'sinon-1.12.2.js' ];
 }

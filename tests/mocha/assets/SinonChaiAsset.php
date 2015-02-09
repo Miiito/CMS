@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\assets;
+namespace app\tests\mocha\assets;
 
 class SinonChaiAsset extends \yii\web\AssetBundle
 {
@@ -11,6 +11,6 @@ class SinonChaiAsset extends \yii\web\AssetBundle
     public $sourcePath = '@bower/sinon-chai/lib';
     public $js = [ 'sinon-chai.js' ];
     public $depends = [
-        'app\tests\frontend\assets\ChaiAsset'
+        'app\tests\mocha\assets\ChaiAsset'
     ];
 }

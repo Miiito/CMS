@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\assets;
+namespace app\tests\mocha\assets;
 
 class ChaiAsset extends \yii\web\AssetBundle
 {

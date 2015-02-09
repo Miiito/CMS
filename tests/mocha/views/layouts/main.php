@@ -1,9 +1,9 @@
 <?php
-use app\tests\frontend\assets\MochaAsset;
-use app\tests\frontend\assets\ChaiAsset;
-use app\tests\frontend\assets\MochaSinonAsset;
-use app\tests\frontend\assets\SinonChaiAsset;
-use app\tests\frontend\assets\LecheAsset;
+use app\tests\mocha\assets\MochaAsset;
+use app\tests\mocha\assets\ChaiAsset;
+use app\tests\mocha\assets\MochaSinonAsset;
+use app\tests\mocha\assets\SinonChaiAsset;
+use app\tests\mocha\assets\LecheAsset;
 use yii\helpers\Html;
 
 /**

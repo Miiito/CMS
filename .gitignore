@@ -42,4 +42,4 @@ tests/codeception.yml
 tests/codeception/acceptance.suite.yml
 
 # mocha config
-tests/frontend/config.json
+tests/mocha/config.json

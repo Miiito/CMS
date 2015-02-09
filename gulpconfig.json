@@ -17,8 +17,8 @@
             "destFile": "acceptance.suite.yml"
         },
         "mochaconfig": {
-            "src": "tests/frontend/config.json.sample",
-            "destPath": "tests/frontend",
+            "src": "tests/mocha/config.json.sample",
+            "destPath": "tests/mocha",
             "destFile": "config.json"
         }
     },

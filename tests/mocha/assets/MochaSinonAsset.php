@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\assets;
+namespace app\tests\mocha\assets;
 
 class MochaSinonAsset extends \yii\web\AssetBundle
 {
@@ -8,10 +8,10 @@ class MochaSinonAsset extends \yii\web\AssetBundle
         'position' => \yii\web\View::POS_END,
     ];
 
-    public $sourcePath = '@app/tests/frontend/assets/vendor';
+    public $sourcePath = '@app/tests/mocha/assets/vendor';
     public $js = [ 'mocha-sinon.js' ];
     public $depends = [
-        'app\tests\frontend\assets\MochaAsset',
-        'app\tests\frontend\assets\SinonAsset',
+        'app\tests\mocha\assets\MochaAsset',
+        'app\tests\mocha\assets\SinonAsset',
     ];
 }

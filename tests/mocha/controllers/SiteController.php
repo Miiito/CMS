@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\controllers;
+namespace app\tests\mocha\controllers;
 
 use yii\web\Controller;
 

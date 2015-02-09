@@ -15,7 +15,7 @@ require_once(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 
 $config = require(__DIR__ . '/../codeception/config/acceptance.php');
 
-$config['controllerNamespace'] = 'app\tests\frontend\controllers';
-$config['viewPath'] = dirname(__DIR__) . '/frontend/views';
+$config['controllerNamespace'] = 'app\tests\mocha\controllers';
+$config['viewPath'] = dirname(__DIR__) . '/mocha/views';
 
 (new yii\web\Application($config))->run();

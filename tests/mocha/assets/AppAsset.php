@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\frontend\assets;
+namespace app\tests\mocha\assets;
 
 /**
  * This asset loads only someplugin.js from AppAsset,
