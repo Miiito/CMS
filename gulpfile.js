@@ -570,7 +570,7 @@ gulp.task('default', function() {
  */
 gulp.task('protractor', function(){
     gulp.src(["./tests/protractor/tests/*.js"])
-        .pipe(protractor({
+        .pipe($.protractor.protractor({
             configFile: "tests/protractor/config.js",
         }))
         .on('error', function(e) { throw e })
