@@ -27,6 +27,7 @@
     "gulp-mocha-phantomjs": "^0.5.3",
     "gulp-phpcs": "^0.2.1",
     "gulp-prompt": "^0.1.1",
+    "gulp-protractor": "0.0.12",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.0",
     "gulp-sane-watch": "^0.0.6",

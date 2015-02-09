@@ -564,6 +564,18 @@ gulp.task('default', function() {
         }));
 });
 
+
+/**
+ * Run progractor test
+ */
+gulp.task('protractor', function(){
+    gulp.src(["./tests/protractor/tests/*.js"])
+        .pipe(protractor({
+            configFile: "tests/protractor/config.js",
+        }))
+        .on('error', function(e) { throw e })
+});
+
 /**
  * Watch
  */
