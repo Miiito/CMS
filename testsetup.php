@@ -7,7 +7,7 @@ class testsetup
         'tests/codeception.yml.sample' => 'tests/codeception.yml',
         'tests/codeception/acceptance.suite.sample' => 'tests/codeception/acceptance.suite.yml',
         'config/development/common.local.example' => 'config/development/common.local.php',
-        'tests/mocha/config.json.sample' => 'tests/mocha/config.json',
+        'tests/config.json.sample' => 'tests/config.json',
     ];
 
     public static function run($args)
@@ -53,15 +53,21 @@ class testsetup
 
         file_put_contents('tests/codeception.yml', $contents);
 
-        $contents = file_get_contents('tests/mocha/config.json');
+        $contents = file_get_contents('tests/config.json');
 
         $contents = preg_replace(
-            '/"path":.*/',
-            '"path": "' . $frontendtestroot . '"',
+            '/"mochaPath":.*?(,\s*$|$)/m',
+            '"mochaPath": "' . $frontendtestroot . '"$1',
             $contents
         );
 
-        file_put_contents('tests/mocha/config.json', $contents);
+        $contents = preg_replace(
+            '/"baseUrl":.*?(,\s*$|$)/m',
+            '"baseUrl": "' . $testroot . '"$1',
+            $contents
+        );
+
+        file_put_contents('tests/config.json', $contents);
 
     }
 }

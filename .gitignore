@@ -41,5 +41,5 @@ c3tmp
 tests/codeception.yml
 tests/codeception/acceptance.suite.yml
 
-# mocha config
-tests/mocha/config.json
+# mocha + protractor config
+tests/config.json

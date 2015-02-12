@@ -16,9 +16,9 @@
             "destPath": "tests/codeception",
             "destFile": "acceptance.suite.yml"
         },
-        "mochaconfig": {
-            "src": "tests/mocha/config.json.sample",
-            "destPath": "tests/mocha",
+        "jstestconfig": {
+            "src": "tests/config.json.sample",
+            "destPath": "tests",
             "destFile": "config.json"
         }
     },
