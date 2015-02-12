@@ -179,6 +179,11 @@ class PackagesControllerTest extends TestCase
                     'imgPath' => 'img',
                     'fontPath' => 'fonts',
                     'css' => ['css/screen.css','css/print.css','css/main.css','css/form.css'],
+                    'extraParams' => [
+                        'extra1' => 'Extra 1',
+                        'extra2' => true,
+                        'extra3' => 47,
+                    ]
                 ],
             ],
         ];
@@ -205,6 +210,7 @@ class PackagesControllerTest extends TestCase
             'imgPath',
             'fontPath',
             'css',
+            'extraParams'
         ];
 
         $mainAssets = $this->tempPath . '/assets';
@@ -603,6 +609,11 @@ class " . $package['name'] . " extends " . $package['type'] . "
                     if (!$allFound) {
                         continue;
                     }
+                }
+
+                if (array_key_exists('extraParams', $package)) {
+                    $this->assertArrayHasKey('extraParams', $config, 'Package is missing extra params');
+                    $this->assertEquals($package['extraParams'], $config['extraParams'], 'Extra params does not match');
                 }
 
                 $found = true;
