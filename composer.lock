@@ -317,17 +317,17 @@
         },
         {
             "name": "mito/yii2-enhanced-assets",
-            "version": "0.2.7",
+            "version": "0.2.8",
             "source": {
                 "type": "git",
                 "url": "ssh://git@gitlab.mito.hu:2222/yii-2/enhanced-assets.git",
-                "reference": "7452259074697fff54c2af50397361c2d00196e6"
+                "reference": "681c4214f14ea1fb5c526576c9bb08a82427b0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.2.7-334776.zip",
-                "reference": "7452259074697fff54c2af50397361c2d00196e6",
-                "shasum": "e0e0358f65139f17d829c518f5ed5f136ca0d385"
+                "url": "http://satis.mito.hu/dist/mito-yii2-enhanced-assets-0.2.8-1975fb.zip",
+                "reference": "681c4214f14ea1fb5c526576c9bb08a82427b0b3",
+                "shasum": "aa1e2a465bb3537485d4dded8a46b5fa5667362c"
             },
             "require": {
                 "yiisoft/yii2": "*"
@@ -352,7 +352,7 @@
                 "extension",
                 "yii2"
             ],
-            "time": "2015-02-12 14:09:38"
+            "time": "2015-02-13 10:05:03"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -731,16 +731,16 @@
         },
         {
             "name": "bower-asset/sinon-chai",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/domenic/sinon-chai.git",
-                "reference": "f63422a45c43274866305e3cb30b918637222171"
+                "reference": "10e36ee756e4352519f54dc88914c747681533d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/domenic/sinon-chai/zipball/f63422a45c43274866305e3cb30b918637222171",
-                "reference": "f63422a45c43274866305e3cb30b918637222171",
+                "url": "https://api.github.com/repos/domenic/sinon-chai/zipball/10e36ee756e4352519f54dc88914c747681533d8",
+                "reference": "10e36ee756e4352519f54dc88914c747681533d8",
                 "shasum": ""
             },
             "type": "bower-asset-library"
@@ -983,12 +983,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "8210cb267be79b74b2792a8f52283e3fee49e967"
+                "reference": "a24717350ed4a34443f17e943c50907f67e59015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/8210cb267be79b74b2792a8f52283e3fee49e967",
-                "reference": "8210cb267be79b74b2792a8f52283e3fee49e967",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/a24717350ed4a34443f17e943c50907f67e59015",
+                "reference": "a24717350ed4a34443f17e943c50907f67e59015",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1033,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-02-10 23:49:23"
+            "time": "2015-02-19 17:16:51"
         },
         {
             "name": "facebook/webdriver",
