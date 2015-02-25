@@ -516,8 +516,15 @@ gulp.task('test', ['codeception', 'mocha', 'protractor']);
 gulp.task('postinstall', function() {
     var fs = require('fs');
     if (!fs.existsSync(path.join('config', 'ENV'))) {
-        gulp.start('hooks', 'setup');
+        gulp.start('setup:postinstall');
     }
+});
+
+/**
+ * complete hook installation task before displaying environment chooser.
+ */
+gulp.task('setup:postinstall', ['hooks'], function() {
+    gulp.start('setup');
 });
 
 /**
