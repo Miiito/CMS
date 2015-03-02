@@ -9,6 +9,11 @@ return yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/../../../config/web.php'),
     require(__DIR__ . '/config.php'),
     [
-
+        'components' => [
+            'request' => [
+                // Csrf validation does not work in functional tests
+                'enableCsrfValidation' => false,
+            ],
+        ],
     ]
 );
