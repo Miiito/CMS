@@ -43,7 +43,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 After cloning the repository, run:
 
 ~~~
-composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+composer global require "fxp/composer-asset-plugin:1.0.0"
 composer install
 npm install
 ~~~
