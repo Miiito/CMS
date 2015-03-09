@@ -17,5 +17,6 @@ $config = require(__DIR__ . '/../codeception/config/acceptance.php');
 
 $config['controllerNamespace'] = 'app\tests\mocha\controllers';
 $config['viewPath'] = dirname(__DIR__) . '/mocha/views';
+$config['defaultRoute'] = 'site/index';
 
 (new yii\web\Application($config))->run();
