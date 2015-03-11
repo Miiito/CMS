@@ -532,17 +532,36 @@ gulp.task('setup:postinstall', ['hooks'], function() {
  */
 gulp.task('clean:hooks', function(cb) {
     var del = require('del');
-    del(['.git/hooks/pre-commit'], cb);
+    del(['.git/hooks/pre-commit', '.git/hooks/post-checkout', '.git/hooks/post-merge'], cb);
 });
 
 /**
  * Hooks
  */
 gulp.task('hooks', ['clean:hooks'], function() {
-    return gulp.src('hooks/staged')
-        .pipe($.rename('pre-commit'))
-        .pipe($.chmod(755))
-        .pipe(gulp.dest('.git/hooks/'));
+    var hooks = [
+        {
+            src: 'hooks/staged',
+            dest: 'pre-commit'
+        },
+        {
+            src: 'hooks/post-checkout-updates',
+            dest: 'post-checkout'
+        },
+        {
+            src: 'hooks/post-merge-updates',
+            dest: 'post-merge'
+        },
+    ];
+
+    var streams = hooks.map(function(hook) {
+        return gulp.src(hook.src)
+            .pipe($.rename(hook.dest))
+            .pipe($.chmod(755))
+            .pipe(gulp.dest('.git/hooks/'));
+    });
+
+    return es.merge.apply(null, streams);
 });
 
 /**
