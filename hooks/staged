@@ -108,6 +108,19 @@ fixed_stash() {
 	return 0
 }
 
+fixed_pop() {
+	if [ $stashed -eq 1 ]; then
+		# prevent conflict between stashed index and restored index by reseting first
+		git reset --hard -q && git stash apply --index -q >/dev/null && git stash drop -q
+		stashed=0
+	fi
+}
+
+interrupt() {
+	fixed_pop
+	exit 130
+}
+
 #if git diff --cached --quiet; then
 #	exit 0
 #fi
@@ -124,16 +137,14 @@ if [ -f "$GIT_DIR/MERGE_HEAD" ] || [ -f "$GIT_DIR/CHERRY_PICK_HEAD" ]; then
 else
 	if fixed_stash; then
 		stashed=1
+		trap interrupt INT
 	fi
 fi
 
 (gulp commit)
 exitcode=$?
 
-if [ $stashed -eq 1 ]; then
-	# prevent conflict between stashed index and restored index by reseting first
-	git reset --hard -q && git stash apply --index -q >/dev/null && git stash drop -q
-fi
+fixed_pop
 
 if [ $exitcode -ne 0 ]; then
 	echo "Pre-commit check failed! Use 'git commit --no-verify' to bypass."
